@@ -1,5 +1,6 @@
 package com.code.test.HackerRank;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -28,5 +29,4 @@ public class Kangaroo {
         String result = kangaroo(x1, v1, x2, v2);
         System.out.println(result);
     }
-
 }
