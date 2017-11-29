@@ -1,10 +1,6 @@
-package com.code.test.HackerRank;
+package com.code.test.problemset.HackerRank;
 
-import java.text.DecimalFormat;
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 /**
  * Created by aliismail on 16/11/2017.
@@ -12,7 +8,6 @@ import java.util.stream.Stream;
 public class HackerRank {
 
     public static void main(String[] args) {
-
         Scanner in = new Scanner(System.in);
         int s = in.nextInt();
         int t = in.nextInt();
@@ -56,6 +51,27 @@ public class HackerRank {
         }
         return 1000001;
     }
+
+    static int[] getRecord(int[] s){
+        int high = s[0];
+        int low = s[0];
+        int highBeatCount = 0;
+        int lowDecreaseCount = 0;
+        for(int i = 1; i < s.length; i++){
+            if(s[i] > high){
+                high = s[i];
+                highBeatCount++;
+            }
+
+            if(s[i] < low){
+                low = s[i];
+                lowDecreaseCount++;
+            }
+        }
+
+        return new int[]{highBeatCount, lowDecreaseCount};
+    }
+
 
 
     static void warningCount() {

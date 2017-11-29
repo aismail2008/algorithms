@@ -40,7 +40,7 @@ public class Challange {
 //        int[] _arr = new int[_arr_size];
 //        int _arr_item;
 //        for(int _arr_i = 0; _arr_i < _arr_size; _arr_i++) {
-//            _arr_item = Integer.parseInt(in.nextLine());
+//            _arr_item = Integer.parseInt(in.nextLine())
 //            _arr[_arr_i] = _arr_item;
 //        }
 //        

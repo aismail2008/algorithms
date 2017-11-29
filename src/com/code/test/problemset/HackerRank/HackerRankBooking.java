@@ -1,4 +1,4 @@
-package com.code.test.HackerRank;
+package com.code.test.problemset.HackerRank;
 
 import java.util.*;
 

@@ -5,9 +5,10 @@ import java.util.Arrays;
 /**
  * Created by aliismail on 12/11/2017.
  */
-public class __N18 {
+public class N18_ {
 //    Problem:
-//    Implement strStr(). Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+//    Implement strStr(). Returns the index of the first occurrence of needle in haystack,
+//    or -1 if needle is not part of haystack.
 
     public static void main(String[] args) {
         strStr("AABCD", "AAABCD");
