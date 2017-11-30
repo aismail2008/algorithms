@@ -118,3 +118,6 @@ Temporary Items
 
 # End of https://www.gitignore.io/api/java,macos,intellij
 !/com/code/test/problemset/HackerRank/HackerRank.java
+!/src/com/code/test/designpatterns/CrackingCodingCh7/ParkingLot/Level.java
+!/src/com/code/test/designpatterns/CrackingCodingCh7/ParkingLot/Bus.java
+!/src/com/code/test/designpatterns/CrackingCodingCh7/Jigsaw/Shape.java
