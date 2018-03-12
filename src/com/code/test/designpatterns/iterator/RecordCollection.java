@@ -1,4 +1,4 @@
-package com.code.test.designpatterns.Iterator;
+package com.code.test.designpatterns.iterator;
 
 /**
  * Created by aliismail on 16/12/2017.

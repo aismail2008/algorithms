@@ -1,4 +1,4 @@
-package com.code.test.designpatterns.Factory;
+package com.code.test.designpatterns.factory;
 
 public class Boy implements Human {
 	@Override

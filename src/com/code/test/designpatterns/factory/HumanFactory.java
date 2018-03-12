@@ -1,4 +1,4 @@
-package com.code.test.designpatterns.Factory;
+package com.code.test.designpatterns.factory;
 
 
 //java.util.Calendar - getInstance()

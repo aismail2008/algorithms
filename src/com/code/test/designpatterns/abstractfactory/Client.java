@@ -1,4 +1,4 @@
-package com.code.test.designpatterns.AbstractFactory;
+package com.code.test.designpatterns.abstractfactory;
 
 interface CPU {
 	void process();

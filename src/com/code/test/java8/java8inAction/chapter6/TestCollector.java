@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import com.code.test.java8.java8inAction.chapter4.Dish;
@@ -12,6 +13,16 @@ import com.sun.javafx.collections.MappingChange.Map;
 
 public class TestCollector {
 	public static void main(String[] args) {
+
+
+
+		Pattern p  = Pattern.compile("^en/puzzles//?$");
+		boolean b1 = p.matcher("en/puzzles/").matches();
+		boolean b2 = p.matcher("en/puzzles/").matches();
+
+
+
+
 		List<Dish> menu = Arrays.asList(
 				new Dish("pork", false, 800, Dish.Type.MEAT),
 				new Dish("beef", false, 700, Dish.Type.MEAT),

@@ -1,4 +1,4 @@
-package com.code.test.designpatterns.Singleton;
+package com.code.test.designpatterns.singleton;
 
 public class AmericaPresident {
 	private static AmericaPresident thePresident;
