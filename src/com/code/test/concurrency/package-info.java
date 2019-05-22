@@ -14,5 +14,8 @@
  * 		- This essentially gives access to only one thread to the entire map & blocks all the other threads.
  * 		- It may cause contention.
  * 		- SynchronizedHashMap returns Iterator, which fails-fast on concurrent modification.
+ *
+ *
+ *    https://crunchify.com/hashmap-vs-concurrenthashmap-vs-synchronizedmap-how-a-hashmap-can-be-synchronized-in-java/
  */
  package com.code.test.concurrency;
