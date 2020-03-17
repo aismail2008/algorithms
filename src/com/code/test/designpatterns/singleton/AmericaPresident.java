@@ -10,7 +10,9 @@ public class AmericaPresident {
 
 		if (thePresident == null) {
 			synchronized (AmericaPresident.class) {
-				thePresident = new AmericaPresident();
+				if (thePresident == null) {
+					thePresident = new AmericaPresident();
+				}
 			}
 		}
 		return thePresident;
