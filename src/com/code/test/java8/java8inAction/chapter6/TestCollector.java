@@ -1,15 +1,11 @@
 package com.code.test.java8.java8inAction.chapter6;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import com.code.test.java8.java8inAction.chapter4.Dish;
 import com.code.test.java8.java8inAction.chapter4.Dish.Type;
-import com.sun.javafx.collections.MappingChange.Map;
 
 public class TestCollector {
 	public static void main(String[] args) {
@@ -44,6 +40,6 @@ public class TestCollector {
 		
 		totalCalories = menu.stream().collect(Collectors.reducing(0,Dish::getCalories,Integer::sum));
 		
-		Map<Dish.Type, List<Dish>> r = (Map<Type, List<Dish>>) menu.stream().collect(Collectors.groupingBy(Dish::getType));
+		Map<Type, List<Dish>> r = (Map<Type, List<Dish>>) menu.stream().collect(Collectors.groupingBy(Dish::getType));
 	}
 }

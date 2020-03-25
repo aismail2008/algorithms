@@ -10,7 +10,6 @@ import java.util.function.BiFunction;
 
 public class Java8Examples {
 
-	
 	public void test(){
 		//The simplest asynchronous computation
 		CompletableFuture<String> cf = CompletableFuture.supplyAsync(this::sendMessage);

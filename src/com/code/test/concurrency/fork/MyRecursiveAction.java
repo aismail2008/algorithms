@@ -1,7 +1,5 @@
 package com.code.test.concurrency.fork;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveAction;
 
@@ -17,25 +15,18 @@ public class MyRecursiveAction extends RecursiveAction {
 
 		// if work is above threshold, break tasks up into smaller tasks
 		if (this.workLoad > 2) {
-			System.out.println("Splitting workLoad : " + this.workLoad);
+			System.out.println(Thread.currentThread().getName() + " Splitting workLoad : " + this.workLoad);
 
-			List<MyRecursiveAction> subtasks = new ArrayList<MyRecursiveAction>();
-			MyRecursiveAction subtask1 = new MyRecursiveAction(this.workLoad / 2);
-			MyRecursiveAction subtask2 = new MyRecursiveAction(this.workLoad / 2);
-			subtasks.add(subtask1);
-			subtasks.add(subtask2);
-
-			for (RecursiveAction subtask : subtasks) {
-				subtask.fork();
-			}
+			new MyRecursiveAction(this.workLoad / 2).fork();
+			new MyRecursiveAction(this.workLoad / 2).fork();
 
 		} else {
-			System.out.println("Doing workLoad myself: " + this.workLoad);
+			System.out.println(Thread.currentThread().getName() + " Doing workLoad myself: " + this.workLoad);
 		}
 	}
 
 	public static void main(String[] args) {
-		ForkJoinPool pool = new ForkJoinPool(100);
+		ForkJoinPool pool = new ForkJoinPool(5);
 		pool.invoke(new MyRecursiveAction(20));
 	}
 }

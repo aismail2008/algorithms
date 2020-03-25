@@ -1,10 +1,6 @@
 package com.code.test.problemset.book;
 
-import java.sql.Date;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class HotelReservationAvail {
 
@@ -39,7 +35,12 @@ public class HotelReservationAvail {
 				System.out.println(s);
 				hotelsRushHour.put(s.substring(0, s.indexOf(",")), s.substring(s.indexOf(",") + 2, s.length()));
 			} else {
-				Date firstDateInter = new Date(Integer.parseInt(period.substring(0, 4)) - 1900, Integer.parseInt(period.substring(5, 7)) - 1, Integer.parseInt(period.substring(8, 10)));
+				Calendar date = Calendar.getInstance();
+				date.set(Calendar.YEAR, Integer.parseInt(period.substring(0, 4)) - 1900);
+				date.set(Calendar.MONTH, Integer.parseInt(period.substring(5, 7)) - 1);
+				date.set(Calendar.DAY_OF_MONTH, Integer.parseInt(period.substring(8, 10)));
+				Date firstDateInter = date.getTime();
+
 				Date secondDateInter = new Date(Integer.parseInt(period.substring(12, 16)) - 1900, Integer.parseInt(period.substring(17, 19)) - 1, Integer.parseInt(period.substring(20, 22)));
 				String dateS = s.substring(s.indexOf(" ") + 1);
 				Date thirdDateInter = new Date(Integer.parseInt(dateS.substring(0, 4)) - 1900, Integer.parseInt(dateS.substring(5, 7)) - 1, Integer.parseInt(dateS.substring(8, 10)));

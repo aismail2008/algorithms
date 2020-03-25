@@ -7,14 +7,21 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
 
 public class ChallengA {
+	public static enum SettingEnviroment {
+		CONTAINER,
+		BOOKING_SERVER,
+		NON_BOOKING_SERVER
+	}
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// testB();
+		SettingEnviroment.CONTAINER.name();
 		compress("abababaabbaaaa");
 		 solve("abcdefgh");
 	}

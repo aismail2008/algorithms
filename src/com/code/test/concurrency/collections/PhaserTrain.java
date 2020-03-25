@@ -4,14 +4,13 @@ import java.util.concurrent.Phaser;
 
 public class PhaserTrain {
 
-	class Worker extends Thread {
+	static class Worker extends Thread {
 		Phaser deliveryOrder;
 
 		Worker(Phaser order, String name) {
 			deliveryOrder = order;
 			this.setName(name);
 			deliveryOrder.register();
-			start();
 		}
 
 		public void run() {
@@ -42,15 +41,17 @@ public class PhaserTrain {
 		// the Phaser is the synchronizer to make food items one-by-one,
 		// and deliver it before moving to the next item
 		Phaser deliveryOrder = new Phaser(1);
-		PhaserTrain train = new PhaserTrain();
+
 		System.out.println("Starting to process the delivery order ");
-		train.new Worker(deliveryOrder, "Cook");
-		train.new Worker(deliveryOrder, "Helper");
-		train.new Worker(deliveryOrder, "Attendant");
+
+		new Worker(deliveryOrder, "Cook").start();
+		new Worker(deliveryOrder, "Helper").start();
+		new Worker(deliveryOrder, "Attendant").start();
+
 		for (int i = 1; i <= 3; i++) {
 			// Prepare, mix and deliver this food item
 			deliveryOrder.arriveAndAwaitAdvance();
-			System.out.println("Deliver food item no. " + i);
+			System.out.println("Deliver food item no. " + deliveryOrder.getPhase());
 		}
 		// work completed for this delivery order, so deregister
 		deliveryOrder.arriveAndDeregister();
