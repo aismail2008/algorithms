@@ -8,52 +8,51 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class StreamTest {
-	
-	private static boolean isPrime(final int number) {
-		IntPredicate isDivisble = divisor -> number % divisor == 0;
-		
-		return number > 1 && IntStream.range(2, number).noneMatch(isDivisble);
-	}
 
-	public static void main(String[] args) {
-		isPrime(5);
-		
-		List<Person> persons = populateWithData();
-		//-- Obtain US and non US based pserson using partitioning by and grouping by
-		Map<Boolean, List<Person>> result = persons.stream().collect(Collectors.partitioningBy(p -> p.getCountry().equals("US")));
-		result.get(true).forEach(System.out::println);
-		result.get(false).forEach(System.out::println);
-		System.out.println("============");
-		
-		result = persons.stream().collect(Collectors.groupingBy(p -> p.getCountry().equals("US")));
-		result.get(true).forEach(System.out::println);
-		result.get(false).forEach(System.out::println);
-		System.out.println("============");
-		
-		//-- Obtain US and non US based persons using partitioning by and grouping by
-		Map<Boolean, Long> countResult = persons.stream().collect(Collectors.partitioningBy(p -> p.getCountry().equals("US"), Collectors.counting()));
-		System.out.println(countResult.get(true));
-		System.out.println(countResult.get(false));
-		System.out.println("============");
+    private static boolean isPrime(final int number) {
+        IntPredicate isDivisble = divisor -> number % divisor == 0;
 
-		countResult = persons.stream().collect(Collectors.groupingBy(p -> p.getCountry().equals("US"), Collectors.counting()));
-		System.out.println(countResult.get(true));
-		System.out.println(countResult.get(false));
-		System.out.println("============");
-		
-		//-- Obtain the persons in each country and count them using groupingby
-		persons.stream().collect(Collectors.groupingBy(Person::getCountry));
-		Map<String, Long> groupResult = persons.stream().collect(Collectors.groupingBy(Person::getCountry, Collectors.counting()));
-		groupResult.entrySet().stream().forEach(ent -> System.out.println(ent.getKey() + ": " + ent.getValue()));
-		//-- Obtain US and non US based persons using partitioning by and & map names to uppercase using mapping
-		persons.stream().collect(Collectors.partitioningBy(p -> p.getCountry().equals("US"), Collectors.mapping(p -> p.getName().toUpperCase(), Collectors.toList())));
-		
-		//-- Obtain the persons in each country using groupingBy and map names to upperCase using mapping
-		persons.stream().collect(Collectors.groupingBy(Person::getCountry, Collectors.mapping(p -> p.getName().toUpperCase(), Collectors.toList())));
-				
-	}
-	
-	static List<Person> populateWithData(){
+        return number > 1 && IntStream.range(2, number).noneMatch(isDivisble);
+    }
+
+    public static void main(String[] args) {
+        isPrime(5);
+
+        List<Person> persons = populateWithData();
+        //-- Obtain US and non US based persons using partitioning by and grouping by
+        Map<Boolean, List<Person>> result = persons.stream().collect(Collectors.partitioningBy(p -> p.getCountry().equals("US")));
+        result.get(true).forEach(System.out::println);
+        result.get(false).forEach(System.out::println);
+        System.out.println("============");
+
+        result = persons.stream().collect(Collectors.groupingBy(p -> p.getCountry().equals("US")));
+        result.get(true).forEach(System.out::println);
+        result.get(false).forEach(System.out::println);
+        System.out.println("============");
+
+        //-- Obtain US and non US based persons using partitioning by and grouping by
+        Map<Boolean, Long> countResult = persons.stream().collect(Collectors.partitioningBy(p -> p.getCountry().equals("US"), Collectors.counting()));
+        System.out.println(countResult.get(true));
+        System.out.println(countResult.get(false));
+        System.out.println("============");
+
+        countResult = persons.stream().collect(Collectors.groupingBy(p -> p.getCountry().equals("US"), Collectors.counting()));
+        System.out.println(countResult.get(true));
+        System.out.println(countResult.get(false));
+        System.out.println("============");
+
+        //-- Obtain the persons in each country and count them using groupingby
+        Map<String, Long> groupResult = persons.stream().collect(Collectors.groupingBy(Person::getCountry, Collectors.counting()));
+        groupResult.entrySet().stream().forEach(ent -> System.out.println(ent.getKey() + ": " + ent.getValue()));
+        //-- Obtain US and non US based persons using partitioning by and & map names to uppercase using mapping
+        persons.stream().collect(Collectors.partitioningBy(p -> p.getCountry().equals("US"), Collectors.mapping(p -> p.getName().toUpperCase(), Collectors.toList())));
+
+        //-- Obtain the persons in each country using groupingBy and map names to upperCase using mapping
+        persons.stream().collect(Collectors.groupingBy(Person::getCountry, Collectors.mapping(p -> p.getName().toUpperCase(), Collectors.toList())));
+
+    }
+
+    static List<Person> populateWithData() {
 		Person p1 = new Person("Person01", "US");
 		Person p2 = new Person("Person02", "US");
 		Person p3 = new Person("Person03", "Brazil");
@@ -63,7 +62,7 @@ public class StreamTest {
 		Person p7 = new Person("Person07", "Germany");
 		Person p8 = new Person("Person08", "US");
 		List<Person> personList = new ArrayList<Person>();
-		
+
 		personList.add(p1);
 		personList.add(p2);
 		personList.add(p3);
@@ -72,45 +71,7 @@ public class StreamTest {
 		personList.add(p6);
 		personList.add(p7);
 		personList.add(p8);
-		
+
 		return personList;
-	}
-}
-
-class Person {
-	String name;
-	String country;
-	
-	public String toString(){
-		return "Name : " + name + ", Country :" + country;
-	}
-	
-	public String getName() {
-		return name;
-	}
-
-
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-
-
-	public String getCountry() {
-		return country;
-	}
-
-
-
-	public void setCountry(String country) {
-		this.country = country;
-	}
-
-
-
-	public Person(String name, String country){
-		this.name = name;
-		this.country = country;
 	}
 }

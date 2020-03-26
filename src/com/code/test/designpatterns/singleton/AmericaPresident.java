@@ -7,7 +7,6 @@ public class AmericaPresident {
 	}
 
 	public static AmericaPresident getInstance() {
-
 		if (thePresident == null) {
 			synchronized (AmericaPresident.class) {
 				if (thePresident == null) {

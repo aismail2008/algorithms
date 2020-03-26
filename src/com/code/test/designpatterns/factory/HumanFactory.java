@@ -8,6 +8,7 @@ package com.code.test.designpatterns.factory;
 //java.text.NumberFormat - getInstance()
 //java.text.NumberFormat - getInstance(Locale inLocale)
 public class HumanFactory {
+
 	public static Human createHuman(String m) {
 		Human p = null;
 		if (m.equals("boy")) {
@@ -15,7 +16,6 @@ public class HumanFactory {
 		} else if (m.equals("girl")) {
 			p = new Girl();
 		}
-
 		return p;
 	}
 }

@@ -12,7 +12,7 @@ interface Vehicle {
 	default void print() {
 		System.out.println("I am a vehicle!");
 	}
-
+	// No one can override this one. Similar to default but can't be override
 	static void blowHorn() {
 		System.out.println("Blowing horn!!!");
 	}
@@ -24,7 +24,7 @@ interface FourWheeler {
 	}
 }
 
-class Car implements Vehicle, FourWheeler {
+class Car implements Vehicle, FourWheeler{
 	public void print() {
 		Vehicle.super.print();
 		FourWheeler.super.print();

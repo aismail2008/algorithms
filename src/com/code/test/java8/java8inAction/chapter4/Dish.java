@@ -36,7 +36,7 @@ public class Dish {
 		return name;
 	}
 
-	public enum Type {
+	public static enum Type {
 		MEAT, FISH, OTHER
 	}
 }

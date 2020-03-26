@@ -1,6 +1,7 @@
 package com.code.test.designpatterns.observer;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by aliismail on 16/12/2017.
@@ -22,6 +23,7 @@ public class HeadHunter implements Subject {
 
     @Override
     public void removeObserver(Observer o) {
+        userList.remove(o);
     }
 
     @Override
@@ -36,11 +38,7 @@ public class HeadHunter implements Subject {
         notifyAllObservers();
     }
 
-    public ArrayList<String> getJobs() {
+    public List<String> getJobs() {
         return jobs;
-    }
-
-    public String toString() {
-        return jobs.toString();
     }
 }

@@ -12,6 +12,7 @@ public class JobSeeker implements Observer {
 
     @Override
     public void update(Subject s) {
+        // Here you do you business
         System.out.println(this.name + " got notified!");
         //print job list
         System.out.println(s);

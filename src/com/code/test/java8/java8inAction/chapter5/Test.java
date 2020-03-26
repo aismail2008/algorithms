@@ -20,39 +20,37 @@ public class Test {
                                         				new Transaction(mario, 2012, 700), 
                                         				new Transaction(alan, 2012, 950));
 
-		System.out.println("=========1===========");
+		System.out.println("=========1- Find all transactions in the year 2011 and sort them by value (small to high).===========");
 		// 1- Find all transactions in the year 2011 and sort them by value (small to high).
-//		transactions.stream().filter(t -> t.getYear() == 2011).sorted((a, b) -> Integer.compare(a.getValue(), b.getValue())).forEach(System.out::println);
+		transactions.stream().filter(t -> t.getYear() == 2011).sorted(Comparator.comparingInt(Transaction::getValue)).forEach(System.out::println);
 		
-		transactions.stream().filter(t -> t.getYear() == 2011).sorted(Comparator.comparing(Transaction::getValue)).forEach(System.out::println);
-
-		System.out.println("=========2===========");
+		System.out.println("=========2. What are all the unique cities where the traders work?===========");
 		// 2. What are all the unique cities where the traders work?
 		transactions.stream().map(Transaction::getTrader).map(Trader::getCity).distinct().forEach(System.out::println);
 
-		System.out.println("=========3===========");
+		System.out.println("=========3. Find all traders from Cambridge and sort them by name.===========");
 		// 3. Find all traders from Cambridge and sort them by name.
 		Predicate<Trader> cambOnly = t -> t.getCity().equalsIgnoreCase("Cambridge");
 		transactions.stream().map(Transaction::getTrader).filter(cambOnly).distinct().sorted(Comparator.comparing(Trader::getName)).forEach(System.out::println);
 		
-		System.out.println("=========4===========");
-		// 4. Return a string of all traders’ names sorted alphabetically.
+		System.out.println("=========4. Return a string of all traders names sorted alphabetically.===========");
+		// 4. Return a string of all traders names sorted alphabetically.
 		transactions.stream().map(t -> t.getTrader().getName()).distinct().sorted().forEach(System.out::println);
 		
-		System.out.println("=========5===========");
+		System.out.println("=========5. Are any traders based in Milan?===========");
 		// 5. Are any traders based in Milan?
 		System.out.println(transactions.stream().map(Transaction::getTrader).anyMatch(t -> t.getCity().equalsIgnoreCase("Milan")));
 		
-		System.out.println("=========6===========");
-		// 6. Print all transactions’ values from the traders living in Cambridge
+		System.out.println("=========6. Print all transactions values from the traders living in Cambridge===========");
+		// 6. Print all transactions values from the traders living in Cambridge
 		transactions.stream().filter(t -> t.getTrader().getCity().equalsIgnoreCase("Cambridge")).map(Transaction::getValue).forEach(System.out::println);
 		
-		System.out.println("=========7===========");
-		// 7. What’s the highest value of all the transactions?
+		System.out.println("=========7. What is the highest value of all the transactions?===========");
+		// 7. What is the highest value of all the transactions?
 		transactions.stream().map(Transaction::getValue).reduce(Integer::max).ifPresent(System.out::println);
 		transactions.stream().mapToInt(Transaction::getValue).max().ifPresent(System.out::println);
 		
-		System.out.println("=========8===========");
+		System.out.println("=========8. Find the transaction with the smallest value===========");
 		// 8. Find the transaction with the smallest value
 		BinaryOperator<Transaction> accumlator = (a, b) -> a.getValue() > b.getValue()? b : a;
 		transactions.stream().reduce(accumlator).ifPresent(System.out::println);
