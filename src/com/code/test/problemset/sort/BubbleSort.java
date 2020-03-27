@@ -1,31 +1,62 @@
 package com.code.test.problemset.sort;
 
+import java.util.Arrays;
+
 public class BubbleSort<E> {
 
-	@SuppressWarnings("unchecked")
-	public static <E> void bubbleSort(E[] unsorted) {
-		for (int iter = 1; iter < unsorted.length; iter++) {
-			for (int inner = 0; inner < (unsorted.length - iter); inner++) {
-				if ((((Comparable) (unsorted[inner])).compareTo(unsorted[inner + 1])) > 0) {
-					E tmp = unsorted[inner];
-					unsorted[inner] = unsorted[inner + 1];
-					unsorted[inner + 1] = tmp;
-				}
-			}
-		}
-	}
+    @SuppressWarnings("unchecked")
+    public void bubbleSort(E[] arr) {
+        if (arr == null)
+            return;
+        if (arr.length == 1) {
+            return;
+        }
 
-	public static <E> void display(E[] unsorted) {
-		for (E i : unsorted) {
-			System.out.print(i + " ");
-		}
-		System.out.println();
-	}
+        int n = arr.length;
+//        for (int i = 1; i < n; i++) {
+//            for (int j = 0; j < (n - i); j++) {
+//
+//                if ((((Comparable) (arr[j])).compareTo(arr[j + 1])) > 0) {
+//                    E tmp = arr[j];
+//                    arr[j] = arr[j + 1];
+//                    arr[j + 1] = tmp;
+//                }
+//
+//            }
+//        }
+        for (int i = 1; i < n; i++) {
+            for (int j = 0; j < n - i; j++) {
+                if ((((Comparable) arr[j]).compareTo(arr[j + 1])) > 0) {
+                    E tmp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tmp;
+                }
+            }
+        }
+    }
 
-	public static void main(String[] args) {
-		Integer[] unsorted = { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
-		display(unsorted);
-		bubbleSort(unsorted);
-		display(unsorted);
-	}
+    private static void swap(int[] arr, int i, int j) {
+        int tmp = arr[j];
+        arr[j] = arr[j - 1];
+        arr[j - 1] = tmp;
+    }
+
+    public static void main(String[] args) {
+
+        BubbleSort<Integer> bubbleSort = new BubbleSort();
+
+        Integer[] unsorted = {9, 8, 7, 6, 5, 4, 3, 2, 1};
+        bubbleSort.bubbleSort(unsorted);
+        Arrays.stream(unsorted).forEach((i) -> System.out.print(i + " "));
+        System.out.println("\n===");
+
+        unsorted = new Integer[]{9, 80, 71, 36, 0, 55, 14, 23, -1, 1};
+        bubbleSort.bubbleSort(unsorted);
+        Arrays.stream(unsorted).forEach((i) -> System.out.print(i + " "));
+        System.out.println("\n===");
+
+        bubbleSort.bubbleSort(null);
+
+        bubbleSort.bubbleSort(new Integer[1]);
+    }
 }

@@ -1,5 +1,7 @@
 package com.code.test.problemset.sort;
 
+import java.util.Arrays;
+
 /**
  * Created by aliismail on 07/11/2017.
  */
@@ -9,18 +11,36 @@ public class MergeSort {
     private int[] tempMergArr;
     private int length;
 
-    public static void main(String a[]){
-
-        int[] inputArr = {45,23,11,89,77,98,4,28,65,43};
+    public static void main(String a[]) {
         MergeSort mms = new MergeSort();
+
+        int[] inputArr = {45, 23, 11, 89, 77, 98, 4, 28, 65, 43};
         mms.sort(inputArr);
-        for(int i:inputArr){
-            System.out.print(i);
-            System.out.print(" ");
-        }
+        Arrays.stream(inputArr).forEach((i) -> System.out.print(i + " "));
+        System.out.println("\n===");
+
+        inputArr = new int[]{9, 8, 7, 6, 5, 4, 3, 2, 1};
+        mms.sort(inputArr);
+        Arrays.stream(inputArr).forEach((i) -> System.out.print(i + " "));
+        System.out.println("\n===");
+
+
+        inputArr = new int[]{9, 80, 71, 36, 0, 55, 14, 23, -1, 1};
+        mms.sort(inputArr);
+        Arrays.stream(inputArr).forEach((i) -> System.out.print(i + " "));
+        System.out.println("\n===");
+
+        mms.sort(null);
+        mms.sort(new int[1]);
     }
 
-    public void sort(int inputArr[]) {
+    public void sort(int[] inputArr) {
+        if (inputArr == null)
+            return;
+        if (inputArr.length == 1) {
+            return;
+        }
+
         this.array = inputArr;
         this.length = inputArr.length;
         this.tempMergArr = new int[length];
@@ -46,8 +66,8 @@ public class MergeSort {
             tempMergArr[i] = array[i];
         }
         int i = lowerIndex;
-        int j = middle + 1;
         int k = lowerIndex;
+        int j = middle + 1;
         while (i <= middle && j <= higherIndex) {
             if (tempMergArr[i] <= tempMergArr[j]) {
                 array[k] = tempMergArr[i];
@@ -63,6 +83,5 @@ public class MergeSort {
             k++;
             i++;
         }
-
     }
 }

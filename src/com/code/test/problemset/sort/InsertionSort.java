@@ -5,10 +5,11 @@ import java.util.Arrays;
 /**
  * Created by aliismail on 07/11/2017.
  */
-public class SelectionSort {
+public class InsertionSort {
 
     /**
-     * Getting smallest in each iteration and put it on first.
+     * start with list of size 1 and then insert elements in its right position.
+     *
      * @param arr
      */
     public static void sort(int[] arr) {
@@ -19,15 +20,17 @@ public class SelectionSort {
         }
 
         for (int i = 0; i < arr.length - 1; i++) {
-            int index = i;
-            for (int j = i + 1; j < arr.length; j++)
-                if (arr[j] < arr[index])
-                    index = j;
-
-            int smallerNumber = arr[index];
-            arr[index] = arr[i];
-            arr[i] = smallerNumber;
+            for (int j = i + 1; j > 0; j--)
+                if (arr[j] < arr[j - 1]) {
+                    swap(arr, i, j);
+                }
         }
+    }
+
+    private static void swap(int[] arr, int i, int j){
+        int tmp = arr[j];
+        arr[j] = arr[j-1];
+        arr[j-1] = tmp;
     }
 
     public static void main(String a[]) {

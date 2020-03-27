@@ -1,4 +1,4 @@
-package com.code.test;
+package com.code.test.java8;
 
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
