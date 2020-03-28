@@ -2,8 +2,6 @@ package com.code.test.problemset.CrackingCodingInterview6.Ch1;
 
 import java.util.*;
 
-import static com.code.test.problemset.CrackingCodingInterview6.Ch1.N1.isAllUnique;
-
 /**
  * Check Permutation: Given two strings, write a method to decide if one is a permutation of the
  * other.

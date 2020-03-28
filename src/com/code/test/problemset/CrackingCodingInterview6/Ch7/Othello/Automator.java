@@ -1,6 +1,6 @@
 package com.code.test.problemset.CrackingCodingInterview6.Ch7.Othello;
 
-import com.code.test.problemset.CrackingCodingInterview6.Ch7.AssortedMethods;
+import com.code.test.problemset.CrackingCodingInterview6.AssortedMethods;
 
 import java.util.ArrayList;
 
