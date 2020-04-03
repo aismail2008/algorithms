@@ -8,14 +8,13 @@ import java.util.Random;
  * has a method getRandomNode() which returns a random node from the tree. All nodes should be equally likely to be chosen.
  * Design and implement an algorithm for getRandomNode, and explain how you would implement the rest of the method
  */
-public class N11 {
+public class Q11_RandomNode {
 
     static class Node {
         public int data;
         public Node left;
         public Node right;
         private int size = 0;
-
 
         public Node(int d) {
             data = d;

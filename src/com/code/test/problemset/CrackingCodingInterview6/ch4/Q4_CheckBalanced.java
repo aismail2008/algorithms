@@ -10,7 +10,7 @@ import java.util.Hashtable;
  * For the purposes of this question, a balanced tree is defined to be a tree such that the heights of the
  * two subtrees of any node never differ by more than one.
  */
-public class N4 {
+public class Q4_CheckBalanced {
     static Hashtable<Node, Integer> hights = new Hashtable<>();
 
     public static int checkHeight(Node root) {

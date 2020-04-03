@@ -12,7 +12,7 @@ import java.util.HashMap;
  *      The path does not need to start or end at the root or a leaf, but it must go downwards
  *      (traveling only from parent nodes to child nodes).
  */
-public class N12 {
+public class Q12_PathsWithSum {
 
     //O(N2)
     static class SolutionA {
@@ -48,7 +48,7 @@ public class N12 {
         }
     }
 
-    //Didn't reveiw this solution well
+    //Didn't review this solution well
     static class QuestionB {
 
         public static int countPathsWithSum(Node root, int targetSum) {

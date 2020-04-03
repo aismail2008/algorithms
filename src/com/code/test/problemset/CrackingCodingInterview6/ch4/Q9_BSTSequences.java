@@ -16,7 +16,7 @@ import java.util.LinkedList;
  *           (1)  (3)
  * Output: {2, 1, 3}, {2, 3, 1}
  */
-public class N9 {
+public class Q9_BSTSequences {
 
     public static void weaveLists(LinkedList<Integer> first, LinkedList<Integer> second, ArrayList<LinkedList<Integer>> results, LinkedList<Integer> prefix) {
         /* One list is empty. Add the remainder to [a cloned] prefix and

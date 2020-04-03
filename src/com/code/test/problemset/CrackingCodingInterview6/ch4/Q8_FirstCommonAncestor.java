@@ -7,7 +7,7 @@ package com.code.test.problemset.CrackingCodingInterview6.ch4;
  * Avoid storing additional nodes in a data structure.
  * NOTE: This is not necessarily a binary search tree.
  */
-public class N8 {
+public class Q8_FirstCommonAncestor {
     public class Node {
         public int key;
         public Node left, right, parent;

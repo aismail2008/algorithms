@@ -5,7 +5,7 @@ package com.code.test.problemset.CrackingCodingInterview6.ch4;
  * Given a sorted (increasing order) array with unique integer elements,
  * write an algorithm to create a binary search tree with minimal height.
  */
-public class N2 {
+public class Q2_MinimalTree {
     static class Node {
         private int data;
         private Node left;

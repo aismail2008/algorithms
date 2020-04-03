@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
  * design an algorithm which creates a linked list of all the nodes at each depth
  * (e.g., if you have a tree with depth D, you'll have D linked lists).
  */
-public class N3 {
+public class Q3_ListofDepths {
 
     public static void bfs(GraphNode root) {
         // Since queue is a interface

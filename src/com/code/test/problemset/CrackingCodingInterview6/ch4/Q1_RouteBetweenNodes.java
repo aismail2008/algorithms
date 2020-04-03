@@ -11,7 +11,7 @@ import java.util.Queue;
  * Route Between Nodes:
  *      Given a directed graph, design an algorithm to find out whether there is a route between two nodes.
  */
-public class N1 {
+public class Q1_RouteBetweenNodes {
 
     public static boolean search(Graph g, GraphNode start, GraphNode end) {
         LinkedList<GraphNode> q = new LinkedList<GraphNode>();
@@ -40,7 +40,6 @@ public class N1 {
         }
         return false;
     }
-
 
     public static boolean bfs(GraphNode root, GraphNode target) {
         // Since queue is a interface

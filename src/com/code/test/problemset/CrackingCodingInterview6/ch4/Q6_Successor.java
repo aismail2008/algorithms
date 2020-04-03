@@ -5,7 +5,7 @@ package com.code.test.problemset.CrackingCodingInterview6.ch4;
  * Write an algorithm to find the "next" node (i.e., in-order successor) of a given node in a binary search tree.
  * You may assume that each node has a link to its parent.
  */
-public class N6 {
+public class Q6_Successor {
     public class Node {
         public int val;
         public Node left, right, parent;
