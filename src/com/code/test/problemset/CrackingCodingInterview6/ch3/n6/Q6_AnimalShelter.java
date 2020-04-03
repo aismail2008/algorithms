@@ -12,7 +12,7 @@ package com.code.test.problemset.CrackingCodingInterview6.ch3.n6;
  * 	enqueue, dequeueAny, dequeueDog, and dequeueCat.
  * 	You may use the built-in Linkedlist data structure
  */
-public class N6 {
+public class Q6_AnimalShelter {
     public static void main(String[] args) {
         AnimalQueue animalQueue = new AnimalQueue();
     }

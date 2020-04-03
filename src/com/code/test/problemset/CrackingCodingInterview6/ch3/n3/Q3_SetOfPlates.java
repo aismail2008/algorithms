@@ -16,11 +16,11 @@ import java.util.List;
  * FOLLOW UP
  * Implement a function popAt(int index) which performs a pop operation on a specific sub­ stack.
  */
-class SetOfStacks {
+class Q3_SetOfPlates {
     List<Stack> stacks = new ArrayList<Stack>();
     public int capacity;
 
-    public SetOfStacks(int capacity) {
+    public Q3_SetOfPlates(int capacity) {
         this.capacity = capacity;
     }
 

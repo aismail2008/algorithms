@@ -1,4 +1,4 @@
-package com.code.test.problemset.programcreekbook;
+package com.code.test.problemset.programcreekbook.old;
 
 import java.io.BufferedReader;
 import java.io.IOException;

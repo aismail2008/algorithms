@@ -1,4 +1,4 @@
-package com.code.test.problemset.CrackingCodingInterview6.ch1;
+package com.code.test.problemset.programcreekbook;
 
 /**
  * One Away:
@@ -10,8 +10,15 @@ package com.code.test.problemset.CrackingCodingInterview6.ch1;
  * pales, pale -> true
  * pale, bale -> true
  * pale, bake -> false
+ *
+ *
+ * One Edit Distance (Java)
+ *
+ *      Given two strings S and T, determine if they are both one edit distance apart.
+ *
+ *  https://leetcode.com/problems/one-edit-distance/
  */
-public class N5_OneAway {
+public class Q15_OneEditAway {
 
     public static boolean oneEditAway(String first, String second) {
         /* Length checks. */
@@ -20,33 +27,32 @@ public class N5_OneAway {
         }
 
         /* Get shorter and longer string.*/
-        String s1 = first.length() < second.length() ? first : second;
-        String s2 = first.length() < second.length() ? second : first;
+        String shorter = first.length() < second.length() ? first : second;
+        String longer = first.length() < second.length() ? second : first;
 
-        int index1 = 0;
-        int index2 = 0;
-        boolean isSameSize = s1.length() == s2.length();
+        int sIndex = 0;
+        int lIndex = 0;
+        boolean isSameSize = shorter.length() == longer.length();
         boolean foundDiff = false;
-        while (index2 < s2.length() && index1 < s1.length()) {
-            if (s1.charAt(index1) == s2.charAt(index2)) {
-                index1++;
-                index2++;
+        while (lIndex < longer.length() && sIndex < shorter.length()) {
+            if (shorter.charAt(sIndex) == longer.charAt(lIndex)) {
+                sIndex++;
+                lIndex++;
             } else {
                 if (foundDiff) {
                     return false;
                 }
 
                 if (isSameSize) { // replace
-                    index1++;
+                    sIndex++;
                 }
 
                 foundDiff = true;
-                index2++;
+                lIndex++;
             }
         }
         return true;
     }
-
 
     public static void main(String[] args) {
         String a = "pale";

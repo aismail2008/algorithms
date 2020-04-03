@@ -1,4 +1,4 @@
-package com.code.test.problemset.programcreekbook;
+package com.code.test.problemset.programcreekbook.old;
 
 public class SubarrayProductLessK {
 

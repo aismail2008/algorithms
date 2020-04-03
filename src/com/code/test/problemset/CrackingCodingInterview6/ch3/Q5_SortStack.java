@@ -8,7 +8,7 @@ import java.util.Stack;
  * You can use an additional temporary stack, but you may not copy the elements into any other data structure (such as an array).
  * The stack supports the following operations: push, pop, peek, and isEmpty.
  */
-public class N5 extends Stack<Integer> {
+public class Q5_SortStack extends Stack<Integer> {
 
     Stack<Integer> stack = new Stack<>();
     Stack<Integer> temp;

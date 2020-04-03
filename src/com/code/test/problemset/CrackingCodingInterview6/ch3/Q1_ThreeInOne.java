@@ -5,19 +5,16 @@ import java.util.EmptyStackException;
 /**
  * Three in One: Describe how you could use a single array to implement three stacks.
  */
-public class N1 {
-}
 
 class FullStackException extends Exception {
 }
-
-class FixedMultiStack {
+public class Q1_ThreeInOne {
     private int numberOfStacks = 3;
     private int stackCapacity;
     private int[] values;
     private int[] sizes;
 
-    public FixedMultiStack(int stackSize) {
+    public Q1_ThreeInOne(int stackSize) {
         stackCapacity = stackSize;
         values = new int[stackSize * numberOfStacks];
         sizes = new int[numberOfStacks];

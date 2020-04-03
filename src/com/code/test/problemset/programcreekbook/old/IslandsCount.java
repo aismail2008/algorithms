@@ -1,4 +1,4 @@
-package com.code.test.problemset.programcreekbook;
+package com.code.test.problemset.programcreekbook.old;
 
 public class IslandsCount {
     //	Given a 2-d grid map of '1's (land) and '0's (water),

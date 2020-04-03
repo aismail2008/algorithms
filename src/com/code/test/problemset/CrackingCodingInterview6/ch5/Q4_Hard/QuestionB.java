@@ -1,5 +1,8 @@
 package com.code.test.problemset.CrackingCodingInterview6.ch5.Q4_Hard;
 
+import com.code.test.problemset.programcreekbook.Hard;
+
+@Hard
 public class QuestionB {
 	
 	public static int getNext(int n) {

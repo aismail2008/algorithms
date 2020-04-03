@@ -1,5 +1,8 @@
 package com.code.test.problemset.CrackingCodingInterview6.ch5.Q4_Hard;
 
+import com.code.test.problemset.programcreekbook.Hard;
+
+@Hard
 public class QuestionC {
 	public static int getNextArith(int n) {
 		int c = n;

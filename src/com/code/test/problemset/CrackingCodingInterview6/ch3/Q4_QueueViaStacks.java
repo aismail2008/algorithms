@@ -7,7 +7,7 @@ import java.util.Stack;
 /**
  * Queue via Stacks: Implement a MyQueue class which implements a queue using two stacks.
  */
-public class N4 {
+public class Q4_QueueViaStacks {
     Stack<Integer> s1 = new Stack<>();
     Stack<Integer> s2 = new Stack<>();
 
@@ -43,7 +43,7 @@ public class N4 {
 
     public static void main(String[] args) {
         Queue<Integer> queue = new ArrayDeque<>();
-        N4 q = new N4();
+        Q4_QueueViaStacks q = new Q4_QueueViaStacks();
 
         queue.add(1);
         queue.add(2);
