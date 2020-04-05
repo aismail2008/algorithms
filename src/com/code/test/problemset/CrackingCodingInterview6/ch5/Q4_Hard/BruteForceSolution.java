@@ -1,6 +1,6 @@
 package com.code.test.problemset.CrackingCodingInterview6.ch5.Q4_Hard;
 
-import com.code.test.problemset.programcreekbook.Hard;
+import com.code.test.problemset.leetcode.Hard;
 
 @Hard
 public class BruteForceSolution {
