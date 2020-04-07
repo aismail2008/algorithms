@@ -8,13 +8,12 @@ import java.util.Arrays;
  * Given two sorted integer arrays A and B, merge B into A as one sorted array.
  * <p>
  * Note:
- * You may assume that A has enough space to hold additional elements from B. The number of elements initialized in A and B are m and n respectively.
+ * You may assume that A has enough space to hold additional elements from B.
+ * The number of elements initialized in A and B are m and n respectively.
  *
  * https://leetcode.com/problems/merge-sorted-array
  */
 public class Q16_MergeSortedArray {
-//    Given two sorted integer arrays A and B, merge B into A as one sorted array.
-//    Note: You may assume that A has enough space to hold additional elements from B. The number of elements initialized in A and B are m and n respectively.
 
     public static void main(String[] args) {
         int[] a = new int[]{0};

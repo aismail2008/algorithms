@@ -2,10 +2,26 @@ package com.code.test.problemset.basics;
 
 public class BitMathHelper {
 
+    /**
+     * https://www.aqua-calc.com/page/powers-of-two
+     *
+     * 1000 ~= 2^10
+     *      [Giga = 1000 Mega] [Mega = 1000 Kilo] [Kilo = 1000]
+     * 1 Byte =                     2^3 bit
+     * 1 KByte = 1000 byte =        2^13 bit
+     * 1 MByte =                    2^23 bit
+     */
+
+
     // This is 1010101010101010101010101010101
     int o1o1o1o1 = 0x55555555;
     // This is 10101010101010101010101010101010
     int o1o1o1o = 0xaaaaaaaa;
+
+    int wordNumber = (32 >> 5); // divide by 32
+    //0x1F == 31 == 11111
+    int bitNumber = (32 & 0x1F); // mod 32
+
 
     /**
      * This method shifts 1 over by i bits,
