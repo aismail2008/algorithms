@@ -2,6 +2,11 @@ package com.code.test.problemset.basics;
 
 import java.util.Arrays;
 
+/**
+ * Runtime O(n2) average and worst.
+ * Space O(1)􏰁􏱍􏰷􏱹􏱖􏰤􏰈􏰋 􏰋􏰏 􏰽􏰏 􏰏 􏰎􏲊􏰈􏱮􏰎􏱕􏰈 􏰎􏰷􏰃 􏱉􏱃􏱮􏱐􏱹 􏰄􏰎􏱐􏰈􏰉 􏰆􏰈􏰤􏱃􏱮􏱏􏰍 􏰋􏰏 􏰍􏰉 􏰀
+ * @param <E>
+ */
 public class BubbleSort<E> {
 
     @SuppressWarnings("unchecked")

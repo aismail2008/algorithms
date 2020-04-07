@@ -3,7 +3,8 @@ package com.code.test.problemset.basics;
 import java.util.Arrays;
 
 /**
- * Created by aliismail on 07/11/2017.
+ * Runtime O(n log n) average and worst.
+ * Space O(1)􏰁􏱍􏰷􏱹􏱖􏰤􏰈􏰋 􏰋􏰏 􏰽􏰏 􏰏 􏰎􏲊􏰈􏱮􏰎􏱕􏰈 􏰎􏰷􏰃 􏱉􏱃􏱮􏱐􏱹 􏰄􏰎􏱐􏰈􏰉 􏰆􏰈􏰤􏱃􏱮􏱏􏰍 􏰋􏰏 􏰍􏰉 􏰀
  */
 public class MergeSort {
 

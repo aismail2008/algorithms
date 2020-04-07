@@ -2,6 +2,10 @@ package com.code.test.problemset.CrackingCodingInterview6.ch7.minesweeper;
 
 import java.util.Scanner;
 
+/**
+ *
+ * Minesweeper:
+ */
 public class Game {
 	private Board board;
 	private int rows;

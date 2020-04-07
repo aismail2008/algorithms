@@ -3,21 +3,8 @@ package com.code.test.problemset.basics;
 import java.util.Arrays;
 
 /**
- * for each (unsorted) partition
- * <p>
- * set first element as pivot
- * <p>
- * storeIndex = pivotIndex + 1
- * <p>
- * for i = pivotIndex + 1 to rightmostIndex
- * <p>
- * if element[i] < element[pivot]
- * <p>
- * swap(i, storeIndex); storeIndex++
- * <p>
- * swap(pivot, storeIndex - 1)
- * <p>
- * Created by aliismail on 07/11/2017.
+ *  Runtime O(n log n) average and O(n2) worst.
+ *  Space O(1)􏰁􏱍􏰷􏱹􏱖􏰤􏰈􏰋
  */
 public class QuickSort {
     public void sort(int[] inputArr) {

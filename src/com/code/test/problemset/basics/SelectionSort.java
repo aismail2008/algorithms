@@ -3,6 +3,8 @@ package com.code.test.problemset.basics;
 import java.util.Arrays;
 
 /**
+ * Runtime O(n2) average and worst.
+ * Space O(1)
  * Created by aliismail on 07/11/2017.
  */
 public class SelectionSort {
