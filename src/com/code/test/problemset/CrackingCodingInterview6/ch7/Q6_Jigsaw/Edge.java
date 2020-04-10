@@ -1,4 +1,4 @@
-package com.code.test.problemset.CrackingCodingInterview6.ch7.Jigsaw;
+package com.code.test.problemset.CrackingCodingInterview6.ch7.Q6_Jigsaw;
 
 /**
  * Created by aliismail on 30/11/2017.
@@ -18,7 +18,9 @@ public class Edge {
     }
 
     public Edge _createMatchingEdge() {
-        if (shape == Shape.FLAT) return null;
+        if (shape == Shape.FLAT)
+            return null;
+
         return new Edge(shape.getOpposite(), getCode());
     }
 

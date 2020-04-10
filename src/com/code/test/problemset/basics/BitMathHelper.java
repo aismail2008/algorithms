@@ -10,7 +10,16 @@ public class BitMathHelper {
      * 1 Byte =                     2^3 bit
      * 1 KByte = 1000 byte =        2^13 bit
      * 1 MByte =                    2^23 bit
+     * ------------------------
+     *
+     *  - Total of (1 + 2 + ... + n) =  n * (n+1)/2
+     *  - Total of (2^0 + 2^1 + .. + s^n) = (2^(n+1)) - 1
+     * of 2
+     * ° + 2
+     * 1 + 22 + ... + 2" would, in base 2, be a sequence of (n + 1) 1 s. This is 2n+1
+     * - 1.
      */
+
 
 
     // This is 1010101010101010101010101010101

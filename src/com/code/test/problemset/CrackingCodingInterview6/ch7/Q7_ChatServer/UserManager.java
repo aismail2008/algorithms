@@ -1,4 +1,4 @@
-package com.code.test.problemset.CrackingCodingInterview6.ch7.ChatServer;
+package com.code.test.problemset.CrackingCodingInterview6.ch7.Q7_ChatServer;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -6,9 +6,10 @@ import java.util.HashMap;
 /* UserManager serves as the central place for the core user actions. */
 public class UserManager {
 	private static UserManager instance;
-	private HashMap<Integer, User> usersById = new HashMap<Integer, User>();
-	private HashMap<String, User> usersByAccountName = new HashMap<String, User>();
-	private HashMap<Integer, User> onlineUsers = new HashMap<Integer, User>();
+
+	private HashMap<Integer, User> usersById = new HashMap<>();
+	private HashMap<String, User> usersByAccountName = new HashMap<>();
+	private HashMap<Integer, User> onlineUsers = new HashMap<>();
 	
 	public static UserManager getInstance() {
 		if (instance == null) {

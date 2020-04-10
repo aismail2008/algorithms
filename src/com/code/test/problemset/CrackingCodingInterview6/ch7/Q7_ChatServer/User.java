@@ -1,4 +1,4 @@
-package com.code.test.problemset.CrackingCodingInterview6.ch7.ChatServer;
+package com.code.test.problemset.CrackingCodingInterview6.ch7.Q7_ChatServer;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -6,15 +6,17 @@ import java.util.HashMap;
 
 public class User {
 	private int id;
-	private UserStatus status = null;
-	private HashMap<Integer, PrivateChat> privateChats = new HashMap<Integer, PrivateChat>();
-	private ArrayList<GroupChat> groupChats = new ArrayList<GroupChat>();
-	private HashMap<Integer, AddRequest> receivedAddRequests = new HashMap<Integer, AddRequest>();
-	private HashMap<Integer, AddRequest> sentAddRequests = new HashMap<Integer, AddRequest>();
-	
-	private HashMap<Integer, User> contacts = new HashMap<Integer, User>();
 	private String accountName;
 	private String fullName;
+	private UserStatus status = null;
+
+	private HashMap<Integer, PrivateChat> privateChats = new HashMap<>();
+	private ArrayList<GroupChat> groupChats = new ArrayList<>();
+	private HashMap<Integer, AddRequest> receivedAddRequests = new HashMap<>();
+	private HashMap<Integer, AddRequest> sentAddRequests = new HashMap<>();
+	
+	private HashMap<Integer, User> contacts = new HashMap<>();
+
 	
 	public User(int id, String accountName, String fullName) {
 		this.accountName = accountName;

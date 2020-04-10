@@ -1,4 +1,4 @@
-package com.code.test.problemset.CrackingCodingInterview6.ch7.ChatServer;
+package com.code.test.problemset.CrackingCodingInterview6.ch7.Q7_ChatServer;
 
 /**
  * Chat Server:

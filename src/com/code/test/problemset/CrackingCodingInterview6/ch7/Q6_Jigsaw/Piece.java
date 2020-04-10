@@ -1,4 +1,4 @@
-package com.code.test.problemset.CrackingCodingInterview6.ch7.Jigsaw;
+package com.code.test.problemset.CrackingCodingInterview6.ch7.Q6_Jigsaw;
 
 /**
  * Created by aliismail on 30/11/2017.

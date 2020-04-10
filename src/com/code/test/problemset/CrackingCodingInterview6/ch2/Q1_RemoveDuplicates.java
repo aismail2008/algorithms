@@ -27,29 +27,6 @@ public class Q1_RemoveDuplicates {
         }
     }
 
-    /**
-     * https://leetcode.com/problems/remove-duplicates-from-sorted-list/
-     * @param head
-     */
-    public static void removeDuplicatesSorted(Node head) {
-
-        if (head == null || head.next == null) {
-            return;
-        }
-        Node current = head;
-        Node runner = head.next;
-
-        while (runner != null) {
-            if (current.val == runner.val) {
-                runner = runner.next;
-                current.next = runner;
-            } else {
-                current = runner;
-                runner = runner.next;
-            }
-        }
-    }
-
     public static void main(String[] args) {
         Node root = new Node(ThreadLocalRandom.current().nextInt(1, 100));
         Node current = root;

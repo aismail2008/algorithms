@@ -14,7 +14,7 @@ public class Dijkstra {
      */
     public static void computePaths(DijkstraVertex source) {
         source.minDistance = 0;
-        PriorityQueue<DijkstraVertex> dijkstraVertexPrioQueue = new PriorityQueue<DijkstraVertex>();
+        PriorityQueue<DijkstraVertex> dijkstraVertexPrioQueue = new PriorityQueue<>();
         dijkstraVertexPrioQueue.add(source);
 
         while (!dijkstraVertexPrioQueue.isEmpty()) {

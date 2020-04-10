@@ -1,6 +1,6 @@
 package com.code.test.problemset.CrackingCodingInterview6.ch2;
 
-import com.code.test.problemset.CrackingCodingInterview6.ch7.Hasher;
+import com.code.test.problemset.leetcode.Q148_ReverseLinkedList;
 
 /**
  * Sum Lists: You have two numbers represented by a linked list, where each node contains a single digit.
@@ -63,11 +63,11 @@ public class Q5_SumLists {
 
     public static void main(String[] args) {
         int value = 99617 + 295;
-        System.out.println("99617 + 295 = " +value);
+        System.out.println("99617 + 295 = " + value);
         System.out.println("Output = " + linkedListToInt(sum(toNode(99617), toNode(295))));
     }
 
-    static Node toNode(int number) {
+    public static Node toNode(int number) {
         Node node = new Node(0);
         Node root = node;
         char[] numb = String.valueOf(number).toCharArray();
@@ -82,9 +82,12 @@ public class Q5_SumLists {
         int value = 0;
         int i = 0;
         while (node != null) {
-            value += node.val * Math.pow(10,  i++);
+            value += node.val * Math.pow(10, i++);
             node = node.next;
         }
         return value;
     }
+
+    // Follow up : Idea is to revese first
+    Q148_ReverseLinkedList s = new Q148_ReverseLinkedList();
 }

@@ -7,13 +7,6 @@ package com.code.test.problemset.CrackingCodingInterview6.ch1;
  * call to isSubstring (e.g., "waterbottle" is a rotation of "erbottlewat").
  */
 public class N9_StringRotation {
-    public static boolean isSubstring(String big, String small) {
-        if (big.indexOf(small) >= 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
 
     public static boolean isRotation(String s1, String s2) {
         int len = s1.length();
@@ -21,7 +14,12 @@ public class N9_StringRotation {
         if (len == s2.length() && len > 0) {
             /* concatenate s1 and s1 within new buffer */
             String s1s1 = s1 + s1;
-            return isSubstring(s1s1, s2);
+
+            if (s1s1.indexOf(s2) >= 0) {
+                return true;
+            } else {
+                return false;
+            }
         }
         return false;
     }

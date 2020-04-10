@@ -1,12 +1,16 @@
-package com.code.test.problemset.CrackingCodingInterview6.ch2;
+package com.code.test.problemset.leetcode;
+
+import com.code.test.problemset.CrackingCodingInterview6.ch2.Node;
+import com.code.test.problemset.CrackingCodingInterview6.ch2.Q5_SumLists;
 
 import java.util.Stack;
+
 
 /**
  * Palindrome:
  * Implement a function to check if a linked list is a palindrome
  */
-public class Q6_Palindrome {
+public class Q152_PalindromeLinkedList {
 
     public static boolean isPalindrome(Node head) {
         Node fast = head;

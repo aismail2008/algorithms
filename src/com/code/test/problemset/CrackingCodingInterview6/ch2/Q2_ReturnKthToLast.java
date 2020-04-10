@@ -3,7 +3,8 @@ package com.code.test.problemset.CrackingCodingInterview6.ch2;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * Return Kth to Last: Implement an algorithm to find the kth to last element of a singly linked list.
+ * Return Kth to Last:
+ * Implement an algorithm to find the kth to last element of a singly linked list.
  */
 public class Q2_ReturnKthToLast {
 
