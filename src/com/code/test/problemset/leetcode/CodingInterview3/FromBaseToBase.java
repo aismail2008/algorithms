@@ -9,7 +9,7 @@ public class FromBaseToBase {
      * @param args
      */
     public static void main(String[] args) {
-        List<String> numb = fromBaseToBase(72, 2);
+        List<String> numb = fromBaseToBase(11, 2);
     }
 
     public static List<String> fromBaseToBase(int n, int b) {

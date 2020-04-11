@@ -20,7 +20,13 @@ public class BitMathHelper {
      * - 1.
      */
 
-
+    /**
+     * ^   : XOR 1 different 0 else
+     * ~   : Not
+     * >>  : shift without most significant bit
+     * >>> : shift with most significant bit
+     *
+     */
 
     // This is 1010101010101010101010101010101
     int o1o1o1o1 = 0x55555555;

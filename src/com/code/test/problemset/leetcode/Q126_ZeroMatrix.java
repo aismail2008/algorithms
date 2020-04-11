@@ -1,7 +1,5 @@
 package com.code.test.problemset.leetcode;
 
-import com.code.test.problemset.CrackingCodingInterview6.AssortedMethods;
-
 /**
  * Zero Matrix: Write an algorithm such that if an element in an MxN matrix is 0, its entire row and
  * column are set to 0.
@@ -78,16 +76,5 @@ public class Q126_ZeroMatrix {
     }
 
     public static void main(String[] args) {
-        int nrows = 10;
-        int ncols = 15;
-        int[][] matrix = AssortedMethods.randomMatrix(nrows, ncols, -10, 10);
-
-        AssortedMethods.printMatrix(matrix);
-
-        setZeros(matrix);
-
-        System.out.println();
-
-        AssortedMethods.printMatrix(matrix);
     }
 }
