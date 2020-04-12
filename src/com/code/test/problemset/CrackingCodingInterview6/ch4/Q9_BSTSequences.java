@@ -1,6 +1,7 @@
 package com.code.test.problemset.CrackingCodingInterview6.ch4;
 
 import com.code.test.problemset.basics.datastructure.Node;
+import com.code.test.problemset.leetcode.Hard;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -16,6 +17,7 @@ import java.util.LinkedList;
  *           (1)  (3)
  * Output: {2, 1, 3}, {2, 3, 1}
  */
+@Hard
 public class Q9_BSTSequences {
 
     public static void weaveLists(LinkedList<Integer> first, LinkedList<Integer> second, ArrayList<LinkedList<Integer>> results, LinkedList<Integer> prefix) {
@@ -48,14 +50,14 @@ public class Q9_BSTSequences {
     }
 
     public static ArrayList<LinkedList<Integer>> allSequences(Node node) {
-        ArrayList<LinkedList<Integer>> result = new ArrayList<LinkedList<Integer>>();
+        ArrayList<LinkedList<Integer>> result = new ArrayList<>();
 
         if (node == null) {
-            result.add(new LinkedList<Integer>());
+            result.add(new LinkedList<>());
             return result;
         }
 
-        LinkedList<Integer> prefix = new LinkedList<Integer>();
+        LinkedList<Integer> prefix = new LinkedList<>();
         prefix.add(node.key);
 
         /* Recurse on left and right subtrees. */
@@ -65,7 +67,7 @@ public class Q9_BSTSequences {
         /* Weave together each list from the left and right sides. */
         for (LinkedList<Integer> left : leftSeq) {
             for (LinkedList<Integer> right : rightSeq) {
-                ArrayList<LinkedList<Integer>> weaved = new ArrayList<LinkedList<Integer>>();
+                ArrayList<LinkedList<Integer>> weaved = new ArrayList<>();
                 weaveLists(left, right, weaved, prefix);
                 result.addAll(weaved);
             }

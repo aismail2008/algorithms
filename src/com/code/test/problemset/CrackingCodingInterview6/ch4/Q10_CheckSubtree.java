@@ -12,25 +12,24 @@ import com.code.test.problemset.basics.datastructure.Node;
 public class Q10_CheckSubtree {
 
     static class SolutionA {
-
         public static boolean containsTree(Node t1, Node t2) {
             StringBuilder string1 = new StringBuilder();
             StringBuilder string2 = new StringBuilder();
 
-            getOrderString(t1, string1);
-            getOrderString(t2, string2);
+            getOrderStringPreOrder(t1, string1);
+            getOrderStringPreOrder(t2, string2);
 
             return string1.indexOf(string2.toString()) != -1;
         }
 
-        public static void getOrderString(Node node, StringBuilder sb) {
+        public static void getOrderStringPreOrder(Node node, StringBuilder sb) {
             if (node == null) {
                 sb.append("X");             // Add null indicator
                 return;
             }
             sb.append(node.key);           // Add root
-            getOrderString(node.left, sb);  // Add left
-            getOrderString(node.right, sb); // Add right
+            getOrderStringPreOrder(node.left, sb);  // Add left
+            getOrderStringPreOrder(node.right, sb); // Add right
         }
     }
 

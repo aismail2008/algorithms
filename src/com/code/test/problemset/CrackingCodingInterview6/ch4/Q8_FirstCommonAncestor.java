@@ -18,6 +18,7 @@ public class Q8_FirstCommonAncestor {
         }
     }
 
+    //Node with link to parent
     static class SolutionB {
         public static Node commonAncestor(Node p, Node q) {
             int delta = depth(p) - depth(q); // get difference in depths
@@ -49,25 +50,55 @@ public class Q8_FirstCommonAncestor {
         }
     }
 
+    // No link to parent
+    static class NoParentSolution{
+        public static Node commonAncestor(Node root, Node p, Node q) {
+            if (!covers(root, p) || !covers(root, q)) { // Error check - one node is not in tree
+                return null;
+            }
+            return ancestorHelper(root, p, q);
+        }
+
+        public static Node ancestorHelper(Node root, Node p, Node q) {
+            if (root == null || root == p || root == q) {
+                return root;
+            }
+
+            boolean pIsOnLeft = covers(root.left, p);
+            boolean qIsOnLeft = covers(root.left, q);
+            if (pIsOnLeft != qIsOnLeft) { // Nodes are on different side
+                return root;
+            }
+            Node childSide = pIsOnLeft ? root.left : root.right;
+            return ancestorHelper(childSide, p, q);
+        }
+
+        public static boolean covers(Node root, Node p) {
+            if (root == null) return false;
+            if (root == p) return true;
+            return covers(root.left, p) || covers(root.right, p);
+        }
+    }
+
     static class SolutionA {
-        public static Node commonAncestor(Node p, Node q) {
-            if (p == q) return p;
-
-            Node ancestor = p;
-            while (ancestor != null) {
-                if (isOnPath(ancestor, q)) {
-                    return ancestor;
-                }
-                ancestor = ancestor.parent;
-            }
-            return null;
-        }
-
-        public static boolean isOnPath(Node ancestor, Node node) {
-            while (node != ancestor && node != null) {
-                node = node.parent;
-            }
-            return node == ancestor;
-        }
+//        public static Node commonAncestor(Node p, Node q) {
+//            if (p == q) return p;
+//
+//            Node ancestor = p;
+//            while (ancestor != null) {
+//                if (isOnPath(ancestor, q)) {
+//                    return ancestor;
+//                }
+//                ancestor = ancestor.parent;
+//            }
+//            return null;
+//        }
+//
+//        public static boolean isOnPath(Node ancestor, Node node) {
+//            while (node != ancestor && node != null) {
+//                node = node.parent;
+//            }
+//            return node == ancestor;
+//        }
     }
 }

@@ -1,5 +1,7 @@
 package com.code.test.problemset.basics.datastructure;
 
+import java.util.Stack;
+
 public class BinarySearchTree {
     // Root of BST
     private Node root = null;
@@ -80,6 +82,7 @@ public class BinarySearchTree {
         inorderRec(root);
     }
 
+    //----------------------
     // A utility function to do inorder traversal of BST
     void inorderRec(Node root) {
         if (root != null) {
@@ -88,6 +91,120 @@ public class BinarySearchTree {
             inorderRec(root.right);
         }
     }
+
+    void inorderIter() {
+        if (root == null)
+            return;
+
+        Stack<Node> s = new Stack<>();
+        Node curr = root;
+
+        // traverse the tree
+        while (curr != null || s.size() > 0) {
+
+            /* Reach the left most Node of the
+            curr Node */
+            while (curr != null) {
+                /* place pointer to a tree node on
+                   the stack before traversing
+                  the node's left subtree */
+                s.push(curr);
+                curr = curr.left;
+            }
+
+            /* Current must be NULL at this point */
+            curr = s.pop();
+
+            System.out.print(curr.key + " ");
+
+            /* we have visited the node and its
+               left subtree.  Now, it's right
+               subtree's turn */
+            curr = curr.right;
+        }
+    }
+
+    //----------------------
+    void preOrderRec(Node root) {
+        if (root != null) {
+            System.out.print(root.key + " ");
+            preOrderRec(root.left);
+            preOrderRec(root.right);
+        }
+    }
+
+    void preOrderIter() {
+        // Base Case
+        if (root == null) {
+            return;
+        }
+
+        // Create an empty stack and push root to it
+        Stack<Node> nodeStack = new Stack<>();
+        nodeStack.push(root);
+
+        /* Pop all items one by one. Do following for every popped item
+         a) print it
+         b) push its right child
+         c) push its left child
+         Note that right child is pushed first so that left is processed first */
+        while (!nodeStack.empty()) {
+
+            // Pop the top item from stack and print it
+            Node mynode = nodeStack.pop();
+            System.out.print(mynode.key + " ");
+
+            // Push right and left children of the popped node to stack
+            if (mynode.right != null) {
+                nodeStack.push(mynode.right);
+            }
+            if (mynode.left != null) {
+                nodeStack.push(mynode.left);
+            }
+        }
+    }
+
+    //----------------------
+    void postOrderRec(Node root) {
+        if (root != null) {
+            inorderRec(root.left);
+            inorderRec(root.right);
+            System.out.print(root.key + " ");
+        }
+    }
+
+    void postOrderIterative() {
+        // Create two stacks
+        Stack<Node> s1 = new Stack<>();
+        Stack<Node> s2 = new Stack<>();
+
+        if (root == null)
+            return;
+
+        // push root to first stack
+        s1.push(root);
+
+        // Run while first stack is not empty
+        while (!s1.isEmpty()) {
+            // Pop an item from s1 and push it to s2
+            Node temp = s1.pop();
+            s2.push(temp);
+
+            // Push left and right children of
+            // removed item to s1
+            if (temp.left != null)
+                s1.push(temp.left);
+            if (temp.right != null)
+                s1.push(temp.right);
+        }
+
+        // Print all elements of second stack
+        while (!s2.isEmpty()) {
+            Node temp = s2.pop();
+            System.out.print(temp.key + " ");
+        }
+    }
+    //----------------------
 
     // Driver Program to test above functions
     public static void main(String[] args) {
@@ -115,6 +232,11 @@ public class BinarySearchTree {
 
         System.out.println("Inorder traversal of the given tree");
         tree.inorder();
+        tree.inorderIter();
+
+        System.out.println("preOrder traversal of the given tree");
+        tree.preOrderRec(tree.root);
+        tree.preOrderIter();
 
         System.out.println("\nDelete 20");
         tree.deleteKey(20);

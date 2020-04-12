@@ -43,7 +43,7 @@ public class Q1_RouteBetweenNodes {
 
     public static boolean bfs(GraphNode root, GraphNode target) {
         // Since queue is a interface
-        Queue<GraphNode> queue = new LinkedList<GraphNode>();
+        Queue<GraphNode> queue = new LinkedList<>();
 
         if (root == null)
             return false;

@@ -3,7 +3,10 @@ package com.code.test.problemset.CrackingCodingInterview6.ch4;
 import com.code.test.problemset.basics.datastructure.GraphNode;
 import com.code.test.problemset.basics.datastructure.State;
 
-import java.util.*;
+import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Queue;
 import java.util.stream.Collectors;
 
 /**
@@ -12,7 +15,7 @@ import java.util.stream.Collectors;
  * design an algorithm which creates a linked list of all the nodes at each depth
  * (e.g., if you have a tree with depth D, you'll have D linked lists).
  */
-public class Q3_ListofDepths {
+public class Q3_ListOfDepths {
 
     public static void bfs(GraphNode root) {
         // Since queue is a interface
@@ -24,7 +27,7 @@ public class Q3_ListofDepths {
         root.state = State.Visited;
         // Adds to end of queue
         queue.add(root);
-        Map<GraphNode, Integer> level = new HashMap<>();
+        Map<GraphNode, Integer> level = new LinkedHashMap<>();
         level.put(root, 0);
         while (!queue.isEmpty()) {
             // removes from front of queue

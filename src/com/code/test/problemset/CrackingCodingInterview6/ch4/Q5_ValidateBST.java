@@ -35,8 +35,8 @@ public class Q5_ValidateBST {
             return true;
         }
 
-        if ((min != null && n.key <= min) // Left Child must follow min < key <=  max
-                || (max != null && n.key >= max)){ // Right Child must follow min < key <=  max
+        if ((min != null && n.key <= min) // Left Child must follow null < key <=  max
+                || (max != null && n.key >= max)){ // Right Child must follow min < key <=  null
             return false;
         }
 

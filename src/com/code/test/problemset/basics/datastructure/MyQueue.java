@@ -1,4 +1,4 @@
-package com.code.test.problemset.CrackingCodingInterview6.ch3;
+package com.code.test.problemset.basics.datastructure;
 
 import java.util.NoSuchElementException;
 

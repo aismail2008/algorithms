@@ -3,7 +3,8 @@ package com.code.test.problemset.CrackingCodingInterview6.ch3;
 import java.util.EmptyStackException;
 
 /**
- * Three in One: Describe how you could use a single array to implement three stacks.
+ * Three in One:
+ *      Describe how you could use a single array to implement three stacks.
  */
 
 class FullStackException extends Exception {
