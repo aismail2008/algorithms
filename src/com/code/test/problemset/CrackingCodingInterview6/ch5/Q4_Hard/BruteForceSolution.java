@@ -2,6 +2,11 @@ package com.code.test.problemset.CrackingCodingInterview6.ch5.Q4_Hard;
 
 import com.code.test.problemset.leetcode.Hard;
 
+/**
+ * Next Number:
+ * Given a positive integer, print the next smallest and the next largest number that
+ * have the same number of 1 bits in their binary representation.
+ */
 @Hard
 public class BruteForceSolution {
 
@@ -15,10 +20,6 @@ public class BruteForceSolution {
 		}
 		return count;
 	}
-	
-	public static int countZeros(int i) {
-		return 32 - countOnes(i);
-	}	
 	
 	public static boolean hasValidNext(int i) {
 		if (i == 0) {

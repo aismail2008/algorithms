@@ -50,39 +50,39 @@ public class Q111_Search2DMatrixII {
             return helper(matrix, i1, i2, j1, j2, target);
         }
 
-        public boolean helper(int[][] matrix, int i1, int i2, int j1, int j2, int target) {
+        public boolean helper(int[][] matrix, int i0, int in, int j0, int jn, int target) {
 
-            if (i1 > i2 || j1 > j2)
+            if (i0 > in || j0 > jn)
                 return false;
 
-            for (int j = j1; j <= j2; j++) {
-                if (target < matrix[i1][j]) {
-                    return helper(matrix, i1, i2, j1, j - 1, target);
-                } else if (target == matrix[i1][j]) {
+            for (int j = j0; j <= jn; j++) {
+                if (target < matrix[i0][j]) {
+                    return helper(matrix, i0, in, j0, j - 1, target);
+                } else if (target == matrix[i0][j]) {
                     return true;
                 }
             }
 
-            for (int i = i1; i <= i2; i++) {
-                if (target < matrix[i][j1]) {
-                    return helper(matrix, i1, i - 1, j1, j2, target);
-                } else if (target == matrix[i][j1]) {
+            for (int i = i0; i <= in; i++) {
+                if (target < matrix[i][j0]) {
+                    return helper(matrix, i0, i - 1, j0, jn, target);
+                } else if (target == matrix[i][j0]) {
                     return true;
                 }
             }
 
-            for (int j = j1; j <= j2; j++) {
-                if (target > matrix[i2][j]) {
-                    return helper(matrix, i1, i2, j + 1, j2, target);
-                } else if (target == matrix[i2][j]) {
+            for (int j = j0; j <= jn; j++) {
+                if (target > matrix[in][j]) {
+                    return helper(matrix, i0, in, j + 1, jn, target);
+                } else if (target == matrix[in][j]) {
                     return true;
                 }
             }
 
-            for (int i = i1; i <= i2; i++) {
-                if (target > matrix[i][j2]) {
-                    return helper(matrix, i1, i + 1, j1, j2, target);
-                } else if (target == matrix[i][j2]) {
+            for (int i = i0; i <= in; i++) {
+                if (target > matrix[i][jn]) {
+                    return helper(matrix, i0, i + 1, j0, jn, target);
+                } else if (target == matrix[i][jn]) {
                     return true;
                 }
             }

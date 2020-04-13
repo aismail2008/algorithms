@@ -29,20 +29,17 @@ public class Q98_GroupAanagrams {
     }
 
     public static String[] groupAnagrams(String[] str) {
-        Arrays.sort(str, new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                if (o1.length() != o2.length())
-                    return o1.compareTo(o2);
+        Arrays.sort(str, (o1, o2) -> {
+            if (o1.length() != o2.length())
+                return o1.compareTo(o2);
 
-                char[] o1arr = o1.toCharArray();
-                Arrays.sort(o1arr);
+            char[] o1arr = o1.toCharArray();
+            Arrays.sort(o1arr);
 
-                char[] o2arr = o2.toCharArray();
-                Arrays.sort(o2arr);
+            char[] o2arr = o2.toCharArray();
+            Arrays.sort(o2arr);
 
-                return new String(o2arr).compareTo(new String(o1arr));
-            }
+            return new String(o2arr).compareTo(new String(o1arr));
         });
 
         return str;

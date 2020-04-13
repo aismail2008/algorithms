@@ -6,6 +6,8 @@ import java.util.Arrays;
  * Triple Step:
  * A child is running up a staircase with n steps and can hop either 1 step, 2 steps, or 3 steps at a time.
  * Implement a method to count how many possible ways the child can run up the stairs.
+ *
+ * https://leetcode.com/problems/nim-game/
  */
 public class Q1_TripleStep {
 
@@ -38,7 +40,6 @@ public class Q1_TripleStep {
             return memo[n];
         }
     }
-
 
     public static void main(String[] args) {
         int n = 20;

@@ -1,6 +1,8 @@
 package com.code.test.problemset.leetcode;
 
 
+import com.code.test.problemset.CrackingCodingInterview6.ch8.Q1_TripleStep;
+
 public class _Mockup2 {
 
     public static void main(String[] args) {
@@ -26,8 +28,10 @@ public class _Mockup2 {
      * removed by your friend.
      *
      * https://leetcode.com/problems/nim-game/
+     *  //          Q1_TripleStep               //
      */
     static class SolutionA {
+
         public boolean canWinNim(int n) {
             if (n % 4 == 0)
                 return false;

@@ -10,7 +10,7 @@ import java.util.Arrays;
  * Note:
  * You may assume that A has enough space to hold additional elements from B.
  * The number of elements initialized in A and B are m and n respectively.
- *
+ * <p>
  * https://leetcode.com/problems/merge-sorted-array
  */
 public class Q16_MergeSortedArray {
@@ -24,7 +24,7 @@ public class Q16_MergeSortedArray {
 
     public static void merge(int[] a, int n, int[] b, int m) {
         m = m - 1;
-        n = n -1;
+        n = n - 1;
         int h = a.length - 1;
         while (h >= 0 && m >= 0 && n >= 0) {
             if (b[m] > a[n]) {

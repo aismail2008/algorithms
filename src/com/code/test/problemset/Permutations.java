@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Permutations {
 
@@ -16,76 +17,66 @@ public class Permutations {
             s = br.readLine();
 
             System.out.println("Permutations are :");
-            permutationIterative(s);
+            permutationIterative(s).stream().forEach(System.out::println);
+            System.out.println("Permutations are :");
+            permutations(s).stream().forEach(System.out::println);
         }
     }
     //----------------------1st
 
-    public static void permutations(String s){
-        permutations(s,"");
+    public static List<String> permutations(String s) {
+        permutations(s, "");
+        return permutationsList.stream().collect(Collectors.toList());
     }
 
-    public static void permutations(String s, String prefix){
-        if(s.length() == 0){
-            System.out.println(prefix);
-        }else{
+    static Set<String> permutationsList = new HashSet<>();
+
+    public static void permutations(String s, String prefix) {
+        if (s.length() == 0) {
+            permutationsList.add(prefix);
+        } else {
             for (int i = 0; i < s.length(); i++) {
-                String rem = s.substring(0, i) + s.substring(i+1);
+                String rem = s.substring(0, i) + s.substring(i + 1);
                 permutations(rem, prefix + s.charAt(i));
             }
         }
     }
+
     //----------------------2st
     public static class Node {
         String prefix;
         String remain;
     }
 
-    public static Deque<Node> permutationIterative(String s) {
-        String sol = "";
+    public static List<String> permutationIterative(String s) {
+        Set<String> solutions = new HashSet<>();
         Node n = new Node();
         n.prefix = "";
         n.remain = s;
-        Deque<Node> q = new LinkedList<Node>();
+        Deque<Node> q = new LinkedList<>();
         q.add(n);
         while (!q.isEmpty()) {
             n = q.poll();
-            if (n.remain.length() == 1) {
-                if ((n.prefix + n.remain).compareTo(s) > 0)
-                    if (sol.equals("") || (n.prefix + n.remain).compareTo(s) < 0)
-                        sol = n.prefix + n.remain;
+
+            if (n.remain.length() == 0) {
+                solutions.add(n.prefix);
             } else {
                 for (int i = n.remain.length() - 1; i >= 0; i--) {
                     Node child = new Node();
-                    child.prefix = n.prefix + n.remain.substring(i, i + 1);
-                    child.remain = n.remain.substring(0, i) + n.remain.substring(i + 1, n.remain.length());
+                    child.prefix = n.prefix + n.remain.charAt(i);
+                    child.remain = n.remain.substring(0, i) + n.remain.substring(i + 1);
                     q.addFirst(child);
                 }
             }
         }
-        return q;
-    }
-    //----------------------3nd
-    private static String permutation(String prefix, String str, String solution, String orginal) {
-        int n = str.length();
-        if (n == 0) {
-            if (prefix.compareTo(orginal) > 0) {
-                if (solution.equals("") || prefix.compareTo(solution) < 0)
-                    solution = prefix;
-            }
-        } else {
-            for (int i = 0; i < n; i++)
-                if (((prefix + str.charAt(i)).compareTo(orginal.substring(0, prefix.length() + 1)) > 0))
-                    solution = permutation(prefix + str.charAt(i), str.substring(0, i) + str.substring(i + 1, n), solution, orginal);
-        }
-
-        return solution;
+        return solutions.stream().collect(Collectors.toList());
     }
 
+    ////////////////////////// ??///////////////////////////
     public static int solution(int n) {
         int max = (int) Math.ceil(Math.sqrt(n));
 
-        Set<Integer> sortedSet = new TreeSet<Integer>();
+        Set<Integer> sortedSet = new TreeSet<>();
         for (int p = 0; p < n / 2; p++) {
             for (int q = 0; q < n / 2; q++) {
                 sortedSet.add((int) (Math.pow(2, p) * Math.pow(3, q)));

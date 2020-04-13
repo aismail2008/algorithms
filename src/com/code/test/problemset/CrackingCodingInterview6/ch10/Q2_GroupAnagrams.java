@@ -24,6 +24,5 @@ import com.code.test.problemset.leetcode.Q98_GroupAanagrams;
 public class Q2_GroupAnagrams {
     public static void main(String[] args) {
         Q98_GroupAanagrams.groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"});
-        Q98_GroupAanagrams.sort(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"});
     }
 }

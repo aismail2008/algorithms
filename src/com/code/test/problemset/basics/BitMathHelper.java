@@ -3,10 +3,18 @@ package com.code.test.problemset.basics;
 public class BitMathHelper {
 
     /**
+     * ^   : XOR 1 different 0 else
+     * ~   : Not
+     * >>  : shift without most significant bit
+     * >>> : shift with most significant bit
+     * -x: flip then add 1 => two's complement
+     */
+
+    /**
      * https://www.aqua-calc.com/page/powers-of-two
      *
      * 1000 ~= 2^10
-     *      [Giga = 1000 Mega] [Mega = 1000 Kilo] [Kilo = 1000]
+     * [Giga = 1000 Mega] [Mega = 1000 Kilo] [Kilo = 1000]
      * 1 Byte =                     2^3 bit
      * 1 KByte = 1000 byte =        2^13 bit
      * 1 MByte =                    2^23 bit
@@ -20,20 +28,13 @@ public class BitMathHelper {
      * - 1.
      */
 
-    /**
-     * ^   : XOR 1 different 0 else
-     * ~   : Not
-     * >>  : shift without most significant bit
-     * >>> : shift with most significant bit
-     *
-     */
 
     // This is 1010101010101010101010101010101
     int o1o1o1o1 = 0x55555555;
     // This is 10101010101010101010101010101010
     int o1o1o1o = 0xaaaaaaaa;
 
-    int wordNumber = (32 >> 5); // divide by 32
+    int wordNumber = (32 >> 5); // divide by 32  == power(2,5)
     //0x1F == 31 == 11111
     int bitNumber = (32 & 0x1F); // mod 32
 
@@ -59,7 +60,7 @@ public class BitMathHelper {
     }
 
     /**
-     * Clear Bit
+     * Clear Bit == set bit 0
      * This method operates in almost the reverse of setBit.
      * First, we create a number like 11101111 by creating the reverse of it (00010000) and negating it.
      * Then, we perform an AND with num. This will clear the ith bit and leave the remainder unchanged.
@@ -67,10 +68,6 @@ public class BitMathHelper {
     int clearBit(int num, int i) {
         int mask = ~(1 << i);
         return num & mask;
-    }
-
-    public static void main(String[] args) {
-        clearBitsIThrough0(5, 3);
     }
 
     /**
@@ -83,6 +80,7 @@ public class BitMathHelper {
      */
     static int clearBitsMSBthroughI(int num, int i) {
         int mask = (1 << i) - 1;
+//        int mask = ~(1 << i);
         return num & mask;
     }
 

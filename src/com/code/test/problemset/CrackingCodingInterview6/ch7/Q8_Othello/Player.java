@@ -1,4 +1,4 @@
-package com.code.test.problemset.CrackingCodingInterview6.ch7.Othello;
+package com.code.test.problemset.CrackingCodingInterview6.ch7.Q8_Othello;
 
 public class Player {
 	private Color color;

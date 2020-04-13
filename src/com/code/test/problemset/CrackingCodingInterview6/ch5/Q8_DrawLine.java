@@ -1,5 +1,7 @@
 package com.code.test.problemset.CrackingCodingInterview6.ch5;
 
+import com.code.test.problemset.leetcode.Hard;
+
 /**
  * Draw Line:
  * A monochrome screen is stored as a single array of bytes,
@@ -10,7 +12,8 @@ package com.code.test.problemset.CrackingCodingInterview6.ch5;
  * The method signature should look something like:
  * drawLine(byte[] screen, int width, int xl, int x2, int y)
  */
-public class Q8_DrawLine_Hard {
+@Hard
+public class Q8_DrawLine {
 	public static int computeByteNum(int width, int x, int y) {
 		return (width * y + x) / 8;
 	}

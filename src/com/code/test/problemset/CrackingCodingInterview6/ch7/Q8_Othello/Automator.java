@@ -1,4 +1,4 @@
-package com.code.test.problemset.CrackingCodingInterview6.ch7.Othello;
+package com.code.test.problemset.CrackingCodingInterview6.ch7.Q8_Othello;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Automator {
     private Player[] players;
     private Player lastPlayer = null;
-    public ArrayList<Location> remainingMoves = new ArrayList<Location>();
+    public ArrayList<Location> remainingMoves = new ArrayList<>();
     private static Automator instance;
 
     private Automator() {
