@@ -1,9 +1,7 @@
 package com.code.test.problemset.CrackingCodingInterview6.ch8;
 
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Robot in a Grid:
@@ -14,11 +12,10 @@ import java.util.Set;
  */
 public class Q2_RobotInGrid {
 
-
     public static ArrayList<Point> getPath(boolean[][] maze) {
         if (maze == null || maze.length == 0) return null;
-        ArrayList<Point> path = new ArrayList<Point>();
-        Set<Point> failedPoints = new HashSet<Point>();
+        ArrayList<Point> path = new ArrayList<>();
+        Set<Point> failedPoints = new HashSet<>();
         if (getPath(maze, maze.length - 1, maze[0].length - 1, path, failedPoints)) {
             return path;
         }
@@ -51,5 +48,40 @@ public class Q2_RobotInGrid {
     }
 
     public static void main(String[] args) {
+    }
+
+    static class solutionA {
+        public static ArrayList<Point> getPath(boolean[][] maze) {
+            Point start = new Point(0, 0);
+            ArrayList<Point> path = new ArrayList<>();
+            Set<Point> failedPaths = new HashSet<>();
+
+            if (getPath(maze, start.x, start.y, path, failedPaths))
+                return path;
+
+            return null;
+        }
+
+        public static boolean getPath(boolean[][] maze, int row, int col, ArrayList<Point> path, Set<Point> failedPaths) {
+            if (row == maze.length - 1 && col == maze.length - 1) {
+                path.add(new Point(row, col));
+                return true;
+            }
+
+            if (row >= maze.length || col >= maze.length || failedPaths.contains(new Point(row, col))) {
+                return false;
+            }
+
+            if (getPath(maze, row, col + 1, path, failedPaths)) {
+                path.add(new Point(row, col));
+                return true;
+            } else if (getPath(maze, row + 1, col, path, failedPaths)) {
+                path.add(new Point(row, col));
+                return true;
+            }
+
+            failedPaths.add(new Point(row, col));
+            return false;
+        }
     }
 }

@@ -50,5 +50,4 @@ public class Q245_Subsets {
             allSets(arr, i + 1, cur);
         }
     }
-    //-------------Ali----------//
 }

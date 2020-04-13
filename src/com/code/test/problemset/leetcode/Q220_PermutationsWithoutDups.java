@@ -1,8 +1,7 @@
 package com.code.test.problemset.leetcode;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Permutations without Dups:
@@ -13,134 +12,70 @@ import java.util.List;
 public class Q220_PermutationsWithoutDups {
     public List<String> perm = new ArrayList<>();
 
-    public List<String> stringPermutations(String str) {
-        if (str == null) {
-            return new ArrayList<>();
-        }
-        if (str.length() <= 1) {
-            List<String> res = new ArrayList<>();
-            res.add(str);
-            return res;
+    public static class UniquePermutationsStr {
+
+        public static void main(String[] args) {
+            permutations("aebc").forEach(System.out::println);
         }
 
-        for (int i = 0; i < str.length(); i++) {
-            String rem = str.substring(0, i) + str.substring(i + 1);
-            List<String> list = subStringPermutations(rem);
-            for (String s : list) {
-                perm.add(str.charAt(i) + s);
+        public static List<String> permutations(String s) {
+            permutations(s, "");
+            return permutationsList.stream().collect(Collectors.toList());
+        }
+
+        static Set<String> permutationsList = new HashSet<>();
+
+        public static void permutations(String s, String prefix) {
+            if (s.length() == 0) {
+                permutationsList.add(prefix);
+            } else {
+                for (int i = 0; i < s.length(); i++) {
+                    String rem = s.substring(0, i) + s.substring(i + 1);
+                    permutations(rem, prefix + s.charAt(i));
+                }
             }
         }
-
-        return perm;
     }
 
-    public List<String> subStringPermutations(String str) {
-        if (str == null) {
-            return new ArrayList<>();
-        }
-        if (str.length() <= 1) {
-            List<String> res = new ArrayList<>();
-            res.add(str);
-            return res;
-        }
+    public static class UniquePermutationsNum {
 
-        List<String> result = new ArrayList<>();
-
-        for (int i = 0; i < str.length(); i++) {
-            String rem = str.substring(0, i) + str.substring(i + 1);
-            List<String> subList = subStringPermutations(rem);
-            for (String s : subList) {
-                result.add(str.charAt(i) + s);
-            }
+        public static void main(String[] args) {
+            permutations(new int[]{1, 2, 3}).forEach(l -> {
+                l.forEach(i -> System.out.print(i + "-"));
+                System.out.println();
+            });
         }
 
-        return result;
-    }
-
-    public static void main(String[] args) {
-        Q221_PermutationsWithDups nd = new Q221_PermutationsWithDups();
-        nd.stringPermutations("aebc");
-        System.out.println("=====Size : n! " + nd.perm.size() + "=======");
-        for (String s : nd.perm) {
-            System.out.println(s);
+        public static List<List<Integer>> permutations(int[] s) {
+            permutations(s, new ArrayList<>());
+            return permutationsList.stream().collect(Collectors.toList());
         }
-        System.out.println("============");
 
-        PermutationsNumber q = new PermutationsNumber();
-        q.permute(new int[]{1, 2, 3});
-        for (List<Integer> s : q.permArr) {
-            s.forEach(i -> System.out.print(1 + ","));
-            System.out.println();
-        }
-        System.out.println("============");
-    }
+        static Set<List<Integer>> permutationsList = new HashSet<>();
 
-    static class PermutationsNumber {
-        public List<List<Integer>> permArr = new ArrayList<>();
-
-        public List<List<Integer>> permute(int[] nums) {
-            if (nums == null) {
-                return permArr;
-            }
-            if (nums.length <= 1) {
-                List<Integer> l = new ArrayList<>();
-                Arrays.stream(nums).forEach(i -> l.add(i));
-                permArr.add(l);
-                return permArr;
-            }
-
-            for (int i = 0; i < nums.length; i++) {
-                int[] rem = new int[nums.length - 1];
-                int h = 0;
-                for (int j = 0; j < rem.length; j++) {
-                    if (h == i) {
-                        h++;
-                    }
-                    rem[j] = nums[h++];
-                }
-
-                List<List<Integer>> list = subStringPermutations(rem);
-                for (List<Integer> s : list) {
-                    s.add(0, nums[i]);
-                    permArr.add(s);
+        public static void permutations(int[] s, List<Integer> prefix) {
+            if (s.length == 0) {
+                permutationsList.add(prefix);
+            } else {
+                for (int i = 0; i < s.length; i++) {
+                    int[] rem = copyArrayExceptI(i, s);
+                    List<Integer> iPrefix = new ArrayList<>(prefix);
+                    iPrefix.add(s[i]);
+                    permutations(rem, iPrefix);
                 }
             }
-
-            return permArr;
         }
 
-        public List<List<Integer>> subStringPermutations(int[] nums) {
-            if (nums == null) {
-                return new ArrayList<>();
-            }
-            if (nums.length <= 1) {
-                List<Integer> l = new ArrayList<>();
-                Arrays.stream(nums).forEach(i -> l.add(i));
-                List<List<Integer>> res = new ArrayList<>();
-                res.add(l);
-                return res;
-            }
-
-            List<List<Integer>> result = new ArrayList<>();
-
-            for (int i = 0; i < nums.length; i++) {
-                int[] rem = new int[nums.length - 1];
-                int h = 0;
-                for (int j = 0; j < rem.length; j++) {
-                    if (h == i) {
-                        h++;
-                    }
-                    rem[j] = nums[h++];
+        private static int[] copyArrayExceptI(int i, int[] arr) {
+            int[] newArr = new int[arr.length - 1];
+            int h = 0;
+            for (int j = 0; j < newArr.length; j++) {
+                if (h == i) {
+                    h++;
                 }
-
-                List<List<Integer>> subList = subStringPermutations(rem);
-                for (List<Integer> s : subList) {
-                    s.add(0, nums[i]);
-                    result.add(s);
-                }
+                newArr[j] = arr[h++];
             }
-
-            return result;
+            return newArr;
         }
     }
 }

@@ -30,41 +30,33 @@ public class Q14_BooleanEvaluation {
 
             int subWays = 0;
             if (c == '^') { // required: one true and one false
+                int leftTrue = countEval(left, true);
+                int leftFalse = countEval(left, false);
+                int rightTrue = countEval(right, true);
+                int rightFalse = countEval(right, false);
                 if (result) {
-                    int leftTrue = countEval(left, true);
-                    int leftFalse = countEval(left, false);
-                    int rightTrue = countEval(right, true);
-                    int rightFalse = countEval(right, false);
                     subWays = leftTrue * rightFalse + leftFalse * rightTrue;
                 } else {
-                    int leftTrue = countEval(left, true);
-                    int leftFalse = countEval(left, false);
-                    int rightTrue = countEval(right, true);
-                    int rightFalse = countEval(right, false);
                     subWays = leftTrue * rightTrue + leftFalse * rightFalse;
                 }
             } else if (c == '&') { // required: both true
+                int leftTrue = countEval(left, true);
+                int rightTrue = countEval(right, true);
                 if (result) {
-                    int leftTrue = countEval(left, true);
-                    int rightTrue = countEval(right, true);
                     subWays = leftTrue * rightTrue;
                 } else {
-                    int leftTrue = countEval(left, true);
                     int leftFalse = countEval(left, false);
-                    int rightTrue = countEval(right, true);
                     int rightFalse = countEval(right, false);
                     subWays = leftTrue * rightFalse + leftFalse * rightTrue + leftFalse * rightFalse;
                 }
             } else if (c == '|') { // required: anything but both false
+                int leftFalse = countEval(left, false);
+                int rightFalse = countEval(right, false);
                 if (result) {
                     int leftTrue = countEval(left, true);
-                    int leftFalse = countEval(left, false);
                     int rightTrue = countEval(right, true);
-                    int rightFalse = countEval(right, false);
                     subWays = leftTrue * rightFalse + leftFalse * rightTrue + leftTrue * rightTrue;
                 } else {
-                    int leftFalse = countEval(left, false);
-                    int rightFalse = countEval(right, false);
                     subWays = leftFalse * rightFalse;
                 }
             }

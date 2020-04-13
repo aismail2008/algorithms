@@ -7,9 +7,9 @@ package com.code.test.problemset.CrackingCodingInterview6.ch8;
  */
 public class Q11_Coins {
 
-    public static int makeChange(int amount, int[] denoms, int index, int[][] map) {
-        if (map[amount][index] > 0) {//retrieve value
-            return map[amount][index];
+    public static int makeChange(int amount, int[] denoms, int index, int[][] memory) {
+        if (memory[amount][index] > 0) {//retrieve value
+            return memory[amount][index];
         }
 
         int denomAmount = denoms[index];
@@ -19,10 +19,10 @@ public class Q11_Coins {
 
         int ways = 0;
         for (int i = 0; i * denomAmount <= amount; i++) {
-            ways += makeChange(amount - denomAmount * i, denoms, index + 1, map);
+            ways += makeChange(amount - denomAmount * i, denoms, index + 1, memory);
         }
 
-        map[amount][index] = ways;
+        memory[amount][index] = ways;
         return ways;
     }
 
