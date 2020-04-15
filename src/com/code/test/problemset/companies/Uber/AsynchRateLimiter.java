@@ -1,5 +1,6 @@
 package com.code.test.problemset.companies.Uber;
 
+import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
@@ -63,7 +64,7 @@ public class AsynchRateLimiter {
     }
 
     //------------------------------------//
-    class RateLimiter {
+    /*class RateLimiter {
         private final double fillRatePerMs;
         private final double maxBudget;
         private double currentBudget;
@@ -76,11 +77,11 @@ public class AsynchRateLimiter {
             this.lastUpdateTime = System.currentTimeMillis();
         }
 
-        /**
+        *//**
          * Attempt to consume the specified amount of resources.  If the resources
          * are available, consume them and return true; otherwise, consume nothing
          * and return false.
-         */
+         *//*
         public synchronized boolean consume(double amount) {
             long msSinceLastUpdate = System.currentTimeMillis() - lastUpdateTime;
             currentBudget = Math.min(maxBudget, currentBudget + msSinceLastUpdate * fillRatePerMs);
@@ -95,4 +96,62 @@ public class AsynchRateLimiter {
         }
     }
 
+
+//    ==---------------------------------
+    *//**
+     * A simple BlockingQueue based rate limiter.
+     * Usage: call limit() to throttle the current thread (blocks)
+     * and call tick() at regular intervals from a separate thread.
+     *//*
+    static class RateLimiter {
+        private final long fillPeriod;
+        private final BlockingQueue queue;
+        private long timer;
+
+        *//**
+         * Create a simple blocking queue based rate limiter with a
+         * certain capacity and fill rate. Be careful when handling
+         * lots of requests with a high capacity as memory usage
+         * scales with capacity.
+         *
+         * @param capacity
+         * capacity before rate limiting kicks in
+         * @param rate
+         * rate limit in allowed calls per second
+         *//*
+        public RateLimiter(int capacity, double rate) {
+            if (rate (capacity));
+            this.timer = System.nanoTime();
+        }
+
+        *//**
+         * Tick the rate limiter, advancing the timer and possibly
+         * unblocking calls to limit()
+         *//*
+        public synchronized void tick() {
+            long elapsedTime = System.nanoTime() - timer;
+            int numToRemove = (int) (elapsedTime / fillPeriod);
+
+            // advance timer
+            timer += fillPeriod * numToRemove;
+
+            List discardedObjects = new ArrayList(numToRemove);
+            queue.drainTo(discardedObjects, numToRemove);
+        }
+
+        *//**
+         * A call to this method blocks when it is called too often
+         * (depleted capacity).
+         *
+         * @return false when interrupted, otherwise true
+         *//*
+        public boolean limit() {
+            try {
+                queue.put(new Object());
+            } catch (InterruptedException e) {
+                return false;
+            }
+            return true;
+        }
+    }*/
 }

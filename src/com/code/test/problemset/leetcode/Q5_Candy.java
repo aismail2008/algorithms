@@ -19,6 +19,7 @@ package com.code.test.problemset.leetcode;
  * <p>
  * https://leetcode.com/problems/candy/
  */
+@Hard
 public class Q5_Candy {
 
     public static void main(String[] args) {

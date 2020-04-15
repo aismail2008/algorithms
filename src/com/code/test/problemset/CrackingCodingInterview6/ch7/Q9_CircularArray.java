@@ -2,13 +2,13 @@ package com.code.test.problemset.CrackingCodingInterview6.ch7;
 
 import java.util.Iterator;
 
-public class CircularArray<T> implements Iterable<T> {
+public class Q9_CircularArray<T> implements Iterable<T> {
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		int size = 10;
-		CircularArray<String> array = new CircularArray<String>(size);
+		Q9_CircularArray<String> array = new Q9_CircularArray<String>(size);
 		for (int i = 0; i < size; i++) {
 			array.set(i, String.valueOf(i));
 		}
@@ -27,11 +27,10 @@ public class CircularArray<T> implements Iterable<T> {
 		}
 	}
 
-
 	private T[] items;
 	private int head = 0;
 	
-	public CircularArray(int size) {
+	public Q9_CircularArray(int size) {
 		items = (T[]) new Object[size];
 	}
 	

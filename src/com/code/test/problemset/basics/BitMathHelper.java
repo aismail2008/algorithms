@@ -28,6 +28,10 @@ public class BitMathHelper {
      * - 1.
      */
 
+    /**
+     * Max number in byte ( 8 bits)    -128 <  val < 127
+     * which is power(2,n-1) < val < power(2,n-1) -1
+     */
 
     // This is 1010101010101010101010101010101
     int o1o1o1o1 = 0x55555555;
@@ -72,7 +76,7 @@ public class BitMathHelper {
 
     /**
      * if i = 3 this will create ..0001111
-     *
+     * <p>
      * To clear all bits from the most significant bit through i (inclusive),
      * we create a mask with a 1 at the ith bit (1 << i).
      * Then, we subtract 1 from it, giving us a sequence of 0s followed by i 1s.
@@ -105,5 +109,13 @@ public class BitMathHelper {
         int value = bitisl ? 1 : 0;
         int mask = ~(1 << i);
         return (num & mask) | (value << i);
+    }
+
+    /* Returns 1 if a is positive, and 0 if a is negative */
+    public static int sign(int a) {
+        return 1^ ((a >> 31) & 0x1);
+    }
+    private static int getSign(int a) {
+        return (a >>> 31) ^ 1;
     }
 }

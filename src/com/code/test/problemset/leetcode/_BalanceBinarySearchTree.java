@@ -3,6 +3,15 @@ package com.code.test.problemset.leetcode;
 
 import java.util.ArrayList;
 
+/**
+ *Balance a Binary Search Tree
+ * Given a binary search tree, return a balanced binary search tree with the same node values.
+ *
+ * A binary search tree is balanced if and only if the depth of the two subtrees of every node never differ by more than 1.
+ *
+ * If there is more than one answer, return any of them.
+ * https://leetcode.com/problems/balance-a-binary-search-tree/
+ */
 public class _BalanceBinarySearchTree {
 
     static class TreeNode {
