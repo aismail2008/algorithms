@@ -1,4 +1,4 @@
-package com.code.test.problemset.CrackingCodingInterview6.ch7.minesweeper;
+package com.code.test.problemset.CrackingCodingInterview6.ch7.Q10_minesweeper;
 
 import java.util.LinkedList;
 import java.util.Queue;

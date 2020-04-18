@@ -18,27 +18,26 @@ import java.util.Hashtable;
  * https://leetcode.com/problems/balanced-binary-tree/
  */
 public class Q175_BalancedBinaryTree {
-    static Hashtable<Node, Integer> hights = new Hashtable<>();
+    static Hashtable<Node, Integer> hightsMemory = new Hashtable<>();
 
-    public static int getHeight(Node root, Hashtable<Node, Integer> hights) {
+    public static int getHeight(Node root, Hashtable<Node, Integer> memory) {
         if (root == null) {
             return -1;
-        } else if (hights.get(root) != null) {
-            hights.get(root);
+        } else if (memory.get(root) != null) {
+            memory.get(root);
         }
 
-        hights.put(root, Math.max(getHeight(root.left, hights), getHeight(root.right, hights)) + 1);
+        memory.put(root, Math.max(getHeight(root.left, memory), getHeight(root.right, memory)) + 1);
 
-        return hights.get(root);
+        return memory.get(root);
     }
-
 
     public static boolean isBalanced(Node root) {
         if (root == null) {
             return true;
         }
 
-        int heightDiff = getHeight(root.left, hights) - getHeight(root.right, hights);
+        int heightDiff = getHeight(root.left, hightsMemory) - getHeight(root.right, hightsMemory);
         if (Math.abs(heightDiff) > 1) {
             return false;
         } else {

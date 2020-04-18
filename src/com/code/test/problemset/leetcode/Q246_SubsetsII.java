@@ -66,4 +66,46 @@ public class Q246_SubsetsII {
         }
     }
     //-------------Ali----------//
+
+    public static class UniquePermutationsNum {
+
+        public static void main(String[] args) {
+            permutations(new int[]{1, 2,2}).forEach(l -> {
+                l.forEach(i -> System.out.print(i + "-"));
+                System.out.println();
+            });
+        }
+
+        public static List<List<Integer>> permutations(int[] s) {
+            permutations(s, new ArrayList<>());
+            return permutationsList.stream().collect(Collectors.toList());
+        }
+
+        static Set<List<Integer>> permutationsList = new HashSet<>();
+
+        public static void permutations(int[] s, List<Integer> prefix) {
+            if (s.length != 0) {
+                for (int i = 0; i < s.length; i++) {
+                    int[] rem = copyArrayExceptI(i, s);
+                    List<Integer> iPrefix = new ArrayList<>(prefix);
+                    iPrefix.add(s[i]);
+                    iPrefix.sort(Integer::compareTo);
+                    permutationsList.add(new ArrayList<>(iPrefix));
+                    permutations(rem, iPrefix);
+                }
+            }
+        }
+
+        private static int[] copyArrayExceptI(int i, int[] arr) {
+            int[] newArr = new int[arr.length - 1];
+            int h = 0;
+            for (int j = 0; j < newArr.length; j++) {
+                if (h == i) {
+                    h++;
+                }
+                newArr[j] = arr[h++];
+            }
+            return newArr;
+        }
+    }
 }

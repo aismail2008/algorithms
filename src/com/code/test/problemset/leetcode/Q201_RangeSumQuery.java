@@ -102,11 +102,11 @@ public class Q201_RangeSumQuery {
             r += n;
             int sum = 0;
             while (l <= r) {
-                if ((l % 2) == 1) {
+                if ((l % 2) == 1) { // right child
                     sum += tree[l];
                     l++;
                 }
-                if ((r % 2) == 0) {
+                if ((r % 2) == 0) { // left child
                     sum += tree[r];
                     r--;
                 }

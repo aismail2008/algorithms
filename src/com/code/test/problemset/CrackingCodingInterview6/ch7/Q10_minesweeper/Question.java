@@ -1,4 +1,4 @@
-package com.code.test.problemset.CrackingCodingInterview6.ch7.minesweeper;
+package com.code.test.problemset.CrackingCodingInterview6.ch7.Q10_minesweeper;
 
 public class Question {	
 	public static void main(String[] args) {

@@ -17,9 +17,6 @@ public class Q6_TrappingRainWater {
 
     /**
      * Min(Highest bar on my left,  highest bar on my right) - my height => is how much i can hold under i
-     *
-     * @param height
-     * @return
      */
     public static int trap(int[] height) {
         int result = 0;
