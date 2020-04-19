@@ -51,7 +51,7 @@ public class Q5_FactorialZeros {
         return count;
     }
 
-    //-------------------OR---------------------------
+    //-------------------****OR***---------------------------
     public static int factorsOf5(int i) {
         int count = 0;
         while (i % 5 == 0) {

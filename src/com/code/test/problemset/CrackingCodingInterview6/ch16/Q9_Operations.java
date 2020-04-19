@@ -1,13 +1,10 @@
 package com.code.test.problemset.CrackingCodingInterview6.ch16;
 
-import com.code.test.problemset.leetcode.Hard;
-
 /**
  * Operations:
  * Write methods to implement the multiply, subtract, and divide operations for integers.
  * The results of all of these are integers. Use only the add operator.
  */
-@Hard
 public class Q9_Operations {
 
     /* Flip a positive sign to negative, or a negative sign to pos */
@@ -65,8 +62,10 @@ public class Q9_Operations {
         return sum;
     }
 
-    /* Divide a by b by literally counting how many times b can go into
-     * a. That is, count how many times you can add b to itself until you reach a. */
+    /**
+     * Divide a by b by literally counting how many times b can go into a
+     * That is, count how many times you can add b to itself until you reach a.
+     */
     public static int divide(int a, int b) throws java.lang.ArithmeticException {
         if (b == 0) {
             throw new java.lang.ArithmeticException("ERROR: Divide by zero.");

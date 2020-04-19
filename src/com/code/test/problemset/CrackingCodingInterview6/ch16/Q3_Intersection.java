@@ -4,6 +4,9 @@ package com.code.test.problemset.CrackingCodingInterview6.ch16;
  * Intersection:
  * Given two straight line segments (represented as a start point and an end point),
  * compute the point of intersection, if any.
+ * Line Equation is : Y = m X + b
+ * m is the slope = (y2-y1) / (x2-x1)
+ * b is y-intercept: y1 - m * x1
  */
 public class Q3_Intersection {
 
@@ -34,6 +37,7 @@ public class Q3_Intersection {
         }
     }
 
+
     static Point lineLineIntersection(Point A, Point B, Point C, Point D) {
         // Line AB represented as a1x + b1y = c1
         double a1 = B.y - A.y;
@@ -59,7 +63,7 @@ public class Q3_Intersection {
     }
 
     static Point lineLineIntersectionAli(Point A, Point B, Point C, Point D) {
-        // Line AB represented as y-y1 = s1x-sx1
+        // Line AB represented as y-y1 = sx-sx1
         double s1 = (B.y - A.y) / (B.x - A.x);
         double m1 = A.y - s1 * A.x;
 

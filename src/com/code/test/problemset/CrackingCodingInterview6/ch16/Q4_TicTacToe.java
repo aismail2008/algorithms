@@ -67,7 +67,7 @@ public class Q4_TicTacToe {
 
     public static void main(String[] args) {
         //[[0,0],[2,0],[1,1],[2,1],[2,2]]
-//        System.out.println(new Q4_TicTacToe().tictactoe(new int[][]{{0, 0}, {1, 0}, {1, 1}, {2, 1}, {2, 2}}));
+        System.out.println(new Q4_TicTacToe().tictactoe(new int[][]{{0, 0}, {1, 0}, {1, 1}, {2, 1}, {2, 2}}));
         System.out.println(new Q4_TicTacToe().tictactoe(new int[][]{{0, 0}, {1, 1}, {0, 1}, {0, 2}, {1, 0}, {2, 0}}));
     }
 
