@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class BinarySearchTree {
     // Root of BST
-    private Node root = null;
+    private TreeNode root = null;
 
     // This method mainly calls deleteRec()
     void deleteKey(int key) {
@@ -12,7 +12,7 @@ public class BinarySearchTree {
     }
 
     /* A recursive function to delete Key fromBST */
-    Node deleteRec(Node root, int key) {
+    TreeNode deleteRec(TreeNode root, int key) {
         /* Base Case: If the tree is empty */
         if (root == null)
             return null;
@@ -44,7 +44,7 @@ public class BinarySearchTree {
         return root;
     }
 
-    int minValue(Node root) {
+    int minValue(TreeNode root) {
         int minv = root.key;
         while (root.left != null) {
             minv = root.left.key;
@@ -59,11 +59,11 @@ public class BinarySearchTree {
     }
 
     /* A recursive function to insert a new key in BST */
-    Node insertRec(Node root, int key) {
+    TreeNode insertRec(TreeNode root, int key) {
 
         /* If the tree is empty, return a new node */
         if (root == null) {
-            root = new Node(key);
+            root = new TreeNode(key);
             return root;
         }
 
@@ -84,7 +84,7 @@ public class BinarySearchTree {
 
     //----------------------
     // A utility function to do inorder traversal of BST
-    void inorderRec(Node root) {
+    void inorderRec(TreeNode root) {
         if (root != null) {
             inorderRec(root.left);
             System.out.print(root.key + " ");
@@ -96,8 +96,8 @@ public class BinarySearchTree {
         if (root == null)
             return;
 
-        Stack<Node> s = new Stack<>();
-        Node curr = root;
+        Stack<TreeNode> s = new Stack<>();
+        TreeNode curr = root;
 
         // traverse the tree
         while (curr != null || s.size() > 0) {
@@ -125,7 +125,7 @@ public class BinarySearchTree {
     }
 
     //----------------------
-    void preOrderRec(Node root) {
+    void preOrderRec(TreeNode root) {
         if (root != null) {
             System.out.print(root.key + " ");
             preOrderRec(root.left);
@@ -140,32 +140,32 @@ public class BinarySearchTree {
         }
 
         // Create an empty stack and push root to it
-        Stack<Node> nodeStack = new Stack<>();
-        nodeStack.push(root);
+        Stack<TreeNode> treeNodeStack = new Stack<>();
+        treeNodeStack.push(root);
 
         /* Pop all items one by one. Do following for every popped item
          a) print it
          b) push its right child
          c) push its left child
          Note that right child is pushed first so that left is processed first */
-        while (!nodeStack.empty()) {
+        while (!treeNodeStack.empty()) {
 
             // Pop the top item from stack and print it
-            Node mynode = nodeStack.pop();
+            TreeNode mynode = treeNodeStack.pop();
             System.out.print(mynode.key + " ");
 
             // Push right and left children of the popped node to stack
             if (mynode.right != null) {
-                nodeStack.push(mynode.right);
+                treeNodeStack.push(mynode.right);
             }
             if (mynode.left != null) {
-                nodeStack.push(mynode.left);
+                treeNodeStack.push(mynode.left);
             }
         }
     }
 
     //----------------------
-    void postOrderRec(Node root) {
+    void postOrderRec(TreeNode root) {
         if (root != null) {
             inorderRec(root.left);
             inorderRec(root.right);
@@ -175,8 +175,8 @@ public class BinarySearchTree {
 
     void postOrderIterative() {
         // Create two stacks
-        Stack<Node> s1 = new Stack<>();
-        Stack<Node> s2 = new Stack<>();
+        Stack<TreeNode> s1 = new Stack<>();
+        Stack<TreeNode> s2 = new Stack<>();
 
         if (root == null)
             return;
@@ -187,7 +187,7 @@ public class BinarySearchTree {
         // Run while first stack is not empty
         while (!s1.isEmpty()) {
             // Pop an item from s1 and push it to s2
-            Node temp = s1.pop();
+            TreeNode temp = s1.pop();
             s2.push(temp);
 
             // Push left and right children of
@@ -200,7 +200,7 @@ public class BinarySearchTree {
 
         // Print all elements of second stack
         while (!s2.isEmpty()) {
-            Node temp = s2.pop();
+            TreeNode temp = s2.pop();
             System.out.print(temp.key + " ");
         }
     }

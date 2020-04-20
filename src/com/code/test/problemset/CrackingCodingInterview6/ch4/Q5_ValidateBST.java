@@ -1,6 +1,6 @@
 package com.code.test.problemset.CrackingCodingInterview6.ch4;
 
-import com.code.test.problemset.basics.datastructure.Node;
+import com.code.test.problemset.basics.datastructure.TreeNode;
 
 /**
  * Validate BST:
@@ -13,7 +13,7 @@ public class Q5_ValidateBST {
      *
      * @param root
      */
-    void inorderRec(Node root) {
+    void inorderRec(TreeNode root) {
         if (root != null) {
             inorderRec(root.left);
             System.out.print(root.key + " ");
@@ -26,11 +26,11 @@ public class Q5_ValidateBST {
      * @param n
      * @return
      */
-    static boolean checkBST(Node n) {
+    static boolean checkBST(TreeNode n) {
         return checkBST(n, null, null);
     }
 
-    static boolean checkBST(Node n, Integer min, Integer max) {
+    static boolean checkBST(TreeNode n, Integer min, Integer max) {
         if (n == null) {
             return true;
         }
@@ -47,8 +47,8 @@ public class Q5_ValidateBST {
     }
 
     public static void main(String[] args) {
-        Node n = new Node(1);
-        n.left = new Node(1);
+        TreeNode n = new TreeNode(1);
+        n.left = new TreeNode(1);
         checkBST(n);
     }
 

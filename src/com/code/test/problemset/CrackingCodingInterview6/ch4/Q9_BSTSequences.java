@@ -1,6 +1,6 @@
 package com.code.test.problemset.CrackingCodingInterview6.ch4;
 
-import com.code.test.problemset.basics.datastructure.Node;
+import com.code.test.problemset.basics.datastructure.TreeNode;
 import com.code.test.problemset.leetcode.Hard;
 
 import java.util.ArrayList;
@@ -49,20 +49,20 @@ public class Q9_BSTSequences {
         second.addFirst(headSecond);
     }
 
-    public static ArrayList<LinkedList<Integer>> allSequences(Node node) {
+    public static ArrayList<LinkedList<Integer>> allSequences(TreeNode treeNode) {
         ArrayList<LinkedList<Integer>> result = new ArrayList<>();
 
-        if (node == null) {
+        if (treeNode == null) {
             result.add(new LinkedList<>());
             return result;
         }
 
         LinkedList<Integer> prefix = new LinkedList<>();
-        prefix.add(node.key);
+        prefix.add(treeNode.key);
 
         /* Recurse on left and right subtrees. */
-        ArrayList<LinkedList<Integer>> leftSeq = allSequences(node.left);
-        ArrayList<LinkedList<Integer>> rightSeq = allSequences(node.right);
+        ArrayList<LinkedList<Integer>> leftSeq = allSequences(treeNode.left);
+        ArrayList<LinkedList<Integer>> rightSeq = allSequences(treeNode.right);
 
         /* Weave together each list from the left and right sides. */
         for (LinkedList<Integer> left : leftSeq) {

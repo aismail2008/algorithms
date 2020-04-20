@@ -1,6 +1,8 @@
 package com.code.test.problemset.CrackingCodingInterview6.ch4;
 
 
+import com.code.test.problemset.leetcode.Q180_FirstCommonAncestorBinaryTree;
+
 /**
  * First Common Ancestor:
  * Design an algorithm and write code to find the first common ancestor of two nodes in a binary tree.
@@ -8,6 +10,11 @@ package com.code.test.problemset.CrackingCodingInterview6.ch4;
  * NOTE: This is not necessarily a binary search tree.
  */
 public class Q8_FirstCommonAncestor {
+
+    public static void main(String[] args) {
+        Q180_FirstCommonAncestorBinaryTree.commonAncestor(null, null, null);
+    }
+
     public class Node {
         public int key;
         public Node left, right, parent;
@@ -51,7 +58,7 @@ public class Q8_FirstCommonAncestor {
     }
 
     // No link to parent
-    static class NoParentSolution{
+    static class NoParentSolution {
         public static Node commonAncestor(Node root, Node p, Node q) {
             if (!covers(root, p) || !covers(root, q)) { // Error check - one node is not in tree
                 return null;

@@ -1,6 +1,6 @@
 package com.code.test.problemset.CrackingCodingInterview6.ch4;
 
-import com.code.test.problemset.basics.datastructure.Node;
+import com.code.test.problemset.basics.datastructure.TreeNode;
 
 import java.util.Hashtable;
 
@@ -11,9 +11,9 @@ import java.util.Hashtable;
  * two subtrees of any node never differ by more than one.
  */
 public class Q4_CheckBalanced {
-    static Hashtable<Node, Integer> hights = new Hashtable<>();
+    static Hashtable<TreeNode, Integer> hights = new Hashtable<>();
 
-    public static int checkHeight(Node root) {
+    public static int checkHeight(TreeNode root) {
         if (root == null)
             return -1;
 
@@ -34,7 +34,7 @@ public class Q4_CheckBalanced {
         }
     }
 
-    public static int getHeight(Node root, Hashtable<Node, Integer> hights) {
+    public static int getHeight(TreeNode root, Hashtable<TreeNode, Integer> hights) {
         if (root == null) {
             return -1;
         } else if (hights.get(root) != null) {
@@ -47,7 +47,7 @@ public class Q4_CheckBalanced {
     }
 
 
-    public static boolean isBalanced(Node root) {
+    public static boolean isBalanced(TreeNode root) {
         if (root == null) {
             return true;
         }

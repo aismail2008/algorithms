@@ -1,7 +1,7 @@
 package com.code.test.problemset.CrackingCodingInterview6.ch4;
 
 
-import com.code.test.problemset.basics.datastructure.Node;
+import com.code.test.problemset.basics.datastructure.TreeNode;
 
 import java.util.HashMap;
 
@@ -17,7 +17,7 @@ public class Q12_PathsWithSum {
     //O(N2)
     static class SolutionA {
 
-        public static int countPathsWithSum(Node root, int targetSum) {
+        public static int countPathsWithSum(TreeNode root, int targetSum) {
             if (root == null) return 0;
 
             /* Count paths with sum starting from the root. */
@@ -31,18 +31,18 @@ public class Q12_PathsWithSum {
         }
 
         /* Returns the number of paths with this sum starting from this node. */
-        public static int countPathsWithSumFromNode(Node node, int targetSum, int currentSum) {
-            if (node == null) return 0;
+        public static int countPathsWithSumFromNode(TreeNode treeNode, int targetSum, int currentSum) {
+            if (treeNode == null) return 0;
 
-            currentSum += node.key;
+            currentSum += treeNode.key;
 
             int totalPaths = 0;
             if (currentSum == targetSum) { // Found a path from the root
                 totalPaths++;
             }
 
-            totalPaths += countPathsWithSumFromNode(node.left, targetSum, currentSum); // Go left
-            totalPaths += countPathsWithSumFromNode(node.right, targetSum, currentSum); // Go right
+            totalPaths += countPathsWithSumFromNode(treeNode.left, targetSum, currentSum); // Go left
+            totalPaths += countPathsWithSumFromNode(treeNode.right, targetSum, currentSum); // Go right
 
             return totalPaths;
         }
@@ -51,14 +51,14 @@ public class Q12_PathsWithSum {
     //Didn't review this solution well
     static class QuestionB {
 
-        public static int countPathsWithSum(Node root, int targetSum) {
+        public static int countPathsWithSum(TreeNode root, int targetSum) {
             return countPathsWithSum(root, targetSum, 0, new HashMap<Integer, Integer>());
         }
 
-        public static int countPathsWithSum(Node node, int targetSum, int runningSum, HashMap<Integer, Integer> pathCount) {
-            if (node == null) return 0; // Base case
+        public static int countPathsWithSum(TreeNode treeNode, int targetSum, int runningSum, HashMap<Integer, Integer> pathCount) {
+            if (treeNode == null) return 0; // Base case
 
-            runningSum += node.key;
+            runningSum += treeNode.key;
 
             /* Count paths with sum ending at the current node. */
             int sum = runningSum - targetSum;
@@ -73,8 +73,8 @@ public class Q12_PathsWithSum {
             incrementHashTable(pathCount, runningSum, 1);
 
             /* Count paths with sum on the left and right. */
-            totalPaths += countPathsWithSum(node.left, targetSum, runningSum, pathCount);
-            totalPaths += countPathsWithSum(node.right, targetSum, runningSum, pathCount);
+            totalPaths += countPathsWithSum(treeNode.left, targetSum, runningSum, pathCount);
+            totalPaths += countPathsWithSum(treeNode.right, targetSum, runningSum, pathCount);
 
             incrementHashTable(pathCount, runningSum, -1); // Remove runningSum
             return totalPaths;

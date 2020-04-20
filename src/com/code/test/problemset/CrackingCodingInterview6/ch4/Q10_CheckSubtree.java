@@ -1,6 +1,6 @@
 package com.code.test.problemset.CrackingCodingInterview6.ch4;
 
-import com.code.test.problemset.basics.datastructure.Node;
+import com.code.test.problemset.basics.datastructure.TreeNode;
 
 /**
  * Check Subtree:
@@ -12,7 +12,7 @@ import com.code.test.problemset.basics.datastructure.Node;
 public class Q10_CheckSubtree {
 
     static class SolutionA {
-        public static boolean containsTree(Node t1, Node t2) {
+        public static boolean containsTree(TreeNode t1, TreeNode t2) {
             StringBuilder string1 = new StringBuilder();
             StringBuilder string2 = new StringBuilder();
 
@@ -22,20 +22,20 @@ public class Q10_CheckSubtree {
             return string1.indexOf(string2.toString()) != -1;
         }
 
-        public static void getOrderStringPreOrder(Node node, StringBuilder sb) {
-            if (node == null) {
+        public static void getOrderStringPreOrder(TreeNode treeNode, StringBuilder sb) {
+            if (treeNode == null) {
                 sb.append("X");             // Add null indicator
                 return;
             }
-            sb.append(node.key);           // Add root
-            getOrderStringPreOrder(node.left, sb);  // Add left
-            getOrderStringPreOrder(node.right, sb); // Add right
+            sb.append(treeNode.key);           // Add root
+            getOrderStringPreOrder(treeNode.left, sb);  // Add left
+            getOrderStringPreOrder(treeNode.right, sb); // Add right
         }
     }
 
     static class SolutionB {
 
-        public static boolean containsTree(Node t1, Node t2) {
+        public static boolean containsTree(TreeNode t1, TreeNode t2) {
             if (t2 == null) {
                 return true; // The empty tree is a subtree of every tree.
             }
@@ -45,7 +45,7 @@ public class Q10_CheckSubtree {
         /* Checks if the binary tree rooted at r1 contains the binary tree
          * rooted at r2 as a subtree somewhere within it.
          */
-        public static boolean subTree(Node r1, Node r2) {
+        public static boolean subTree(TreeNode r1, TreeNode r2) {
             if (r1 == null) {
                 return false; // big tree empty & subtree still not found.
             } else if (r1.key == r2.key && matchTree(r1, r2)) {
@@ -57,7 +57,7 @@ public class Q10_CheckSubtree {
         /* Checks if the binary tree rooted at r1 contains the
          * binary tree rooted at r2 as a subtree starting at r1.
          */
-        public static boolean matchTree(Node r1, Node r2) {
+        public static boolean matchTree(TreeNode r1, TreeNode r2) {
             if (r1 == null && r2 == null) {
                 return true; // nothing left in the subtree
             } else if (r1 == null || r2 == null) {

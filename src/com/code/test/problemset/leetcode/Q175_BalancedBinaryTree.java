@@ -1,6 +1,6 @@
 package com.code.test.problemset.leetcode;
 
-import com.code.test.problemset.basics.datastructure.Node;
+import com.code.test.problemset.basics.datastructure.TreeNode;
 
 import java.util.Hashtable;
 
@@ -18,9 +18,9 @@ import java.util.Hashtable;
  * https://leetcode.com/problems/balanced-binary-tree/
  */
 public class Q175_BalancedBinaryTree {
-    static Hashtable<Node, Integer> hightsMemory = new Hashtable<>();
+    static Hashtable<TreeNode, Integer> hightsMemory = new Hashtable<>();
 
-    public static int getHeight(Node root, Hashtable<Node, Integer> memory) {
+    public static int getHeight(TreeNode root, Hashtable<TreeNode, Integer> memory) {
         if (root == null) {
             return -1;
         } else if (memory.get(root) != null) {
@@ -32,7 +32,7 @@ public class Q175_BalancedBinaryTree {
         return memory.get(root);
     }
 
-    public static boolean isBalanced(Node root) {
+    public static boolean isBalanced(TreeNode root) {
         if (root == null) {
             return true;
         }
