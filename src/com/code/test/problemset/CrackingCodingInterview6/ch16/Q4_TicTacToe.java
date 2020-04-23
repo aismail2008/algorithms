@@ -91,7 +91,7 @@ public class Q4_TicTacToe {
             return "A";
         if (winner == 2)
             return "B";
-        return moves.length < 9? "Pending": "Draw";
+        return moves.length < 9 ? "Pending" : "Draw";
     }
 
     private int checkWinner(int[][] game, int i, int j) {

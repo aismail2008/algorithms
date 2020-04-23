@@ -7,8 +7,8 @@ package com.code.test.problemset.CrackingCodingInterview6.ch1;
  * the original string. You can assume the string has only uppercase and lowercase letters (a - z).
  */
 public class N6_StringCompression {
-    public static String compressBad(String str) {
-        String compressedString = "";
+    public static String compress(String str) {
+        StringBuilder compressedString = new StringBuilder("");
         int countConsecutive = 0;
         for (int i = 0; i < str.length(); i++) {
             countConsecutive++;
@@ -16,20 +16,20 @@ public class N6_StringCompression {
             /* If next character is different than current, append this char to result.*/
             if (i + 1 >= str.length() // This is the end
                     || str.charAt(i) != str.charAt(i + 1)) {
-                compressedString += "" + str.charAt(i) + countConsecutive;
+                compressedString = compressedString.append("" + str.charAt(i) + countConsecutive);
                 countConsecutive = 0;
             }
         }
-        return compressedString;
+        return compressedString.toString();
     }
 
     public static void main(String[] args) {
         String str = "aabcccccaaa";
         System.out.println(str);
-        System.out.println(compressBad(str));
+        System.out.println(compress(str));
 
         str = "aa";
         System.out.println(str);
-        System.out.println(compressBad(str));
+        System.out.println(compress(str));
     }
 }
