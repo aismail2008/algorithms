@@ -55,7 +55,8 @@ public class Q9_CircularArray<T> implements Iterable<T> {
 	public void set(int i, T item) {
 		items[convert(i)] = item;
 	}
-	
+
+	@Override
 	public Iterator<T> iterator() {
 		return new CircularArrayIterator();
 	}

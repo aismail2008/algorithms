@@ -1,16 +1,17 @@
 package com.code.test.problemset.CrackingCodingInterview6.ch7.Q11_FileSystem;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Directory extends Entry {
-	protected ArrayList<Entry> contents;
+	protected List<Entry> contents;
 	
 	public Directory(String n, Directory p) {
 		super(n, p);
 		contents = new ArrayList<Entry>();
 	}
 	
-	protected ArrayList<Entry> getContents() {
+	protected List<Entry> getContents() {
 		return contents;
 	}
 	

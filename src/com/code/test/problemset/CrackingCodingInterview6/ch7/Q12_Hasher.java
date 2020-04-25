@@ -2,6 +2,7 @@ package com.code.test.problemset.CrackingCodingInterview6.ch7;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Q12_Hasher<K, V> {
     public static class LinkedListNode<K, V> {
@@ -100,7 +101,7 @@ public class Q12_Hasher<K, V> {
     }
 
     /* Really stupid function to map a key to an index. */
-    public int getIndexForKey(K key) {
+    private int getIndexForKey(K key) {
         return Math.abs(key.hashCode() % arr.size());
     }
 
@@ -111,6 +112,13 @@ public class Q12_Hasher<K, V> {
         }
     }
 
+    public static void main(String[] args) {
+        Q12_Hasher_Ali arr = new Q12_Hasher_Ali(5);
+
+        arr.get(3);
+        arr.put(4,5);
+        arr.remove(2);
+    }
 
     static class Q12_Hasher_Ali<K, V> {
         class Node {
@@ -118,14 +126,21 @@ public class Q12_Hasher<K, V> {
             V value;
 
             public Node(K key, V value) {
+                this.key = key;
+                this.value = value;
             }
         }
 
         private ArrayList<LinkedList<Node>> arr;
+        private int capacity;
 
         public Q12_Hasher_Ali(int capacity) {
+            this.capacity = capacity;
             /* Create list of linked lists. */
-            arr = new ArrayList<>();
+            arr = new ArrayList<>(capacity);
+            for (int i = 0; i < capacity; i++) {
+                arr.add(null);
+            }
         }
 
         /* Insert key and value into hash table. */
@@ -141,7 +156,7 @@ public class Q12_Hasher<K, V> {
             node = new Node(key, value);
             int index = getIndexForKey(key);
             if (arr.get(index) == null) {
-                arr.add(new LinkedList<>());
+                arr.set(index, new LinkedList<>());
             }
             arr.get(index).add(node);
 
@@ -181,7 +196,7 @@ public class Q12_Hasher<K, V> {
 
         /* Really stupid function to map a key to an index. */
         public int getIndexForKey(K key) {
-            return Math.abs(key.hashCode() % arr.size());
+            return Math.abs(key.hashCode() % capacity);
         }
     }
 }

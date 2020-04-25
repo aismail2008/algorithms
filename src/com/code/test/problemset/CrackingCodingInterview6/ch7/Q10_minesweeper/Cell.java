@@ -49,9 +49,8 @@ public class Cell {
 		return isExposed;
 	}
 	
-	public boolean flip() {
+	public void flip() {
 		isExposed = true;
-		return !isBomb;
 	}
 	
 	public boolean toggleGuess() {

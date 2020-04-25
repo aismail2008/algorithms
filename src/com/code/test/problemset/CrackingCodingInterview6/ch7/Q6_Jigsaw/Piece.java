@@ -9,7 +9,7 @@ import java.util.Map.Entry;
 public class Piece {
     private final static int NUMBER_OF_EDGES = 4;
 //    Edge left, top, right, bottom;
-    private HashMap<Orientation, Edge> edges = new HashMap<Orientation, Edge>();
+    private HashMap<Orientation, Edge> edges = new HashMap<>();
 
 
     public Piece(Edge[] edgeList) {

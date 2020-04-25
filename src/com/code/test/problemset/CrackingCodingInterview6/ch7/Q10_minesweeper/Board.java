@@ -168,9 +168,7 @@ public class Board {
 		
 		if (cell.isBomb()) {
 			return new UserPlayResult(result, GameState.LOST);
-		}
-		
-		if (cell.isBlank()) {
+		}else if (cell.isBlank()) {
 			expandBlank(cell);
 		}
 		
@@ -181,7 +179,7 @@ public class Board {
 		return new UserPlayResult(result, GameState.RUNNING);
 	}
 	
-	public Cell getCellAtLocation(UserPlay play) {
+	private Cell getCellAtLocation(UserPlay play) {
 		int row = play.getRow();
 		int col = play.getColumn();
 		if (!inBounds(row, col)) {
