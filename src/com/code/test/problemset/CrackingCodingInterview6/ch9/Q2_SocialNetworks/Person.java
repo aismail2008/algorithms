@@ -3,7 +3,7 @@ package com.code.test.problemset.CrackingCodingInterview6.ch9.Q2_SocialNetworks;
 import java.util.ArrayList;
 
 public class Person {
-    private ArrayList<Integer> friends = new ArrayList<Integer>();
+    private ArrayList<Integer> friends = new ArrayList<>();
     private int personID;
     private String info;
 

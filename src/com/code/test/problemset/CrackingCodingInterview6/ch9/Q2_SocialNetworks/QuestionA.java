@@ -4,8 +4,8 @@ import java.util.*;
 
 public class QuestionA {
 	public static LinkedList<Person> findPathBFS(HashMap<Integer, Person> people, int source, int destination) {
-		Queue<PathNode> toVisit = new LinkedList<PathNode>();
-		HashSet<Integer> visited = new HashSet<Integer>();
+		Queue<PathNode> toVisit = new LinkedList<>();
+		HashSet<Integer> visited = new HashSet<>();
 		toVisit.add(new PathNode(people.get(source), null));
 		visited.add(source);
 		while (!toVisit.isEmpty()) {
@@ -22,6 +22,44 @@ public class QuestionA {
 					visited.add(friendId);
 					Person friend = people.get(friendId);
 					toVisit.add(new PathNode(friend, node));
+				}
+			}
+		}
+		return null;
+	}
+
+	public static LinkedList<Person> findPathBFSBi_ALI(HashMap<Integer, Person> people, int source, int destination) {
+		Queue<PathNode> toVisitS = new LinkedList<>();
+		HashSet<Integer> visitedS = new HashSet<>();
+		toVisitS.add(new PathNode(people.get(source), null));
+		visitedS.add(source);
+
+		Queue<PathNode> toVisitD = new LinkedList<>();
+		HashSet<Integer> visitedD = new HashSet<>();
+		toVisitD.add(new PathNode(people.get(source), null));
+		visitedD.add(destination);
+
+
+		while (!toVisitS.isEmpty() && !toVisitD.isEmpty()) {
+			PathNode nodeS = toVisitS.poll();
+
+			if(visitedD.contains(nodeS)){
+
+			}
+
+
+			Person person = nodeS.getPerson();
+			if (person.getID() == destination) {
+				return nodeS.collapse(false);
+			}
+
+			/* Search friends. */
+			ArrayList<Integer> friends = person.getFriends();
+			for (int friendId : friends) {
+				if (!visitedS.contains(friendId)) {
+					visitedS.add(friendId);
+					Person friend = people.get(friendId);
+					toVisitS.add(new PathNode(friend, nodeS));
 				}
 			}
 		}

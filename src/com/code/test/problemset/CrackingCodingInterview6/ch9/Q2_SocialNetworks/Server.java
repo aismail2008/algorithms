@@ -3,8 +3,8 @@ package com.code.test.problemset.CrackingCodingInterview6.ch9.Q2_SocialNetworks;
 import java.util.HashMap;
 
 public class Server {
-	HashMap<Integer, Machine> machines = new HashMap<Integer, Machine>();
-	HashMap<Integer, Integer> personToMachineMap = new HashMap<Integer, Integer>();
+	HashMap<Integer, Machine> machines = new HashMap<>();
+	HashMap<Integer, Integer> personToMachineMap = new HashMap<>();
 	
 	public Machine getMachineWithId(int machineID) {
 		return machines.get(machineID);
