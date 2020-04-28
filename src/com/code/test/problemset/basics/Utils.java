@@ -80,4 +80,20 @@ public class Utils {
 
         return pointSteps.getOrDefault(end, -1);
     }
+
+    /**
+     * Copy Array except I
+     */
+    private  int[] copyArrayExceptI(int i, int[] arr) {
+        int[] newArr = new int[arr.length - 1];
+        int h = 0;
+        for (int j = 0; j < newArr.length; j++) {
+            if (h == i) {
+                h++;
+            }
+            newArr[j] = arr[h++];
+        }
+        return newArr;
+    }
+
 }

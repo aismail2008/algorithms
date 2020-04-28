@@ -1,9 +1,10 @@
 package com.code.test.problemset.leetcode;
 
-import java.io.*;
-import java.util.*;
-
-class Solution {
+/**
+ *
+ * https://www.pramp.com/challenge/2WBx3Axln1t7JQ2jQq96
+ */
+class _BusiestTimeinTheMall {
 
     /*
     [1487799425, 14, 1], 14 i =0

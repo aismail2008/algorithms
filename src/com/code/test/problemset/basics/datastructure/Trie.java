@@ -14,8 +14,6 @@ public class Trie {
 
         TrieNode() {
             isEndOfWord = false;
-            for (int i = 0; i < ALPHABET_SIZE; i++)
-                children[i] = null;
         }
 
         public boolean terminates(String prefix) {
@@ -33,34 +31,22 @@ public class Trie {
     // If the key is prefix of trie node,
     // just marks leaf node
     public static void insert(String key) {
-        int level;
-        int length = key.length();
-        int index;
-
         TrieNode pCrawl = root;
-
-        for (level = 0; level < length; level++) {
-            index = key.charAt(level) - 'a';
+        for (char ch : key.toCharArray()) {
+            int index = ch - 'a';
             if (pCrawl.children[index] == null)
                 pCrawl.children[index] = new TrieNode();
 
             pCrawl = pCrawl.children[index];
         }
-
-        // mark last node as leaf
         pCrawl.isEndOfWord = true;
     }
 
     // Returns true if key presents in trie, else false
     public static boolean search(String key) {
-        int level;
-        int length = key.length();
-        int index;
         TrieNode pCrawl = root;
-
-        for (level = 0; level < length; level++) {
-            index = key.charAt(level) - 'a';
-
+        for (char ch : key.toCharArray()) {
+            int index = ch - 'a';
             if (pCrawl.children[index] == null)
                 return false;
 
