@@ -1,9 +1,6 @@
-package com.code.test.problemset.basics;
+package com.code.test.java8;
 
-import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -14,6 +11,8 @@ public class ConcurrentModificationExcep {
      * In case of ConcurrentHashMap, the behavior is not always the same.
      */
     public static void main(String[] args) {
+        trySet();
+        System.out.println("--");
         tryMap();
         System.out.println("--");
         tryMap();
@@ -61,8 +60,30 @@ public class ConcurrentModificationExcep {
         System.out.println("Map Size:" + myMap.size());
     }
 
+    public static void trySet() {
+        Set<int[]> mySet = new HashSet<>();
+        mySet.add(new int[]{1,1});
+        mySet.add(new int[]{2,2});
+        mySet.add(new int[]{3,3});
+
+        // Iterator will through concurrentModiExce. so that it the work around
+        int[][] it1 = new int[mySet.size()][];
+        mySet.toArray(it1);
+        for (int i = 0; i < it1.length; i++) {
+            int[] key = it1[i];
+            System.out.println("Set Value:" + key);
+            if (Arrays.equals(key,new int[]{1,1})) {
+                mySet.remove(new int[]{3,3});
+                mySet.remove(new int[]{4,4});
+                mySet.remove(new int[]{5,5});
+            }
+        }
+
+        System.out.println("Map Size:" + mySet.size());
+    }
+
     public static void tryList() {
-        List<String> myList = new CopyOnWriteArrayList<String>();
+        List<String> myList = new CopyOnWriteArrayList<>();
 
         myList.add("1");
         myList.add("2");

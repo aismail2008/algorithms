@@ -6,17 +6,16 @@ package com.code.test.problemset.CrackingCodingInterview6.ch8;
  * write code to calculate the number of ways of representing n cents
  */
 public class Q11_Coins {
-
-    public static int makeChange(int amount, int[] denoms, int index, int[][] memory) {
-        if (memory[amount][index] > 0) {//retrieve value
+    private static int makeChange(int amount, int[] denoms, int index, int[][] memory) {
+        if (amount == 0) {//(index >= denoms.length - 1) {
+            return 1; //last denom
+        } else if (index >= denoms.length) {
+            return 0;
+        } else if (memory[amount][index] > 0) {//retrieve value
             return memory[amount][index];
         }
 
         int denomAmount = denoms[index];
-        if (index >= denoms.length - 1) {
-            return 1; //last denom
-        }
-
         int ways = 0;
         for (int i = 0; i * denomAmount <= amount; i++) {
             ways += makeChange(amount - denomAmount * i, denoms, index + 1, memory);
@@ -26,8 +25,13 @@ public class Q11_Coins {
         return ways;
     }
 
-    static int makeChange(int n) {
+    public static int makeChange(int n) {
         int[] denoms = {25, 10, 5, 1};
+        int[][] map = new int[n + 1][denoms.length];
+        return makeChange(n, denoms, 0, map);
+    }
+
+    public int makeChange(int n, int[] denoms) {
         int[][] map = new int[n + 1][denoms.length];
         return makeChange(n, denoms, 0, map);
     }

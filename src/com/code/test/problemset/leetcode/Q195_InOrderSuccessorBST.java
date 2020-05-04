@@ -16,12 +16,40 @@ public class Q195_InOrderSuccessorBST {
     public class TreeNode {
         public int val;
         public TreeNode left, right;
-
+        public TreeNode parent;
         public TreeNode(int item) {
             val = item;
             left = right = null;
         }
     }
+
+    // If you have parent
+    TreeNode findInOrderSuccessor(TreeNode node) {
+        if(node == null){
+            return null;
+        }
+
+        if (node.right != null){
+            return getMostLeft(node.right);
+        }
+        else{
+            while(node.parent != null && node != node.parent.left){
+                node = node.parent;
+            }
+            if(node.parent != null){
+                return node.parent;
+            }
+        }
+        return null;
+    }
+
+    TreeNode getMostLeft(TreeNode n){
+        while(n.left != null){
+            n = n.left;
+        }
+        return n;
+    }
+
 
     public TreeNode nextSuccessor(TreeNode root, TreeNode p) {
         if (root == null)

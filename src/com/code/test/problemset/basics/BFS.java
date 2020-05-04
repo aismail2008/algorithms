@@ -13,10 +13,22 @@ import java.util.*;
  *  - Print on Remove from Queue to keep order as BFS
  */
 public class BFS {
+    class Node{
+        int min;
+        int max;
+        int i;
+        Map<Character, List<Integer>> map;
 
+        public Node(int min, int max, int i, Map<Character, List<Integer>> map) {
+            this.min = min;
+            this.max = max;
+            this.i = i;
+            this.map = map;
+        }
+    }
     public static void bfs(GraphNode root) {
         // Since queue is a interface
-        Queue<GraphNode> queue = new LinkedList<GraphNode>();
+        Queue<GraphNode> queue = new LinkedList<>();
 
         if (root == null)
             return;
@@ -24,7 +36,7 @@ public class BFS {
         root.state = State.Visited;
         // Adds to end of queue
         queue.add(root);
-
+        Queue copy = new LinkedList(queue);
         while (!queue.isEmpty()) {
             // removes from front of queue
             GraphNode r = queue.remove();

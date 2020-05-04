@@ -3,7 +3,9 @@ package com.code.test.problemset.basics;
 import java.util.Arrays;
 
 /**
- * Created by aliismail on 07/11/2017.
+ * Stable Sorting Algorithms
+ * Runtime O(n2) average and worst.
+ * Space O(1)􏰁􏱍􏰷􏱹􏱖􏰤􏰈􏰋 􏰋􏰏
  */
 public class InsertionSort {
 

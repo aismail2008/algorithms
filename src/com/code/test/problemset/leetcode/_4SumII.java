@@ -30,7 +30,7 @@ import java.util.stream.Collectors;
 public class _4SumII {
 
     public int fourSumCount(int[] A, int[] B, int[] C, int[] D) {
-        HashMap<Integer, Integer> E = new HashMap<Integer, Integer>();
+        HashMap<Integer, Integer> E = new HashMap<>();
         for (int a : A) {
             for (int b : B) {
                 E.put(a + b, E.getOrDefault(a + b, 0) + 1);

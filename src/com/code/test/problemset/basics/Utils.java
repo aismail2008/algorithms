@@ -5,6 +5,7 @@ import java.util.*;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
 public class Utils {
 
     /**
@@ -39,6 +40,8 @@ public class Utils {
 
     /**
      * Shortest path between two points in 2d matrix
+     *
+     * O(m*n) && O(m*n) time and space
      */
     private int visitBfsPointToPoint(int[][] forest, Point start, Point end) {
         if (start == end)
@@ -94,6 +97,28 @@ public class Utils {
             newArr[j] = arr[h++];
         }
         return newArr;
+    }
+
+    /**
+     * Going all directions
+     * @param i
+     * @param j
+     * @param board
+     */
+    public void allFourDirections(int i, int j, int[][]board){
+        int[] dx = {-1, 0, 1, 0};
+        int[] dy = {0, 1, 0, -1};
+
+        for (int k = 0; k < 4; k++) {
+            int x = i + dx[k];
+            int y = j + dy[k];
+
+            if (x >= 0 && x < board.length
+                    && y >= 0 && y < board[0].length
+                    && board[x][y] == 'O') {
+                // TODO
+            }
+        }
     }
 
 }
