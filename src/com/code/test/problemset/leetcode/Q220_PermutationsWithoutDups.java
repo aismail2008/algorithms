@@ -6,12 +6,13 @@ import java.util.stream.Collectors;
 /**
  * Permutations without Dups:
  * Write a method to compute all permutations of a string of unique characters.
+ *
+ * O(n2*!n) time
+ * space (n)
  * <p>
  * https://leetcode.com/problems/permutations/
  */
 public class Q220_PermutationsWithoutDups {
-    public List<String> perm = new ArrayList<>();
-
     public static class UniquePermutationsStr {
 
         public static void main(String[] args) {

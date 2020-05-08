@@ -29,12 +29,10 @@ public class _Ali {
     static class Project {
         String name;
         List<Project> children;
-//        List<String> path;
 
         public Project(String name) {
             this.name = name;
             children = new ArrayList<>();
-//            path = new ArrayList<>();
         }
 
         @Override
@@ -58,24 +56,19 @@ public class _Ali {
                 .collect(Collectors.toList());
         list.sort(Comparator.comparingInt(o -> o.children.size()));
 
-//        List<List<String>> paths = new ArrayList<>();
         List<String> paths = new ArrayList<>();
         for (int i = 0; i< list.size(); i++) {
             Project pr = list.get(i);
             if (pr.children.size() != 0) {
                 return null;
             } else {
-//                pr.path.add(pr.name);
-                //update remaing projs
                 for (int j = i+1; j < list.size(); j++) {
                     Project dep = list.get(j);
                     if(dep.children.remove(pr)){
-//                        dep.path.add(pr.name);
                     }
                 }
             }
 
-//            paths.add(pr.path);
             paths.add(pr.name);
         }
         return paths;

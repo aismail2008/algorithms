@@ -17,10 +17,26 @@ package com.code.test.problemset.leetcode;
  */
 public class Q36_NextPermutations {
 
-    // scan from right to left, find the first element that is less than its previous one.
-    // scan from right to left, find the first element that is greater than p.
-    // swap p and q
-    // reverse elements [p+1, nums.length] 461235
+    //  The steps to solve this problem:
+    //   1) scan from right to left, find the first element that is less than its previous one.
+    //
+    //   4 5 6 3 2 1
+    //     |
+    //     p
+    //   2) scan from right to left, find the first element that is greater than p.
+    //
+    //   4 5 6 3 2 1
+    //       |
+    //       q
+    //   3) swap p and q
+    //
+    //   4 5 6 3 2 1
+    //   swap
+    //   4 6 5 3 2 1
+    //
+    //   4) reverse elements [p+1, nums.length]
+    //
+    //   4 6 1 2 3 5
     public void nextPermutation(int[] nums) {
         //find first decreasing digit
         int mark = -1;
@@ -31,7 +47,7 @@ public class Q36_NextPermutations {
             }
         }
 
-        if (mark == -1) {
+        if (mark == -1) { // you are max number then revers whole array to get min number
             reverse(nums, 0, nums.length - 1);
             return;
         }

@@ -22,6 +22,7 @@ public class OrderLogLines {
             }
             return s1.compareTo(s2);
         });
+
         for (String line : logLines) {
             if (isNumeric(line.split(" ")[1])) {
                 numberLines.add(line);

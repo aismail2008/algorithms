@@ -37,7 +37,7 @@ public class Q196_InOrderSuccessorBSTII {
         } else {
             Node q = n;
             Node parent = q.parent;
-            // Go up until we're on left instead of right
+            // Go up until we're on left instead of right - or by other meaning until you found parent larger than you
             while (parent != null && parent.left != q) {
                 q = parent;
                 parent = parent.parent;
