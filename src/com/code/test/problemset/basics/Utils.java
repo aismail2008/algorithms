@@ -121,4 +121,32 @@ public class Utils {
         }
     }
 
+    //Arrays sort with Primitive
+    static int[] absSort(int[] input) {
+        input = Arrays.stream(input).boxed().sorted((o1, o2) -> {
+            Integer a = Integer.valueOf(o1.toString());
+            Integer b = Integer.valueOf(o2.toString());
+
+            if(Math.abs(a) != Math.abs(b)){
+                return Math.abs(a) - Math.abs(b);
+            }else{
+                return a.compareTo(b);
+            }
+        }).mapToInt(Integer::intValue).toArray();
+
+        //Or to Integer[]
+
+        Integer[] ar = Arrays.stream(input).boxed().sorted((o1, o2) -> {
+            Integer a = Integer.valueOf(o1.toString());
+            Integer b = Integer.valueOf(o2.toString());
+
+            if(Math.abs(a) != Math.abs(b)){
+                return Math.abs(a) - Math.abs(b);
+            }else{
+                return a.compareTo(b);
+            }
+        }).toArray(Integer[]::new);
+
+        return input;
+    }
 }

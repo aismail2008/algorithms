@@ -29,16 +29,14 @@ import java.util.*;
  * 0 ≤ arr[i] ≤ MAX_INT for every i, 0 ≤ i < MAX_INT
  * [output] integer
  */
-public class MissingInteger {
-
+public class DifferentNumber {
     static int getDifferentNumber(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            int t = arr[i]; //1
+            int t; //1
             while (arr[i] != i) {
                 if (arr[i] > arr.length - 1) {
                     break;
                 }
-
                 t = arr[i]; // 3
                 arr[i] = arr[t]; // = 1
                 arr[t] = t;

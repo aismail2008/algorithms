@@ -30,11 +30,11 @@ public class Q5_SumLists {
 
         Node r = new Node(0);
         Node sol = r;
-        int remainder = 0;
+        int carry = 0;
         while (f != null && s != null) {
-            int result = f.val + s.val + remainder;
+            int result = f.val + s.val + carry;
             r.next = new Node(result % 10);
-            remainder = result / 10;
+            carry = result / 10;
 
             r = r.next;
             s = s.next;
@@ -42,21 +42,21 @@ public class Q5_SumLists {
         }
 
         while (s != null) {
-            r.next = new Node((s.val + remainder) % 10);
-            remainder = (s.val + remainder) / 10;
+            r.next = new Node((s.val + carry) % 10);
+            carry = (s.val + carry) / 10;
             s = s.next;
             r = r.next;
         }
 
         while (f != null) {
-            r.next = new Node((f.val + remainder) % 10);
-            remainder = (f.val + remainder) / 10;
+            r.next = new Node((f.val + carry) % 10);
+            carry = (f.val + carry) / 10;
             f = f.next;
             r = r.next;
         }
 
-        if (remainder > 0)
-            r.next = new Node(remainder);
+        if (carry > 0)
+            r.next = new Node(carry);
 
         return sol.next;
     }

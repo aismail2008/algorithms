@@ -27,11 +27,10 @@ public class Q11_Coins {
 
     public static int makeChange(int n) {
         int[] denoms = {25, 10, 5, 1};
-        int[][] map = new int[n + 1][denoms.length];
-        return makeChange(n, denoms, 0, map);
+        return makeChange(n, denoms);
     }
 
-    public int makeChange(int n, int[] denoms) {
+    public static int makeChange(int n, int[] denoms) {
         int[][] map = new int[n + 1][denoms.length];
         return makeChange(n, denoms, 0, map);
     }
