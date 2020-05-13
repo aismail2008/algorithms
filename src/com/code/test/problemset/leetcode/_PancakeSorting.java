@@ -34,6 +34,9 @@ import java.util.List;
  * A[i] is a permutation of [1, 2, ..., A.length]
  * <p>
  * https://leetcode.com/problems/pancake-sorting/
+ *
+ *   // Space Complexity : O(1)
+ *   // Time Complexity : O(n2)
  */
 public class _PancakeSorting {
 
