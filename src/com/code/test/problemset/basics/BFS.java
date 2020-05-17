@@ -32,7 +32,7 @@ public class BFS {
 
         if (root == null)
             return;
-
+        int min = Integer.MAX_VALUE;
         root.state = State.Visited;
         // Adds to end of queue
         queue.add(root);
