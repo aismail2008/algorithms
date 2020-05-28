@@ -1,8 +1,5 @@
 package com.code.test.problemset.leetcode;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Verifying Alien Dictionary / validate Alien Dictionary
  * In an alien language, surprisingly they also use english lowercase letters, but possibly in a different order. The order of the alphabet is some permutation of lowercase letters.
@@ -35,15 +32,15 @@ import java.util.Map;
  */
 public class _VerifyingAlienDictionary {
 
-    Map<Character, Integer> map = new HashMap<>(); // could be replaced with order.indexOf(char)
+    //Map<Character, Integer> map = new HashMap<>(); // could be replaced with order.indexOf(char)
 
     public boolean isAlienSorted(String[] words, String order) {
-        for (int i = 0; i < order.length(); i++) {
-            map.put(order.charAt(i), i);
-        }
+//        for (int i = 0; i < order.length(); i++) {
+//            map.put(order.charAt(i), i);
+//        }
 
         for (int i = 1; i < words.length; i++) {
-            if (!isSorted(words[i - 1], words[i])) {
+            if (!isSorted(words[i - 1], words[i], order)) {
                 return false;
             }
         }
@@ -51,11 +48,11 @@ public class _VerifyingAlienDictionary {
         return true;
     }
 
-    public boolean isSorted(String a, String b) {
+    public boolean isSorted(String a, String b, String order) {
         for (int i = 0; i < a.length() && i < b.length(); i++) {
-            if (map.get(a.charAt(i)) < map.get(b.charAt(i))) {
+            if (order.indexOf(a.charAt(i)) < order.indexOf(b.charAt(i))) {
                 return true;
-            } else if (map.get(a.charAt(i)) > map.get(b.charAt(i))) {
+            } else if (order.indexOf(a.charAt(i)) > order.indexOf(b.charAt(i))) {
                 return false;
             }
         }

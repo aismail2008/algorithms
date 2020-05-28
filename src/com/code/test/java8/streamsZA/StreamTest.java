@@ -45,7 +45,9 @@ public class StreamTest {
         Map<String, Long> groupResult = persons.stream().collect(Collectors.groupingBy(Person::getCountry, Collectors.counting()));
         groupResult.entrySet().stream().forEach(ent -> System.out.println(ent.getKey() + ": " + ent.getValue()));
         //-- Obtain US and non US based persons using partitioning by and & map names to uppercase using mapping
-        persons.stream().collect(Collectors.partitioningBy(p -> p.getCountry().equals("US"), Collectors.mapping(p -> p.getName().toUpperCase(), Collectors.toList())));
+        Map<Boolean, List<String>> ss = persons.stream().collect(
+                    Collectors.partitioningBy(p -> p.getCountry().equals("US"),
+                                              Collectors.mapping(p -> p.getName().toUpperCase(), Collectors.toList())));
 
         //-- Obtain the persons in each country using groupingBy and map names to upperCase using mapping
         persons.stream().collect(Collectors.groupingBy(Person::getCountry, Collectors.mapping(p -> p.getName().toUpperCase(), Collectors.toList())));

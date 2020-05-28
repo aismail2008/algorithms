@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 /**
  * Revenue Milestones
- * We keep track of the revenue Facebook makes every day, and we want to know on what days Facebook hits certain revenue milestones. Given an array of the revenue on each day, and an array of milestones Facebook wants to reach, return an array containing the days on which Facebook reached every milestone.
+ * We keep track of the revenue Facebook makes every day, and we want to know on what days Facebook hits certain revenue milestones.
+ * Given an array of the revenue on each day, and an array of milestones Facebook wants to reach, return an array containing the days on which Facebook reached every milestone.
  * Signature
  * int[] getMilestoneDays(int[] revenues, int[] milestones)
  * Input
@@ -38,14 +39,14 @@ public class RevenueMilestones {
                     while (j < revenues.length && revenues[j] < milestones[i]) {
                         j++;
                     }
-                    output[i] = j+1;
+                    output[i] = j+1; // NOT J AS it's 1 based index
                 } else
                     output[i] = 0;
             } else {
                 while (j > 0 && revenues[j] == revenues[j - 1]) {
                     j--;
                 }
-                output[i] = j + 1;
+                output[i] = j + 1; // NOT J AS it's 1 based index
             }
         }
         return output;

@@ -16,6 +16,6 @@ import com.code.test.problemset.leetcode._ShortestUnsortedContinuousSubarray;
  */
 public class Q16_SubSort {
     public static void main(String[] args) {
-        _ShortestUnsortedContinuousSubarray.findUnsortedSubarray(null);
+        new _ShortestUnsortedContinuousSubarray();
     }
 }

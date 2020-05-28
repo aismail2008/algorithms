@@ -9,7 +9,8 @@ import java.util.stream.Collectors;
 public class Utils {
 
     /**
-     *  Group by map values and list key.
+     * Group by map values and list key.
+     *
      * @param level
      * @return
      */
@@ -18,16 +19,16 @@ public class Utils {
                 Collectors.mapping(Map.Entry::getKey, Collectors.toList())));
     }
 
-    public static void reverseOrder(){
+    public static void reverseOrder() {
         PriorityQueue priorityQueue = new PriorityQueue(Comparator.reverseOrder());
 
         Arrays.sort(new Integer[]{}, Comparator.reverseOrder());
     }
 
-    public static void reverseArrayOrList()  {
+    public static void reverseArrayOrList() {
 
         String[] typesOfInsurance = {"Cat", "Dog", "Elephant"};
-        System.out.println("array before reverse: " + Arrays.toString(typesOfInsurance) );
+        System.out.println("array before reverse: " + Arrays.toString(typesOfInsurance));
 
         List listOfProducts = Arrays.asList(typesOfInsurance);
         Collections.reverse(listOfProducts);
@@ -35,12 +36,12 @@ public class Utils {
         String[] reversed = new String[3];
         listOfProducts.toArray(reversed);
 
-        System.out.println("array after reverse: " + Arrays.toString(reversed) );
+        System.out.println("array after reverse: " + Arrays.toString(reversed));
     }
 
     /**
      * Shortest path between two points in 2d matrix
-     *
+     * <p>
      * O(m*n) && O(m*n) time and space
      */
     private int visitBfsPointToPoint(int[][] forest, Point start, Point end) {
@@ -87,7 +88,7 @@ public class Utils {
     /**
      * Copy Array except I
      */
-    private  int[] copyArrayExceptI(int i, int[] arr) {
+    private int[] copyArrayExceptI(int i, int[] arr) {
         int[] newArr = new int[arr.length - 1];
         int h = 0;
         for (int j = 0; j < newArr.length; j++) {
@@ -101,11 +102,12 @@ public class Utils {
 
     /**
      * Going all directions
+     *
      * @param i
      * @param j
      * @param board
      */
-    public void allFourDirections(int i, int j, int[][]board){
+    public void allFourDirections(int i, int j, int[][] board) {
         int[] dx = {-1, 0, 1, 0};
         int[] dy = {0, 1, 0, -1};
 
@@ -127,9 +129,9 @@ public class Utils {
             Integer a = Integer.valueOf(o1.toString());
             Integer b = Integer.valueOf(o2.toString());
 
-            if(Math.abs(a) != Math.abs(b)){
+            if (Math.abs(a) != Math.abs(b)) {
                 return Math.abs(a) - Math.abs(b);
-            }else{
+            } else {
                 return a.compareTo(b);
             }
         }).mapToInt(Integer::intValue).toArray();
@@ -140,13 +142,23 @@ public class Utils {
             Integer a = Integer.valueOf(o1.toString());
             Integer b = Integer.valueOf(o2.toString());
 
-            if(Math.abs(a) != Math.abs(b)){
+            if (Math.abs(a) != Math.abs(b)) {
                 return Math.abs(a) - Math.abs(b);
-            }else{
+            } else {
                 return a.compareTo(b);
             }
         }).toArray(Integer[]::new);
 
         return input;
+    }
+
+    // List to Array
+    static int[] listToArr(List<Integer> list) {
+        return list.stream().mapToInt(i -> i).toArray();
+    }
+
+    // List to Array
+    static List<Integer> ArrToList(int [] arr) {
+        return Arrays.stream(arr).boxed().collect(Collectors.toList());
     }
 }

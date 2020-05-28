@@ -2,7 +2,9 @@ package com.code.test.problemset.companies.Pramp;
 
 /**
  * Array Index & Element Equality
- * Given a sorted array arr of distinct integers, write a function indexEqualsValueSearch that returns the lowest index i for which arr[i] == i. Return -1 if there is no such index. Analyze the time and space complexities of your solution and explain its correctness.
+ * Given a sorted array arr of distinct integers,
+ * write a function indexEqualsValueSearch that returns the lowest index i for which arr[i] == i.
+ * Return -1 if there is no such index. Analyze the time and space complexities of your solution and explain its correctness.
  * <p>
  * Examples:
  * <p>
@@ -37,7 +39,7 @@ public class ArrayIndexElementEquality {
             if (mid == arr[mid] && (lastFound == -1 || mid < lastFound)) {
                 lastFound = mid;
             }
-
+            //      2       5
             if (arr[mid] < mid) {
                 start = mid + 1;
             } else {

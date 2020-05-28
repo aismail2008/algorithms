@@ -6,7 +6,7 @@ package com.code.test.problemset.leetcode;
  * For example, given input array A = [1,1,2], your function should return length = 2, and A is now [1,2].
  * <p>
  * https://leetcode.com/problems/remove-duplicates-from-sorted-array/
- * https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/submissions/
+ * https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii
  */
 public class Q1_2_RemoveDuplicateSortedArray {
     public static int removeDuplicated(int[] a) {

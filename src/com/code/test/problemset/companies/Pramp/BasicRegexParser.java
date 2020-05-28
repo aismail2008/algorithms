@@ -44,19 +44,17 @@ public class BasicRegexParser {
             return false;
         }
 
-        int i = 0;
         if (pattern.length() > 1 && pattern.charAt(1) == '*') {
             String toMatch = pattern.substring(0, 2); // .* or a*
             boolean success = isMatch(text, pattern.substring(2)); // zero
 
             String st = toMatch.startsWith(".")? text.substring(0, 1): toMatch.substring(0,1);
             int index = 0;
-            while (!success && index < text.length() && text.substring(index, index + 1).equals(st)) {
-                success = isMatch(text.substring(index + 1), pattern.substring(2)); // 1 or more
+            while (!success && index < text.length() && text.substring(index, index + 1).equals(st)) {  // 1 or more
+                success = isMatch(text.substring(index + 1), pattern.substring(2));
                 index++;
             }
             return success;
-
         } else if (pattern.charAt(0) == '.') {
             return isMatch(text.substring(1), pattern.substring(1));
         } else { // a or b or ..

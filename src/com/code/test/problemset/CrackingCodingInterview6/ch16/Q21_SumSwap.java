@@ -68,8 +68,10 @@ public class Q21_SumSwap {
         }
 
         public static void main(String[] args) {
-            int[] array1 = {-9, -1, -4, 8, 9, 6, -5, -7, 3, 9};
-            int[] array2 = {6, 6, 4, -1, 7, -6, -9, 4, -8, 8};
+//            int[] array1 = {-9, -1, -4, 8, 9, 6, -5, -7, 3, 9};
+//            int[] array2 = {-9, -1, -4, 8, 9, 6, -5, -7, 3, 9};
+            int[] array1 = {4, 1, 2, 1, 1, 2};
+            int[] array2 = {3, 6, 3, 3};
             int[] swaps = findSwapValues(array1, array2);
             if (swaps == null) {
                 System.out.println("null");

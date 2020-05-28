@@ -1,7 +1,8 @@
 package com.code.test.problemset.leetcode;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Power Set:

@@ -5,24 +5,32 @@ greatest common divisor, least common denominator in array in logarithmic time.
 130 Range Sum Query 2D Immutable
 https://leetcode.com/problems/range-sum-query-2d-immutable/
 -------------------
-https://leetcode.com/problems/number-of-closed-islands/
--------------------
-FromBaseToBase
-Google:
-    A23MedianSortedArray
-    Group shifted string
-    flatten a multilevel doubly linked list
-    redundant connection II
-    Bulls and Cows
-    Guess the Word
-    Recover Binary Search Tree
--------------------
-https://leetcode.com/problems/4sum-ii/
--------------------
-
 
 **** 185 - 186 - 219 - 201
-
-
-
 https://en.wikipedia.org/wiki/Catalan_number
+
+
+
+**Important**
+-----
+_PostfixToInfix
+_InfixToPostfix
+
+Difficult/Important
+-----
+Q38_MedianOfTwoSortedArray (M)
+Q46_LongestIncreasingSubSequence(M) == Q48_RussianDollEnvelopes (H)
+Q87_SlidingWindowMaximum (H)  ==> Deque or PriorityQueue
+Q9_BSTSequences (H)
+Q129_RotateImage
+Q211_MaxChunksToMakeSorted (M)
+_AlienDictionary
+
+Q185_UniqueBinarySearchTrees == Q186_UniqueBinarySearchTreesII   => DP
+_DecodeWays   => DP
+Q271_EditDistance (M) == Q275_LongestCommonSubstring == Q274_LongestCommonSubsequence == _DeleteOperationTwoStrings ==> DP
+
+
+Q18_PatternMatching
+
+_StrStr

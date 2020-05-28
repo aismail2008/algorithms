@@ -1,5 +1,7 @@
 package com.code.test.problemset.leetcode;
 
+import java.util.Stack;
+
 /**
  * Given a binary search tree and a node in it, find the in-order successor of that node in the BST.
  * // Definition for a binary tree node.
@@ -17,6 +19,7 @@ public class Q195_InOrderSuccessorBST {
         public int val;
         public TreeNode left, right;
         public TreeNode parent;
+
         public TreeNode(int item) {
             val = item;
             left = right = null;
@@ -25,36 +28,37 @@ public class Q195_InOrderSuccessorBST {
 
     // If you have parent
     TreeNode findInOrderSuccessor(TreeNode node) {
-        if(node == null){
+        if (node == null) {
             return null;
         }
 
-        if (node.right != null){
+        if (node.right != null) {
             return getMostLeft(node.right);
-        }
-        else{
-            while(node.parent != null && node != node.parent.left){
+        } else {
+            while (node.parent != null && node != node.parent.left) {
                 node = node.parent;
             }
-            if(node.parent != null){
+            if (node.parent != null) {
                 return node.parent;
             }
         }
         return null;
     }
 
-    TreeNode getMostLeft(TreeNode n){
-        while(n.left != null){
+    TreeNode getMostLeft(TreeNode n) {
+        while (n.left != null) {
             n = n.left;
         }
         return n;
     }
 
-
+    //------------------------------------------//
+    // If you have parent
+    // Do to InOrder traversal and once found target say found = true then next printed is the Successor
     public TreeNode nextSuccessor(TreeNode root, TreeNode p) {
         if (root == null)
             return null;
-        java.util.Stack<TreeNode> s = new java.util.Stack();
+        Stack<TreeNode> s = new Stack();
         s.push(root);
 
         TreeNode n = root;
@@ -79,6 +83,8 @@ public class Q195_InOrderSuccessorBST {
         return null;
     }
 
+    // --------------------------------------------------------//
+    // If you have parent
     // One solution is do to InOrder traversal and once found target say found = true then next printed is the Successor
     // OR This one
     public TreeNode inorderSuccessor(TreeNode root, TreeNode p) {

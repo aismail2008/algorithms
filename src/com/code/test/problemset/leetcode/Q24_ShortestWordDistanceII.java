@@ -36,19 +36,6 @@ public class Q24_ShortestWordDistanceII {
     }
 
     public int shortest(String word1, String word2) {
-        ArrayList<Integer> l1 = map.get(word1);
-        ArrayList<Integer> l2 = map.get(word2);
-
-        int result = Integer.MAX_VALUE;
-        for (int i1 : l1) {
-            for (int i2 : l2) {
-                result = Math.min(result, Math.abs(i1 - i2));
-            }
-        }
-        return result;
-    }
-
-    public int shortest2(String word1, String word2) {
 
         ArrayList<Integer> l1 = map.get(word1);
         ArrayList<Integer> l2 = map.get(word2);

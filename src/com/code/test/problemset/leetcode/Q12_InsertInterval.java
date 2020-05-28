@@ -26,6 +26,64 @@ public class Q12_InsertInterval {
         insertIntervals(new int[][]{{1, 2}, {3, 5}, {6, 7}, {8, 10}, {12, 16}}, new int[]{4, 9});
     }
 
+    static class SolutionOptimized{
+        static class Interval{
+            int start;
+            int end;
+
+            public Interval(int start, int end) {
+                this.start = start;
+                this.end = end;
+            }
+        }
+
+        public List<Interval> insert(List<Interval> intervals, Interval newInterval) {
+            List<Interval> result = new ArrayList<>();
+
+            if (intervals.size() == 0) {
+                result.add(newInterval);
+                return result;
+            }
+
+            int p = helper(intervals, newInterval);
+
+            result.addAll(intervals.subList(0, p));
+
+            for (int i = p; i < intervals.size(); i++) {
+                Interval inter = intervals.get(i);
+                if (inter.end < newInterval.start) {
+                    result.add(inter);
+                } else if (inter.start > newInterval.end) {
+                    result.add(newInterval);
+                    newInterval = inter;
+                } else if (inter.end >= newInterval.start || inter.start <= newInterval.end) {
+                    newInterval = new Interval(Math.min(inter.start, newInterval.start), Math.max(newInterval.end, inter.end));
+                }
+            }
+
+            result.add(newInterval);
+
+            return result;
+        }
+
+        public int helper(List<Interval> intervals, Interval newInterval) {
+            int low = 0;
+            int high = intervals.size() - 1;
+
+            while (low < high) {
+                int mid = low + (high - low) / 2;
+
+                if (newInterval.start <= intervals.get(mid).start) {
+                    high = mid;
+                } else {
+                    low = mid + 1;
+                }
+            }
+
+            return high == 0 ? 0 : high - 1;
+        }
+    }
+
     public static int[][] insertIntervals(int[][] a, int[] newInter) {
         if (a == null || a.length == 0)
             return new int[][]{newInter};

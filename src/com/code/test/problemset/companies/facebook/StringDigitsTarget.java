@@ -13,7 +13,7 @@ import java.util.List;
 public class StringDigitsTarget {
 
     /*
-    Idea is we have to sets of numbers. Ones is add and other set will be minced
+    Idea is we have two buckets of numbers. one is for adding  and other one will be minced
     so Set1 - Set2 = Target
     > for each item either put it on this set and check or on other set and check
     once you are run out of all numbers check the difference if went to that target or not
@@ -40,6 +40,7 @@ public class StringDigitsTarget {
         List setAddOr = new ArrayList(setAdd);
         setAdd.add(val);
         findTarget(setAdd, setMince, input, i+1, target);
+
         List setMinceAdd = new ArrayList(setMince);
         setMinceAdd.add(val);
         findTarget(setAddOr, setMinceAdd, input, i+1, target);

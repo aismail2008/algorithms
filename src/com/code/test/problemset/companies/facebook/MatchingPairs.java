@@ -3,7 +3,8 @@ package com.code.test.problemset.companies.facebook;
 /**
  * Matching Pairs
  * Given two strings s and t of length N, find the maximum number of possible matching pairs in strings s and t after swapping exactly two characters within s.
- * A swap is switching s[i] and s[j], where s[i] and s[j] denotes the character that is present at the ith and jth index of s, respectively. The matching pairs of the two strings are defined as the number of indices for which s[i] and t[i] are equal.
+ * A swap is switching s[i] and s[j], where s[i] and s[j] denotes the character that is present at the ith and jth index of s, respectively.
+ * The matching pairs of the two strings are defined as the number of indices for which s[i] and t[i] are equal.
  * Note: This means you must swap two characters at different indices.
  * Signature
  * int matchingPairs(String s, String t)

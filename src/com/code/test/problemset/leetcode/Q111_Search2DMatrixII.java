@@ -20,6 +20,7 @@ package com.code.test.problemset.leetcode;
  */
 public class Q111_Search2DMatrixII {
 
+    // O(m + n)
     public static boolean findElement(int[][] matrix, int elem) {
         if(matrix.length == 0)
             return false;

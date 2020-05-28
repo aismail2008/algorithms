@@ -1,17 +1,17 @@
 package com.code.test.problemset.leetcode;
 
 /**
- * Reverse a singly linked list.
+ * Reverse a singly linked list II
+ * <p>
+ * Reverse a linked list from position m to n. Do it in one-pass.
+ * <p>
+ * Note: 1 ≤ m ≤ n ≤ length of list.
  * <p>
  * Example:
  * <p>
- * Input: 1->2->3->4->5->NULL
- * Output: 5->4->3->2->1->NULL
- * Follow up:
- * <p>
- * A linked list can be reversed either iteratively or recursively. Could you implement both?
- * <p>
- * https://leetcode.com/problems/reverse-linked-list/
+ * Input: 1->2->3->4->5->NULL, m = 2, n = 4
+ * Output: 1->4->3->2->5->NULL
+ * https://leetcode.com/problems/reverse-linked-list-ii/
  */
 public class Q149_ReverseLinkedListII {
     static class ListNode {

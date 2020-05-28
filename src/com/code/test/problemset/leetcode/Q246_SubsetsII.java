@@ -86,7 +86,7 @@ public class Q246_SubsetsII {
         public static void permutations(int[] s, List<Integer> prefix) {
             if (s.length != 0) {
                 for (int i = 0; i < s.length; i++) {
-                    int[] rem = copyArrayExceptI(i, s);
+                    int[] rem = copyArrayExceptI(i, s);  // swap solution as in old permutation
                     List<Integer> iPrefix = new ArrayList<>(prefix);
                     iPrefix.add(s[i]);
                     iPrefix.sort(Integer::compareTo);

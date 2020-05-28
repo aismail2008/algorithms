@@ -33,7 +33,7 @@ public class Q190_BinaryTreePaths {
     public List<String> binaryTreePaths(TreeNode root) {
 
         String sb = "";
-        ArrayList<String> result = new ArrayList<String>();
+        ArrayList<String> result = new ArrayList<>();
 
         helper(root, result, sb);
 

@@ -69,9 +69,12 @@ public class Q18_PatternMatching {
 
             for (int mainSize = 0; mainSize <= maxMainSize; mainSize++) {
                 String mainStr = value.substring(0, mainSize);
+
                 int remainingLength = size - mainSize * countOfMain;
+
                 if (countOfAlt == 0 || remainingLength % countOfAlt == 0) {
                     int altIndex = firstAlt * mainSize;
+
                     int altSize = countOfAlt == 0 ? 0 : remainingLength / countOfAlt;
 
                     String altStr = countOfAlt == 0 ? "" : value.substring(altIndex, altSize + altIndex);

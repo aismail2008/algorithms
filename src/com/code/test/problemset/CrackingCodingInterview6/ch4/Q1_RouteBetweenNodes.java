@@ -14,7 +14,7 @@ import java.util.Queue;
 public class Q1_RouteBetweenNodes {
 
     public static boolean search(Graph g, GraphNode start, GraphNode end) {
-        LinkedList<GraphNode> q = new LinkedList<GraphNode>();
+        LinkedList<GraphNode> q = new LinkedList<>();
         for (GraphNode u : g.getNodes()) {
             u.state = State.Unvisited;
         }

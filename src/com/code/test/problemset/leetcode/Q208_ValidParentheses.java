@@ -41,7 +41,7 @@ public class Q208_ValidParentheses {
         map.put(')', '(');
         map.put(']', '[');
         map.put('}', '{');
-        Stack<Character> stack = new Stack<Character>();
+        Stack<Character> stack = new Stack<>();
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
             if (map.containsKey(ch)) { // closing

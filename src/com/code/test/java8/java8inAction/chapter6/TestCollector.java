@@ -29,7 +29,13 @@ public class TestCollector {
 		Comparator<Dish> dishCaloriesComparator = Comparator.comparingInt(Dish::getCalories);
 		
 		Optional<Dish> mostCalorieDish = menu.stream().collect(Collectors.maxBy(dishCaloriesComparator));
-		
+		 mostCalorieDish = menu.stream().max(new Comparator<Dish>() {
+			@Override
+			public int compare(Dish o1, Dish o2) {
+				return o1.getCalories() - o2.getCalories();
+			}
+		});
+
 		int totalCalories = menu.stream().collect(Collectors.summingInt(Dish::getCalories));
 		
 		totalCalories = menu.stream().collect(Collectors.reducing(0,Dish::getCalories,Integer::sum));

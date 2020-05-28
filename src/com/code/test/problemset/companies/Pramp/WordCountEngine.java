@@ -25,6 +25,8 @@ import java.util.*;
  * [time limit] 5000ms
  * [input] string document
  * [output] array.array.string
+ *
+ * Similar to {@link com.code.test.problemset.leetcode.MostCommonWord}
  * */
 public class WordCountEngine {
 

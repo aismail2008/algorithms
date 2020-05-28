@@ -34,7 +34,7 @@ package com.code.test.problemset.companies.Pramp;
  */
 class NumberOfPaths {
     /**
-     * Duplicate or similar to {@ Q267_UniquePath}
+     * Duplicate or similar to {@link com.code.test.problemset.leetcode.Q267_UniquePath}
       * @param n
      * @return
      */

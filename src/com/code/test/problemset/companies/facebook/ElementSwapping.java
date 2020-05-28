@@ -2,8 +2,10 @@ package com.code.test.problemset.companies.facebook;
 
 /**
  * Element Swapping
- * Given a sequence of n integers arr, determine the lexicographically smallest sequence which may be obtained from it after performing at most k element swaps, each involving a pair of consecutive elements in the sequence.
- * Note: A list x is lexicographically smaller than a different equal-length list y if and only if, for the earliest index at which the two lists differ, x's element at that index is smaller than y's element at that index.
+ * Given a sequence of n integers arr, determine the lexicographically smallest sequence which may be obtained from it after performing at most k element swaps,
+ * each involving a pair of consecutive elements in the sequence.
+ * Note: A list x is lexicographically smaller than a different equal-length list y if and only if, for the earliest index
+ * at which the two lists differ, x's element at that index is smaller than y's element at that index.
  * Signature
  * int[] findMinArray(int[] arr, int k)
  * Input
@@ -33,7 +35,7 @@ public class ElementSwapping {
         let start = 0
         find arr[i] < arr[start] between start to start + k
         if found pop to front and decrement k
-        shift start on step ahead
+        shift start one step ahead
         repeat till k = 0 or start+k is the end
 
     */

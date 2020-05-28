@@ -127,7 +127,8 @@ public class Q26_Calculator {
     }
 
     public static void main(String[] args) {
-        String expression = "6/5*3+4*5/2-12/6*3/3+3+3";
+//        String expression = "6/5*3+4*5/2-12/6*3/3+3+3";
+        String expression = "2*3+5/6*3+15";
         double result = compute(expression);
         System.out.println(result);
     }

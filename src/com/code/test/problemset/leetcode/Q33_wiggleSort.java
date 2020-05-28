@@ -35,23 +35,16 @@ public class Q33_wiggleSort {
         }
     }
 
-    public void wiggleSort_(int[] nums) {
-        if (nums == null || nums.length <= 1) {
-            return;
-        }
-
-        for (int i = 1; i < nums.length; i++) {
-            if (i % 2 == 1) {
-                if (nums[i - 1] > nums[i]) {
-                    swap(nums, i - 1, i);
-                }
-            } else {
-                if (nums[i - 1] < nums[i]) {
-                    swap(nums, i - 1, i);
-                }
+    // O(n)
+    public void wiggleSort_(int[] array) {
+        for (int i = 1; i < array.length; i += 2) {
+            if (array[i - 1] < array[i]) {
+                swap(array, i - 1, i);
+            }
+            if (i + 1 < array.length && array[i + 1] < array[i]) {
+                swap(array, i + 1, i);
             }
         }
-        Arrays.stream(nums).forEach(i -> System.out.print(i + ", "));
     }
 
     private void swap(int[] nums, int i, int j) {

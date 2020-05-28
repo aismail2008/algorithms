@@ -19,7 +19,7 @@ import java.util.List;
  *
  */
 class Q3_SetOfPlates {
-    List<Stack> stacks = new ArrayList<Stack>();
+    List<Stack> stacks = new ArrayList<>();
     public int capacity;
 
     public Q3_SetOfPlates(int capacity) {

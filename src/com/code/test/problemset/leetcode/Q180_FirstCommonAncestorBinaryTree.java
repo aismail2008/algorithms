@@ -10,16 +10,16 @@ package com.code.test.problemset.leetcode;
  * Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
  * Output: 3
  * Explanation: The LCA of nodes 5 and 1 is 3.
- *
- *  Example 2:
+ * <p>
+ * Example 2:
  * Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
  * Output: 5
  * Explanation: The LCA of nodes 5 and 4 is 5, since a node can be a descendant of itself according to the LCA definition.
- *
+ * <p>
  * Note:
  * All of the nodes' values will be unique.
  * p and q are different and both values will exist in the binary tree.
- *
+ * <p>
  * https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
  */
 public class Q180_FirstCommonAncestorBinaryTree {
@@ -33,30 +33,53 @@ public class Q180_FirstCommonAncestorBinaryTree {
         }
     }
 
-    public static TreeNode commonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if (!covers(root, p) || !covers(root, q)) { // Error check - one node is not in tree
-            return null;
+    static class SolutionA {
+        public static TreeNode commonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+            if (!covers(root, p) || !covers(root, q)) { // Error check - one node is not in tree
+                return null;
+            }
+            return ancestorHelper(root, p, q);
         }
-        return ancestorHelper(root, p, q);
+
+        public static TreeNode ancestorHelper(TreeNode root, TreeNode p, TreeNode q) {
+            if (root == null || root == p || root == q) {
+                return root;
+            }
+
+            boolean pIsOnLeft = covers(root.left, p);
+            boolean qIsOnLeft = covers(root.left, q);
+            if (pIsOnLeft != qIsOnLeft) { // Nodes are on different side
+                return root;
+            }
+            TreeNode childSide = pIsOnLeft ? root.left : root.right;
+            return ancestorHelper(childSide, p, q);
+        }
+
+        public static boolean covers(TreeNode root, TreeNode p) {
+            if (root == null) return false;
+            if (root == p) return true;
+            return covers(root.left, p) || covers(root.right, p);
+        }
     }
 
-    public static TreeNode ancestorHelper(TreeNode root, TreeNode p, TreeNode q) {
-        if (root == null || root == p || root == q) {
-            return root;
-        }
+    static class SolutionB {
+        public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+            if (root == null)
+                return null;
 
-        boolean pIsOnLeft = covers(root.left, p);
-        boolean qIsOnLeft = covers(root.left, q);
-        if (pIsOnLeft != qIsOnLeft) { // Nodes are on different side
-            return root;
-        }
-        TreeNode childSide = pIsOnLeft ? root.left : root.right;
-        return ancestorHelper(childSide, p, q);
-    }
+            if (root == p || root == q)
+                return root;
 
-    public static boolean covers(TreeNode root, TreeNode p) {
-        if (root == null) return false;
-        if (root == p) return true;
-        return covers(root.left, p) || covers(root.right, p);
+            TreeNode l = lowestCommonAncestor(root.left, p, q);
+            TreeNode r = lowestCommonAncestor(root.right, p, q);
+
+            if (l != null && r != null) {
+                return root;
+            } else if (l == null && r == null) {
+                return null;
+            } else {
+                return l == null ? r : l;
+            }
+        }
     }
 }

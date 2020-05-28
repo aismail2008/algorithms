@@ -3,7 +3,7 @@ package com.code.test.problemset.leetcode;
 import java.util.HashMap;
 
 /**
- * Two Sum III – Data structure design
+ * Two Sum III 2 sums – Data structure design
  *
  * Design and implement a TwoSum class. It should support the following operations: add and find.
  *

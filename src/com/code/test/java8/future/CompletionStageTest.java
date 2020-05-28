@@ -1,15 +1,18 @@
 package com.code.test.java8.future;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.*;
+import java.util.stream.Collectors;
 
 public class CompletionStageTest {
     static Executor service = Executors.newFixedThreadPool(10);
 
     public static void main(String argv[]) throws InterruptedException {
-//        multipleChains();
-//        testCompletableFuture();
-//        nestedCompletionStages();
-//        combineAsync();
+        multipleChains();
+        testCompletableFuture();
+        nestedCompletionStages();
+        combineAsync();
         handlingException();
     }
 
@@ -83,7 +86,7 @@ public class CompletionStageTest {
     }
 
     //-------------Tests---------//
-    static void multipleChains() throws InterruptedException {
+    static void multipleChains() {
         //-----------------Chaining multiple callbacks-------------------//
         // thenApply will execute after and return all results together of supply and ThenApply (all in same thread)
         // With thenApplyAsync second part will run in future mode and future object returns (in different threads)
@@ -95,7 +98,7 @@ public class CompletionStageTest {
         System.out.println("vs Async");
         //VS
         CompletableFuture.supplyAsync(CompletionStageTest::getDummyString, service)
-                .thenApplyAsync(CompletionStageTest::getMessageLength, service) // vs .thenApplyAsync(..)
+                .thenApplyAsync(CompletionStageTest::getMessageLength, service)
                 .thenAcceptAsync(CompletionStageTest::printWithThreadName, service)
                 .join();//otherwise system will end without print values as main thread ends before other completionStages do;
 
@@ -142,9 +145,12 @@ public class CompletionStageTest {
         CompletableFuture<String> secondTask = CompletableFuture.supplyAsync(
                 () -> "Hello");
 
-        firstTask.thenCombineAsync(secondTask, (f, s) -> (f + s.length()), service)
-                .thenAccept(System.out::println).join();
+        firstTask.thenCombineAsync(secondTask, (f, s) -> {
+            return (f + s.length());
+            },
+                service).thenAccept(System.out::println).join();
 
+       // CompletableFuture.anyOf(firstTask, secondTask);
         System.out.println("Done combineAsync!");
     }
 
@@ -192,5 +198,18 @@ public class CompletionStageTest {
             res = "changed_In_Handle";
             return res;
         }).thenAccept(System.out::println).join();
+    }
+
+    static void anyOfExample() {
+        StringBuilder result = new StringBuilder();
+        List<String> messages = Arrays.asList("a", "b", "c");
+        List<CompletableFuture<String>> futures = messages.stream()
+                .map(msg -> CompletableFuture.completedFuture(msg).thenApply(s -> s))
+                .collect(Collectors.toList());
+        CompletableFuture.anyOf(futures.toArray(new CompletableFuture[futures.size()])).whenComplete((res, th) -> {
+            if(th == null) {
+                result.append(res);
+            }
+        });
     }
 }

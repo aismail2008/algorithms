@@ -20,6 +20,14 @@ import java.util.Set;
  * 0 < nums[i] < 10000.
  * Accepted
  * https://leetcode.com/problems/partition-to-k-equal-sum-subsets/
+ *
+ * ????
+ * Time Complexity: O(k^{N-k} k!)
+ * where NN is the length of nums, and kk is as given. As we skip additional zeroes in groups, naively we will make O(k!)O(k!) calls to search, then an additional O(k^{N-k})O(k
+ * N−k
+ *  ) calls after every element of groups is nonzero.
+ *
+ * Space Complexity: O(N), the space used by recursive calls to search in our call stack.
  */
 public class Q219_PartitionToKEqualSumSubsets {
 
@@ -33,8 +41,9 @@ public class Q219_PartitionToKEqualSumSubsets {
         return canPartition(nums, visited, 0, k, 0, sum / k);
     }
 
+
     public boolean canPartition(int[] nums, int[] visited, int start_index, int k, int cur_sum, int target) {
-        if (k == 1)
+        if (k == 1) // could also be 0 but since all sum is divided by k then definitely the last one will be sum
             return true;
 
         if (cur_sum == target)

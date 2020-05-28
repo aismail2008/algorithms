@@ -71,35 +71,6 @@ public class Q267_UniquePath {
         return dp[m - 1][n - 1];
     }
 
-    //Timout for large value
-    static class SolutionAli_1 {
-        int cnt;
-
-        public int uniquePaths(int m, int n) {
-            cnt = 0;
-
-            if (m == 1 && n == 1)
-                return 1;
-            m--;
-            n--;
-            uniquePaths(0, 1, m, n);
-            uniquePaths(1, 0, m, n);
-            System.out.println(cnt);
-            return cnt;
-        }
-
-        public void uniquePaths(int stx, int sty, int m, int n) {
-            if (m == stx && n == sty) {
-                cnt++;
-            }
-            if (stx > m || sty > n) {
-                return;
-            }
-            uniquePaths(stx, sty + 1, m, n);
-            uniquePaths(stx + 1, sty, m, n);
-        }
-    }
-
     static class Solution_Ali2 {
         Set<String> paths;
         Map<String, List<String>> memory;

@@ -27,7 +27,7 @@ import java.util.Stack;
  * So, the answer for the above input is [1, 3, 1, 5, 1]
  */
 public class ContiguousSubArray {
-
+    // O(N2)
     static int[] countSubarrays(int[] arr) {
         int[] total = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {

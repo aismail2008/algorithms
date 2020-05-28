@@ -18,7 +18,10 @@ package com.code.test.problemset.leetcode;
  * X O X X
  * Explanation:
  * <p>
- * Surrounded regions shouldn’t be on the border, which means that any 'O' on the border of the board are not flipped to 'X'. Any 'O' that is not on the border and it is not connected to an 'O' on the border will be flipped to 'X'. Two cells are connected if they are adjacent cells connected horizontally or vertically.
+ * Surrounded regions shouldn’t be on the border,
+ * which means that any 'O' on the border of the board are not flipped to 'X'.
+ * Any 'O' that is not on the border and it is not connected to an 'O' on the border will be flipped to 'X'.
+ * Two cells are connected if they are adjacent cells connected horizontally or vertically.
  * <p>
  * https://leetcode.com/problems/surrounded-regions/
  */
@@ -26,11 +29,11 @@ public class Q125_SurroundedRegions {
     public static void main(String[] args) {
         new Q125_SurroundedRegions().solve(new char[][]
                 {{'O', 'O', 'O', 'O', 'X', 'X'},
-                        {'O', 'O', 'O', 'O', 'O', 'O'},
-                        {'O', 'X', 'O', 'X', 'O', 'O'},
-                        {'O', 'X', 'O', 'O', 'X', 'O'},
-                        {'O', 'X', 'O', 'X', 'O', 'O'},
-                        {'O', 'X', 'O', 'O', 'O', 'O'}});
+                 {'O', 'O', 'O', 'O', 'O', 'O'},
+                 {'O', 'X', 'O', 'X', 'O', 'O'},
+                 {'O', 'X', 'O', 'O', 'X', 'O'},
+                 {'O', 'X', 'O', 'X', 'O', 'O'},
+                 {'O', 'X', 'O', 'O', 'O', 'O'}});
     }
 
     public void solve(char[][] board) {

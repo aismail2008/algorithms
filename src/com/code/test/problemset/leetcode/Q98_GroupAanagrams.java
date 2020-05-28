@@ -4,6 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
+ * Group Anagrams :
  * Given an array of strings, group anagrams together.
  * <p>
  * Example:
@@ -25,28 +26,10 @@ import java.util.stream.Collectors;
 public class Q98_GroupAanagrams {
     public static void main(String[] args) {
         groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"});
-        sort(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"});
     }
 
-    public static String[] groupAnagrams(String[] str) {
-        Arrays.sort(str, (o1, o2) -> {
-            if (o1.length() != o2.length())
-                return o1.compareTo(o2);
-
-            char[] o1arr = o1.toCharArray();
-            Arrays.sort(o1arr);
-
-            char[] o2arr = o2.toCharArray();
-            Arrays.sort(o2arr);
-
-            return new String(o2arr).compareTo(new String(o1arr));
-        });
-
-        return str;
-    }
-
-    public static List<List<String>> sort(String[] array) {
-        HashMap<String, List<String>> mapList = new HashMap<String, List<String>>();
+    public static List<List<String>> groupAnagrams(String[] array) {
+        HashMap<String, List<String>> mapList = new HashMap<>();
 
         /* Group words by anagram */
         for (String s : array) {
@@ -60,6 +43,5 @@ public class Q98_GroupAanagrams {
 
         List<List<String>> lst = mapList.entrySet().stream().map(Map.Entry::getValue).collect(Collectors.toList());
         return lst;
-
     }
 }

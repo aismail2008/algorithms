@@ -2,6 +2,7 @@ package com.code.test.problemset.CrackingCodingInterview6.ch16;
 
 /**
  * Number Max:
+ * max of two numbers
  * Write a method that finds the maximum of two numbers. You should not use if else
  * or any other comparison operator.
  */

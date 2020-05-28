@@ -3,7 +3,11 @@ package com.code.test.problemset.leetcode;
 import com.code.test.problemset.basics.datastructure.TreeNode;
 
 /**
- * Given a Binary Tree, write a function that returns the size of the largest subtree which is also a Binary Search Tree (BST). If the complete Binary Tree is BST, then return the size of whole tree.
+ * Largest BST SubTree
+ * <p>
+ * Given a Binary Tree, write a function that returns the size of the
+ * largest subtree which is also a Binary Search Tree (BST).
+ * If the complete Binary Tree is BST, then return the size of whole tree.
  * Examples:
  * <p>
  * Input:
@@ -40,37 +44,49 @@ import com.code.test.problemset.basics.datastructure.TreeNode;
  */
 public class Q198_LargestBSTSubTree {
     // (size, min, max) -- size of current tree, range of current tree [min, max]
-    class Result {
+    class Wrapper {
         int size;
-        int min;
-        int max;
+        int lower, upper;
+        boolean isBST;
 
-        public Result(int size, int min, int max) {
-            this.size = size;
-            this.min = min;
-            this.max = max;
+        public Wrapper() {
+            lower = Integer.MAX_VALUE;
+            upper = Integer.MIN_VALUE;
+            isBST = false;
+            size = 0;
         }
     }
 
     public int largestBSTSubtree(TreeNode root) {
-        Result rst = BSTSubstree(root);
-        return Math.abs(rst.size);
+        return helper(root).size;
     }
 
-    private Result BSTSubstree(TreeNode root) {
-        if (root == null) {
-            return new Result(0, Integer.MAX_VALUE, Integer.MIN_VALUE);
+    public Wrapper helper(TreeNode node) {
+        Wrapper curr = new Wrapper();
+
+        if (node == null) {
+            curr.isBST = true;
+            return curr;
         }
 
-        Result left = BSTSubstree(root.left);
-        Result right = BSTSubstree(root.right);
+        Wrapper l = helper(node.left);
+        Wrapper r = helper(node.right);
 
-        //The sign of size field indicates whether the returning node is root of a BST or not.
-        if (left.size < 0 || right.size < 0 || root.key < left.max || root.key > right.min) {
-            return new Result(Math.max(Math.abs(left.size), Math.abs(right.size)) * -1, 0, 0);
+        //check left and right subtrees are BST or not
+        //check left's upper again current's value and right's lower against current's value
+        if (l.isBST && r.isBST && l.upper <= node.key && r.lower > node.key) {
+            curr.size = l.size + r.size + 1;
+            curr.isBST = true;
         } else {
-            return new Result(left.size + right.size + 1, Math.min(root.key, left.min), Math.max(root.key, right.max));
+            curr.size = Math.max(l.size, r.size);
+            curr.isBST = false;
         }
+
+        //current subtree's boundaries
+        curr.lower = Math.min(node.key, l.lower);
+        curr.upper = Math.max(node.key, r.upper);
+
+        return curr;
     }
 
     // Driver Program to test above functions

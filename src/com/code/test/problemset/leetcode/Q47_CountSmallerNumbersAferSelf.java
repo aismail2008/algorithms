@@ -8,7 +8,8 @@ import java.util.stream.Collectors;
 /**
  * Count of Smaller Numbers After Self
  *
- * You are given an integer array nums and you have to return a new counts array. The counts array has the property where counts[i] is the number of smaller elements to the right of nums[i].
+ * You are given an integer array nums and you have to return a new counts array.
+ * The counts array has the property where counts[i] is the number of smaller elements to the right of nums[i].
  *
  * Example:
  *
@@ -40,22 +41,22 @@ public class Q47_CountSmallerNumbersAferSelf {
         return Arrays.stream(output).boxed().collect(Collectors.toList());
     }
 
-    int insert(Node root, int k, int left) {
+    int insert(Node root, int k, int totalRight) {
         if (k > root.key) {
-            left += root.leftSize + 1;
+            totalRight += root.leftSize + 1;
             if (root.right == null) {
                 root.right = new Node(k);
-                return left;
+                return totalRight;
             } else {
-                return insert(root.right, k, left);
+                return insert(root.right, k, totalRight);
             }
         } else {
             root.leftSize++;
             if (root.left == null) {
                 root.left = new Node(k);
-                return left;
+                return totalRight;
             } else {
-                return insert(root.left, k, left);
+                return insert(root.left, k, totalRight);
             }
         }
     }

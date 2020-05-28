@@ -30,7 +30,7 @@ public class Q138_LinkedListCycle {
         }
 
         // Error check - there is no meeting point, and therefore no loop
-        if (fast == null || fast.next == null) {
+        if (fast == null || slow == null) {
             return null;
         }
 

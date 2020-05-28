@@ -5,6 +5,7 @@ import com.code.test.problemset.basics.QuickSort;
 import java.util.Arrays;
 
 /**
+ * Sort an Array
  * Given an array of integers nums, sort the array in ascending order.
  *
  * Input: nums = [5,2,3,1]
@@ -14,7 +15,7 @@ import java.util.Arrays;
  * Output: [0,0,1,1,2,5]
  * https://leetcode.com/problems/sort-an-array
  */
-public class Q93_SortArray {
+public class _SortArray {
     public static void main(String[] args) {
         Arrays.sort(args);
         new QuickSort();

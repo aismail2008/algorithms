@@ -1,5 +1,7 @@
 package com.code.test.problemset.companies.facebook;
 
+import com.code.test.problemset.leetcode.Q219_PartitionToKEqualSumSubsets;
+
 import java.util.Arrays;
 
 /**
@@ -24,6 +26,13 @@ import java.util.Arrays;
  *
  */
 public class BalanceSplit {
+
+    public static void main(String[] args) {
+        new Q219_PartitionToKEqualSumSubsets();
+        canPartition(new int[]{2, 1, 2, 5});
+        canPartition(new int[]{3, 6, 3, 4, 4});
+    }
+
     public static boolean canPartition(int[] arr) {
         Arrays.sort(arr);
         int sum = Arrays.stream(arr).sum();
@@ -48,10 +57,5 @@ public class BalanceSplit {
             currentSum += arr[i];
         }
         return false;
-    }
-
-    public static void main(String[] args) {
-        canPartition(new int[]{2, 1, 2, 5});
-        canPartition(new int[]{3, 6, 3, 4, 4});
     }
 }

@@ -28,7 +28,7 @@ import java.util.stream.Collectors;
 public class Q31_4Sum {
 
     public List<List<Integer>> fourSums(int[] nums, int target) {
-        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        List<List<Integer>> result = new ArrayList<>();
 
         if (nums == null || nums.length < 4)
             return result;

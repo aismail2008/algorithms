@@ -1,6 +1,8 @@
 package com.code.test.problemset.leetcode;
 
 /**
+ * search-in-a-sorted-array-of-unknown-size
+ *
  * Sorted Search, No Size:
  * You are given an array-like data structure Listy which lacks a size
  * method. It does, however, have an elementAt ( i) method that returns the element at index i in

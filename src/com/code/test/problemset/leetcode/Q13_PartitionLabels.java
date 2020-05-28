@@ -7,22 +7,22 @@ import java.util.Map;
 
 /**
  * Partition Labels:
- *  A string S of lowercase letters is given.
- *  We want to partition this string into as many parts as possible so that each letter appears in at most one part,
- *  and return a list of integers representing the size of these parts.
- *
- *      Example 1:
- *      Input: S = "ababcbacadefegdehijhklij"
- *      Output: [9,7,8]
- *      Explanation:
- *      The partition is "ababcbaca", "defegde", "hijhklij".
- *      This is a partition so that each letter appears in at most one part.
- *      A partition like "ababcbacadefegde", "hijhklij" is incorrect, because it splits S into less parts.
- *      Note:
- *
- *      S will have length in range [1, 500].
- *      S will consist of lowercase letters ('a' to 'z') only.
- *
+ * A string S of lowercase letters is given.
+ * We want to partition this string into as many parts as possible so that each letter appears in at most one part,
+ * and return a list of integers representing the size of these parts.
+ * <p>
+ * Example 1:
+ * Input: S = "ababcbacadefegdehijhklij"
+ * Output: [9,7,8]
+ * Explanation:
+ * The partition is "ababcbaca", "defegde", "hijhklij".
+ * This is a partition so that each letter appears in at most one part.
+ * A partition like "ababcbacadefegde", "hijhklij" is incorrect, because it splits S into less parts.
+ * Note:
+ * <p>
+ * S will have length in range [1, 500].
+ * S will consist of lowercase letters ('a' to 'z') only.
+ * <p>
  * https://leetcode.com/problems/partition-labels/
  */
 public class Q13_PartitionLabels {
@@ -62,4 +62,29 @@ public class Q13_PartitionLabels {
 
         return result;
     }
+
+    static class SolutionAli {
+        static public List<Integer> partitionLabels_(String s) {
+            List<Integer> output = new ArrayList<>();
+            Map<Character, Integer> map = new LinkedHashMap<>();
+            for (int i = 0; i < s.length(); i++) {
+                map.put(s.charAt(i), i);
+            }
+
+            for (int i = 0; i < s.length(); i++) {
+                int max = map.get(s.charAt(i));
+                int st = i;
+                while (i + 1 <= max) {
+                    i++;
+                    max = Math.max(max, map.get(s.charAt(i)));
+                }
+                output.add(i - st + 1);
+            }
+
+            if (output.size() == 0)
+                output.add(s.length());
+            return output;
+        }
+    }
+
 }

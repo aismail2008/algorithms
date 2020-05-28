@@ -28,6 +28,25 @@ import java.util.*;
  * 1 ≤ arr.length ≤ MAX_INT
  * 0 ≤ arr[i] ≤ MAX_INT for every i, 0 ≤ i < MAX_INT
  * [output] integer
+ * <p>
+ * <p>
+ * ----------------------
+ * Write a function:
+ * <p>
+ * class Solution { public int solution(int[] A); }
+ * <p>
+ * that, given an array A of N integers, returns the smallest positive integer (greater than 0) that does not occur in A.
+ * <p>
+ * For example, given A = [1, 3, 6, 4, 1, 2], the function should return 5.
+ * <p>
+ * Given A = [1, 2, 3], the function should return 4.
+ * <p>
+ * Given A = [−1, −3], the function should return 1.
+ * <p>
+ * Write an efficient algorithm for the following assumptions:
+ * <p>
+ * N is an integer within the range [1..100,000];
+ * each element of array A is an integer within the range [−1,000,000..1,000,000].
  */
 public class DifferentNumber {
     static int getDifferentNumber(int[] arr) {
@@ -52,6 +71,28 @@ public class DifferentNumber {
         //0, 1, 2
         return arr.length;
 
+    }
+
+    // if values are not unique
+    public int solution(int[] arr) {
+        Set<Integer> set = new HashSet<>();
+        for (Integer i : arr) {
+            if (i > 0) {
+                set.add(i);
+            }
+        }
+
+        int missing = 1;
+        while (!set.isEmpty()) {
+            if (set.contains(missing)) {
+                set.remove(missing);
+                missing++;
+            } else
+                break;
+        }
+
+        //0, 1, 2
+        return missing;
     }
 
     public static void main(String[] args) {

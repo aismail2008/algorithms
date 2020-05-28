@@ -1,9 +1,6 @@
 package com.code.test.problemset.leetcode;
 
-import com.code.test.problemset.basics.datastructure.Trie;
-
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -11,22 +8,33 @@ import java.util.List;
  * (Check out your cellphone to see the mappings)
  * Input:Digit string "23",
  * Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
- *
+ * <p>
  * https://leetcode.com/problems/letter-combinations-of-a-phone-number/
+ *
+ * Time complexity : O(3^N *4^M)
+ *      where N is the number of digits in the input that maps to 3 letters (e.g. 2, 3, 4, 5, 6, 8)
+ *      and M is the number of digits in the input that maps to 4 letters (e.g. 7, 9), and N+M is the total number digits in the input.
+ *
+ * Space complexity : O(3^N)
+ *      since one has to keep 3^N * times 4^M solutions
  */
 public class Q242_LetterCombinationsOfPhoneNumber {
     static class Solution {
-        public List<String> getValidT9Words(String number, HashSet<String> wordList) {
+        /* Mapping of digits to letters. */
+        static char[][] t9Letters = {null, null, {'a', 'b', 'c'}, {'d', 'e', 'f'}, {'g', 'h', 'i'}, {'j', 'k', 'l'}, {'m', 'n', 'o'},
+                {'p', 'q', 'r', 's'}, {'t', 'u', 'v'}, {'w', 'x', 'y', 'z'}};
+
+        public List<String> letterCombinations(String number) {
             if (number.length() == 0)
-                return new ArrayList<>();
+                return new ArrayList();
             List<String> results = new ArrayList<>();
-            getValidWords(number, 0, "", wordList, results);
+            getValidWords(number, 0, "", results);
             return results;
         }
 
-        private void getValidWords(String number, int index, String prefix, HashSet<String> wordSet, List<String> results) {
+        private void getValidWords(String number, int index, String prefix, List<String> results) {
             /* If it's a complete word, print it. */
-            if (index == number.length() && wordSet.contains(prefix)) {
+            if (index == number.length()) {
                 results.add(prefix);
                 return;
             }
@@ -37,7 +45,7 @@ public class Q242_LetterCombinationsOfPhoneNumber {
             /* Go through all remaining options. */
             if (letters != null) {
                 for (char letter : letters) {
-                    getValidWords(number, index + 1, prefix + letter, wordSet, results);
+                    getValidWords(number, index + 1, prefix + letter, results);
                 }
             }
         }
@@ -49,40 +57,6 @@ public class Q242_LetterCombinationsOfPhoneNumber {
             }
             int dig = Character.getNumericValue(digit) - Character.getNumericValue('0');
             return t9Letters[dig];
-        }
-
-        /* Mapping of digits to letters. */
-        static char[][] t9Letters = {null, null, {'a', 'b', 'c'}, {'d', 'e', 'f'}, {'g', 'h', 'i'},
-                {'j', 'k', 'l'}, {'m', 'n', 'o'}, {'p', 'q', 'r', 's'}, {'t', 'u', 'v'}, {'w', 'x', 'y', 'z'}};
-    }
-
-    static class OptimizedSolutionTrie {
-        public List<String> getValidT9Words(String number, Trie wordList) {
-            List<String> results = new ArrayList<>();
-            getValidWords(number, 0, "", wordList.root, results);
-            return results;
-        }
-
-        private void getValidWords(String number, int index, String prefix, Trie.TrieNode trieNode, List<String> results) {
-            /* If it's a complete word, print it. */
-            if (index == number.length()) {
-                if (trieNode.terminates(prefix)) {
-                    results.add(prefix);
-                    return;
-                }
-            }
-            /* Get characters that match this digit. */
-            char[] letters = Solution.getT9Chars(number.charAt(index));
-
-            /* Go through all remaining options. */
-            if (letters != null) {
-                for (char letter : letters) {
-                    Trie.TrieNode child = trieNode.getChild(letter);
-                    if (child != null) {
-                        getValidWords(number, index + 1, prefix + letter, child, results);
-                    }
-                }
-            }
         }
     }
 }

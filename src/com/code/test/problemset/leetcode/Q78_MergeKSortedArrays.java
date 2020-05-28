@@ -3,6 +3,13 @@ package com.code.test.problemset.leetcode;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
+/**
+ * This is a classic interview question. Another similar problem is "merge k sorted lists".
+ *
+ * This problem can be solved by using a heap. The time complexity is O(nlog(k)),
+ * where n is the total number of elements and k is the number of arrays.
+ * It takes O(log(k)) to insert an element to the heap and it takes O(log(k)) to delete the minimum element.
+ */
 public class Q78_MergeKSortedArrays {
     static class SolutionA {
         // O(M * N): m is number of arrays and N is max length of all arrays

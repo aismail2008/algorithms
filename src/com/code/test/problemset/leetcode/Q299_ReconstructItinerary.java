@@ -24,13 +24,13 @@ import java.util.*;
  * https://leetcode.com/problems/reconstruct-itinerary/
  */
 public class Q299_ReconstructItinerary {
-    HashMap<String, PriorityQueue<String>> map = new HashMap<String, PriorityQueue<String>>();
-    LinkedList<String> result = new LinkedList<String>();
+    HashMap<String, PriorityQueue<String>> map = new HashMap<>();
+    LinkedList<String> result = new LinkedList<>();
 
     public List<String> findItinerary(List<List<String>> tickets) {
         for (List<String> ticket : tickets) {
             if (!map.containsKey(ticket.get(0))) {
-                PriorityQueue<String> q = new PriorityQueue<String>();
+                PriorityQueue<String> q = new PriorityQueue<>();
                 map.put(ticket.get(0), q);
             }
             map.get(ticket.get(0)).offer(ticket.get(1));

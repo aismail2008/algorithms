@@ -57,7 +57,6 @@ public class _DeleteOperationTwoStrings {
 
         for (int i = 0; i <= str1.length(); i++) {
             for (int j = 0; j <= str2.length(); j++) {
-
                 if (j == 0 || i == 0) {
                     dp[i][j] = 0;
                 } else if (str1.charAt(i - 1) == str2.charAt(j - 1)) {

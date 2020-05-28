@@ -1,6 +1,9 @@
 package com.code.test.problemset.leetcode;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -11,6 +14,9 @@ import java.util.stream.Collectors;
  * space (n)
  * <p>
  * https://leetcode.com/problems/permutations/
+ *
+ *
+ * TIme : O(N * n-1 * n-2 * .. * 1) = O(N!)
  */
 public class Q220_PermutationsWithoutDups {
     public static class UniquePermutationsStr {
@@ -48,35 +54,30 @@ public class Q220_PermutationsWithoutDups {
         }
 
         public static List<List<Integer>> permutations(int[] s) {
-            permutations(s, new ArrayList<>());
+            permutations(s, 0, new ArrayList<>());
             return permutationsList.stream().collect(Collectors.toList());
         }
 
         static Set<List<Integer>> permutationsList = new HashSet<>();
 
-        public static void permutations(int[] s, List<Integer> prefix) {
-            if (s.length == 0) {
+        public static void permutations(int[] s, int start, List<Integer> prefix) {
+            if (start == s.length) {
                 permutationsList.add(prefix);
             } else {
-                for (int i = 0; i < s.length; i++) {
-                    int[] rem = copyArrayExceptI(i, s);
+                for (int i = start; i < s.length; i++) {
                     List<Integer> iPrefix = new ArrayList<>(prefix);
                     iPrefix.add(s[i]);
-                    permutations(rem, iPrefix);
+                    swap(s, start, i);
+                    permutations(s, start + 1, iPrefix);
+                    swap(s, i, start);
                 }
             }
         }
 
-        private static int[] copyArrayExceptI(int i, int[] arr) {
-            int[] newArr = new int[arr.length - 1];
-            int h = 0;
-            for (int j = 0; j < newArr.length; j++) {
-                if (h == i) {
-                    h++;
-                }
-                newArr[j] = arr[h++];
-            }
-            return newArr;
+        static private void swap(int[] nums, int i, int j){
+            int temp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = temp;
         }
     }
 }

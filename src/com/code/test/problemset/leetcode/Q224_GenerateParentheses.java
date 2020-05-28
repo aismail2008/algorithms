@@ -9,6 +9,7 @@ import java.util.List;
  * Hint: https://www.youtube.com/watch?v=sz1qaKt0KGQ
  * <p>
  * https://leetcode.com/problems/generate-parentheses/
+ *
  */
 public class Q224_GenerateParentheses {
     public void generateParenthesis(int left, int right, StringBuilder current, List<String> all) {
@@ -28,7 +29,6 @@ public class Q224_GenerateParentheses {
             generateParenthesis(left, right - 1, new StringBuilder(current + ")"), all);
         }
     }
-
 
     public List<String> generateParenthesis(int n) {
         List<String> all = new ArrayList<>();

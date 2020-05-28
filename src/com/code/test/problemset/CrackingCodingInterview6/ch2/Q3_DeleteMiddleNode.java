@@ -11,7 +11,7 @@ package com.code.test.problemset.CrackingCodingInterview6.ch2;
 public class Q3_DeleteMiddleNode {
     public static void deleteMiddle(Node middle) {
         middle.next = middle.next.next;
-        middle.val = (Integer) middle.next.val;
+        middle.val = middle.next.val;
     }
 
     public static void main(String[] args) {

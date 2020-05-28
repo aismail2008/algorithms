@@ -74,6 +74,7 @@ public class SegmentTreeArr {
             constructSTUtil(arr, 0, n - 1, 0);
         }
 
+        // Preferred and easy to understand
         private int constructSTUtil(int arr[], int ss, int se, int si) {
             // If there is one element in array, store it in current node of
             // segment tree and return

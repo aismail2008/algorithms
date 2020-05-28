@@ -2,6 +2,10 @@ package com.code.test.problemset.CrackingCodingInterview6.ch9.Q2_SocialNetworks;
 
 import java.util.*;
 
+/**
+ *
+ *  Parallel bfs
+ */
 public class QuestionA {
 	public static LinkedList<Person> findPathBFS(HashMap<Integer, Person> people, int source, int destination) {
 		Queue<PathNode> toVisit = new LinkedList<>();
@@ -39,14 +43,12 @@ public class QuestionA {
 		toVisitD.add(new PathNode(people.get(source), null));
 		visitedD.add(destination);
 
-
 		while (!toVisitS.isEmpty() && !toVisitD.isEmpty()) {
 			PathNode nodeS = toVisitS.poll();
 
 			if(visitedD.contains(nodeS)){
 
 			}
-
 
 			Person person = nodeS.getPerson();
 			if (person.getID() == destination) {

@@ -1,5 +1,7 @@
 package com.code.test.problemset.CrackingCodingInterview6.ch10;
 
+import com.code.test.problemset.leetcode.Q33_wiggleSort;
+
 import java.util.Arrays;
 
 /**
@@ -13,34 +15,7 @@ import java.util.Arrays;
  * Output: {5, 1, 3, 2, 3}
  */
 public class Q11_PeaksAndValleys {
-
-    // O(n)
-    public static void sortValleyPeak2(int[] array) {
-        for (int i = 1; i < array.length; i += 2) {
-            if (array[i - 1] < array[i]) {
-                swap(array, i - 1, i);
-            }
-            if (i + 1 < array.length && array[i + 1] < array[i]) {
-                swap(array, i + 1, i);
-            }
-        }
-    }
-
-    // O(log n)
-    public static void sortValleyPeak(int[] array) {
-        Arrays.sort(array);
-        for (int i = 1; i < array.length; i += 2) {
-            swap(array, i - 1, i);
-        }
-    }
-
-    public static void swap(int[] array, int left, int right) {
-        int temp = array[left];
-        array[left] = array[right];
-        array[right] = temp;
-    }
-
     public static void main(String[] args) {
+        new Q33_wiggleSort();
     }
-
 }

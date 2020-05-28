@@ -38,12 +38,13 @@ public class Q204_QueueViaStacks {
     public int size() {
         return s1.size() + s2.size();
     }
-
+    // push O(1)
     public void add(int value) {
         // Push onto stack1
         s1.push(value);
     }
 
+    // push O(N)
     public int peek() {
         // Push onto stack1
         if (s2.isEmpty()) {

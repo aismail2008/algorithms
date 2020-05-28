@@ -5,7 +5,9 @@ import java.util.Comparator;
 
 /**
  * Absolute Value Sort
- * Given an array of integers arr, write a function absSort(arr), that sorts the array according to the absolute values of the numbers in arr. If two numbers have the same absolute value, sort them according to sign, where the negative numbers come before the positive numbers.
+ * Given an array of integers arr, write a function absSort(arr),
+ * that sorts the array according to the absolute values of the numbers in arr.
+ * If two numbers have the same absolute value, sort them according to sign, where the negative numbers come before the positive numbers.
  *
  * Examples:
  *

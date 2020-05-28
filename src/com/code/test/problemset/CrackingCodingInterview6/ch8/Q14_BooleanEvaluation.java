@@ -26,7 +26,7 @@ public class Q14_BooleanEvaluation {
         for (int i = 1; i < s.length(); i += 2) {
             char c = s.charAt(i);
             String left = s.substring(0, i);
-            String right = s.substring(i + 1, s.length());
+            String right = s.substring(i + 1);
 
             int subWays = 0;
             if (c == '^') { // required: one true and one false
