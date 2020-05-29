@@ -1,5 +1,7 @@
 package com.code.test.problemset.leetcode;
 
+import java.util.Arrays;
+
 /**
  * Given an array nums,
  * write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
@@ -12,7 +14,7 @@ package com.code.test.problemset.leetcode;
  */
 public class Q4_MoveZeros {
 
-    public void moveZeroes(int[] nums) {
+    static public int[] moveZeroes(int[] nums) {
 
         int j = 0;
         for (int i = 0; i < nums.length; i++) {
@@ -24,5 +26,9 @@ public class Q4_MoveZeros {
         while (j < nums.length) {
             nums[j++] = 0;
         }
+        return nums;
+    }
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(moveZeroes(new int[]{1, 10, 0, 2, 8, 3, 0, 0, 6, 4, 0, 5, 7, 0})));
     }
 }

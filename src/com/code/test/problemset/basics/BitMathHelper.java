@@ -11,13 +11,18 @@ public class BitMathHelper {
      */
 
     /**
+     *
+     * 1 Terabyte = = 1 Trillion = 1,000,000,000,000 bytes = 10^12 byte
+     * 1 GB = 1 billion = 1,000,000,000 bytes = 10^9 byte
+     *
+     *
      * https://www.aqua-calc.com/page/powers-of-two
      *
      * 1000 ~= 2^10
      * [Giga = 1000 Mega] [Mega = 1000 Kilo] [Kilo = 1000]
      * 1 Byte =                     2^3 bit
      * 1 KByte = 1000 byte =        2^13 bit
-     * 1 MByte =                    2^23 bit
+     * 1 MByte = 10^6 byte  =        2^23 bit
      * ------------------------
      *
      *  - Total of (1 + 2 + ... + n) =  n * (n+1)/2
