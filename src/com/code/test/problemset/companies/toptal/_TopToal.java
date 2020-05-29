@@ -1,4 +1,4 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.companies.toptal;
 
 import java.util.*;
 
