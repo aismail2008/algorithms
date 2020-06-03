@@ -24,6 +24,9 @@ import java.util.stream.Collectors;
  * ]
  *
  * https://leetcode.com/problems/4sum/
+ *
+ * Time Complexity: we have three nested loops whose combined time complexity is O(N^3), where N is the size of arr.
+ * Space Complexity: O(1) as we used only a constant amount of space throughout the algorithm.
  */
 public class Q31_4Sum {
 

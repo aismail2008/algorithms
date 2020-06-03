@@ -156,6 +156,10 @@ public class Utils {
     static int[] listToArr(List<Integer> list) {
         return list.stream().mapToInt(i -> i).toArray();
     }
+    // List to Array
+    static Integer[] listToArrInteger(List<Integer> list) {
+        return list.stream().toArray(Integer[]::new);
+    }
 
     // List to Array
     static List<Integer> ArrToList(int [] arr) {
