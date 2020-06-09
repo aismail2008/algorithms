@@ -165,4 +165,18 @@ public class Utils {
     static List<Integer> ArrToList(int [] arr) {
         return Arrays.stream(arr).boxed().collect(Collectors.toList());
     }
+
+    static public void encode(){
+        String originalInput = "test input";
+        String encodedString = Base64.getEncoder().encodeToString(originalInput.getBytes());
+    }
+
+    public static void main(String[] args) {
+        Set<Integer[]> results = new HashSet<>();
+        Integer[] cur =  new Integer[]{1};
+        Integer[] cur1 = new Integer[]{1};
+        results.add(cur);
+        results.add(cur1);
+        encode();
+    }
 }

@@ -2,6 +2,8 @@ package com.code.test.problemset.companies.Pramp;
 
 import com.code.test.problemset.leetcode._SudokuSolver;
 
+import java.util.*;
+
 /**
  * Sudoku Solver
  * Write the function sudokuSolve that checks whether a given sudoku board (i.e. sudoku puzzle) is solvable. If so, the function will returns true. Otherwise (i.e. there is no valid solution to the given sudoku board), returns false.
@@ -27,71 +29,78 @@ public class SudokuSolver {
     public static void main(String[] args) {
         new _SudokuSolver();
     }
-//
-//    static class CellValue implements Comparator<CellValue> {
-//        List<Character> options;
-//        int i;
-//        int j;
-//
-//        public CellValue(int i, int j, List<Character> options) {
-//            this.i = i;
-//            this.j = j;
-//            this.options = options;
-//        }
-//
-//        @Override
-//        public int compare(CellValue o1, CellValue o2) {
-//            return o1.options.size() - o2.options.size();
-//        }
-//    }
-//    static boolean sudokuSolve(char[][] board) {
-//        Queue<CellValue> prQ = new PriorityQueue<>();
-//        for(int i = 0; i < 9; i++){
-//            for(int j = 0; j < 9; j++){
-//                List<Character> avl = getAvailableNumber(i, j);
-//                prQ.offer(new CellValue(i, j, avl));
-//            }
-//        }
-//
-//        sudokuSolve(board, prQ);
-//    }
-//
-//    static boolean sudokuSolve(char[][] board, Queue<CellValue> prQ) {
-//        while(!prQ.isEmpty()){
-//            CellValue c = prQ.remove();
-//            for(Character num : c.options){
-//                board[c.i][c.j] = num;
-//
-//                Iterator<CellValue> it = prQ.iterator();
-//                while(it.hasNext()){
-//                    CellValue itcell = it.next();
-//                    if(itcell.i == c.i || itcell.j == c.j)
-//                        itcell.remove(num);
-//                    if(c.i % 3 == itcell.i %3 && c.j % 3 == itcell.j % 3){
-//                        itcell.remove(num);
-//                    }
-//                }
-//
-//
-//                if(sudokuSolve(board, prQ))
-//                    return true;
-//
-//                Iterator<CellValue> iterator = prQ.iterator();
-//                while(iterator.hasNext()){
-//                    CellValue itcell = it.next();
-//                    if(itcell.i == c.i || itcell.j == c.j)
-//                        itcell.add(num);
-//                    if(c.i % 3 == itcell.i %3 && c.j % 3 == itcell.j % 3){
-//                        itcell.add(num);
-//                    }
-//                }
-//
-//            }
-//        }
-//
-//    }
-//
-//    List<Character> getAvailableNumber(char[] board, int row, int col) {
-//        return new ArrayList<>();
-//    }
+
+    static class CellValue implements Comparator<CellValue> {
+        List<Character> options;
+        int i;
+        int j;
+
+        public CellValue(int i, int j, List<Character> options) {
+            this.i = i;
+            this.j = j;
+            this.options = options;
+        }
+
+        @Override
+        public int compare(CellValue o1, CellValue o2) {
+            return o1.options.size() - o2.options.size();
+        }
+    }
+
+    static boolean sudokuSolve(char[][] board) {
+        Queue<CellValue> prQ = new PriorityQueue<>();
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                List<Character> avl = getAvailableNumber(i, j);
+                prQ.offer(new CellValue(i, j, avl));
+            }
+        }
+
+        sudokuSolve(board, prQ);
+        return true;
+    }
+
+    private static List<Character> getAvailableNumber(int i, int j) {
+        // return list of all options for this cell
+        return null;
+    }
+
+    static boolean sudokuSolve(char[][] board, Queue<CellValue> prQ) {
+        while (!prQ.isEmpty()) {
+            CellValue c = prQ.remove();
+            for (Character num : c.options) {
+                board[c.i][c.j] = num;
+
+                Iterator<CellValue> it = prQ.iterator();
+                while (it.hasNext()) {
+                    CellValue itcell = it.next();
+                    if (itcell.i == c.i || itcell.j == c.j)
+                        itcell.options.remove(num);
+                    if (c.i % 3 == itcell.i % 3 && c.j % 3 == itcell.j % 3) {
+                        itcell.options.remove(num);
+                    }
+                }
+
+
+                if (sudokuSolve(board, prQ))
+                    return true;
+
+                Iterator<CellValue> iterator = prQ.iterator();
+                while (iterator.hasNext()) {
+                    CellValue itcell = it.next();
+                    if (itcell.i == c.i || itcell.j == c.j)
+                        itcell.options.add(num);
+                    if (c.i % 3 == itcell.i % 3 && c.j % 3 == itcell.j % 3) {
+                        itcell.options.add(num);
+                    }
+                }
+
+            }
+        }
+        return false;
+    }
+
+    List<Character> getAvailableNumber(char[] board, int row, int col) {
+        return new ArrayList<>();
+    }
 }

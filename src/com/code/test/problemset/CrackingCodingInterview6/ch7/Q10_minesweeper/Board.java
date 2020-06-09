@@ -133,7 +133,7 @@ public class Board {
 				{ 1, -1}, { 1, 0}, { 1, 1}
 		};		
 		
-		Queue<Cell> toExplore = new LinkedList<Cell>();
+		Queue<Cell> toExplore = new LinkedList<>();
 		toExplore.add(cell);
 		
 		while (!toExplore.isEmpty()) {

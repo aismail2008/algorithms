@@ -25,7 +25,7 @@ public class BlackJackHand extends Hand<BlackJackCard> {
     }
 
     private ArrayList<Integer> possibleScores() {
-        ArrayList<Integer> scores = new ArrayList<Integer>();
+        ArrayList<Integer> scores = new ArrayList<>();
         if (cards.size() == 0) {
             return scores;
         }

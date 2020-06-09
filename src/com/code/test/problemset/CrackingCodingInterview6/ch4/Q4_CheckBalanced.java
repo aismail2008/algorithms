@@ -34,16 +34,16 @@ public class Q4_CheckBalanced {
         }
     }
 
-    public static int getHeight(TreeNode root, Hashtable<TreeNode, Integer> hights) {
+    public static int getHeight(TreeNode root, Hashtable<TreeNode, Integer> hightsMemory) {
         if (root == null) {
             return -1;
-        } else if (hights.get(root) != null) {
-            hights.get(root);
+        } else if (hightsMemory.get(root) != null) {
+            hightsMemory.get(root);
         }
 
-        hights.put(root, Math.max(getHeight(root.left, hights), getHeight(root.right, hights)) + 1);
+        hightsMemory.put(root, Math.max(getHeight(root.left, hightsMemory), getHeight(root.right, hightsMemory)) + 1);
 
-        return hights.get(root);
+        return hightsMemory.get(root);
     }
 
 

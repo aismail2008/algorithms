@@ -27,4 +27,5 @@ public class Situation {
 		s1.handleByPolice(10);
 		s2.handleByPolice(10);
 	}
+
 }

@@ -4,11 +4,12 @@ import java.util.EmptyStackException;
 
 /**
  * Three in One:
- *      Describe how you could use a single array to implement three stacks.
+ * Describe how you could use a single array to implement three stacks.
  */
 
 class FullStackException extends Exception {
 }
+
 public class Q1_ThreeInOne {
     private int numberOfStacks = 3;
     private int stackCapacity;
@@ -24,7 +25,7 @@ public class Q1_ThreeInOne {
     /* Push value onto stack. */
     public void push(int stackNum, int value) throws FullStackException {
         /* Check that we have space for the next element */
-        if(sizes[stackNum] == stackCapacity)
+        if (sizes[stackNum] == stackCapacity)
             throw new FullStackException();
 
         /* Increment stack pointer and then update top value. */
@@ -80,6 +81,7 @@ class MultiStack {
      * variables, but that’s messy and doesn’t gain us much. */
     private class StackInfo {
         public int start, size, capacity;
+
         public StackInfo(int start, int capacity) {
             this.start = start;
             this.capacity = capacity;

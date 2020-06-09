@@ -12,8 +12,8 @@ public class HeadHunter implements Subject {
     private ArrayList<String> jobs;
 
     public HeadHunter() {
-        userList = new ArrayList<Observer>();
-        jobs = new ArrayList<String>();
+        userList = new ArrayList<>();
+        jobs = new ArrayList<>();
     }
 
     @Override

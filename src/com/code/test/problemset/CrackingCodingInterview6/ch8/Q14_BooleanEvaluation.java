@@ -24,12 +24,12 @@ public class Q14_BooleanEvaluation {
         int ways = 0;
 
         for (int i = 1; i < s.length(); i += 2) {
-            char c = s.charAt(i);
+            char operator = s.charAt(i);
             String left = s.substring(0, i);
             String right = s.substring(i + 1);
 
             int subWays = 0;
-            if (c == '^') { // required: one true and one false
+            if (operator == '^') { // required: one true and one false
                 int leftTrue = countEval(left, true);
                 int leftFalse = countEval(left, false);
                 int rightTrue = countEval(right, true);
@@ -39,7 +39,7 @@ public class Q14_BooleanEvaluation {
                 } else {
                     subWays = leftTrue * rightTrue + leftFalse * rightFalse;
                 }
-            } else if (c == '&') { // required: both true
+            } else if (operator == '&') { // required: both true
                 int leftTrue = countEval(left, true);
                 int rightTrue = countEval(right, true);
                 if (result) {
@@ -49,7 +49,7 @@ public class Q14_BooleanEvaluation {
                     int rightFalse = countEval(right, false);
                     subWays = leftTrue * rightFalse + leftFalse * rightTrue + leftFalse * rightFalse;
                 }
-            } else if (c == '|') { // required: anything but both false
+            } else if (operator == '|') { // required: anything but both false
                 int leftFalse = countEval(left, false);
                 int rightFalse = countEval(right, false);
                 if (result) {

@@ -50,7 +50,8 @@ public class Q211_MaxChunksToMakeSorted {
     }
 
 
-    //Algorithm: Iterate through the array, each time all elements to the left are smaller (or equal) to all elements
+    //Algorithm:
+    //Iterate through the array, each time all elements to the left are smaller (or equal) to all elements
     //to the right, there is a new chunck.
     //Use two arrays to store the left max and right min to achieve O(n) time complexity. Space complexity is O(n) too.
     //This algorithm can be used to solve ver2 too.
@@ -75,7 +76,8 @@ public class Q211_MaxChunksToMakeSorted {
 
         int res = 0;
         for (int i = 0; i < n - 1; i++) {
-            if (maxOfLeft[i] <= minOfRight[i + 1]) res++;
+            if (maxOfLeft[i] <= minOfRight[i + 1])
+                res++;
         }
 
         return res + 1;

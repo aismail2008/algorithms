@@ -76,14 +76,14 @@ public class Q123_ValidSudoku {
         return true;
     }
 
-    boolean isValidRow(char[][] board, int index) {
+    boolean isValidRow(char[][] board, int row) {
         int[] nums = new int[9];
         for (int i = 0; i < 9; i++) {
             nums[i] = 1;
         }
         for (int j = 0; j < 9; j++) {
-            if (board[index][j] != '.') {
-                nums[Character.getNumericValue(board[index][j]) - 1]--;
+            if (board[row][j] != '.') {
+                nums[Character.getNumericValue(board[row][j]) - 1]--;
             }
         }
         for (int i : nums) {

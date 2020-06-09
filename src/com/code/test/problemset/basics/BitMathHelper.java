@@ -89,7 +89,7 @@ public class BitMathHelper {
      */
     static int clearBitsMSBthroughI(int num, int i) {
         int mask = (1 << i) - 1;
-//        int mask = ~(1 << i);
+//        int mask = ~(-1 >> i);
         return num & mask;
     }
 

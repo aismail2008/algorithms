@@ -29,8 +29,8 @@ public class CallHandler {
     List<List<Call>> callQueues;
 
     public CallHandler() {
-        employeeLevels = new ArrayList<List<Employee>>(LEVELS);
-        callQueues = new ArrayList<List<Call>>(LEVELS);
+        employeeLevels = new ArrayList<>(LEVELS);
+        callQueues = new ArrayList<>(LEVELS);
 
         // Create respondents.
         ArrayList<Employee> respondents = new ArrayList<Employee>(NUM_RESPONDENTS);
