@@ -1,4 +1,4 @@
-package com.booking.dropwizardapp;
+package com.code.test.problemset.companies.talabt;
 
 import java.util.HashMap;
 
