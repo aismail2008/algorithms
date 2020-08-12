@@ -1,11 +1,11 @@
-package com.code.test.problemset.companies.Amazon;
+package com.code.test.problemset.companies.Flex;
 
 import java.util.Arrays;
 
 /**
  * Created by aliismail on 22/11/2017.
  */
-public class AmazonChallenge3 {
+public class FlexChallenge3 {
 
     public static void main(String[] args) {
         int[] res = getMinimumDifference(new String[]{"xulkowreuowzxgnhmiqekxhz", "jk", "abb", "mn", "abc"}, new String[]{"istdocbnyozmnqthhpievvlj", "kj", "bbc", "op", "def"});

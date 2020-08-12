@@ -34,6 +34,7 @@ public class Q4_CheckBalanced {
         }
     }
 
+    //---------------------------//
     public static int getHeight(TreeNode root, Hashtable<TreeNode, Integer> hightsMemory) {
         if (root == null) {
             return -1;
@@ -45,7 +46,6 @@ public class Q4_CheckBalanced {
 
         return hightsMemory.get(root);
     }
-
 
     public static boolean isBalanced(TreeNode root) {
         if (root == null) {

@@ -1,12 +1,9 @@
-package com.code.test.problemset.companies.Amazon;
-
-import com.code.test.problemset.CrackingCodingInterview6.ch7.Q11_FileSystem.Directory;
+package com.code.test.problemset.companies.Flex;
 
 import java.io.File;
-import java.nio.file.Files;
 import java.util.*;
 
-public class OnSite {
+public class Flex {
    // roblem statement: Write an algorithm that will take two dates and tell you if they are more than a month apart,
    // less than a month apart or exactly a month apart.
     // -1 less than a month apart

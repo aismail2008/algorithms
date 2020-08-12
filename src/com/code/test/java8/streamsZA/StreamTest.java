@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class StreamTest {
-
+    // https://stackify.com/streams-guide-java-8/
     private static boolean isPrime(final int number) {
         IntPredicate isDivisble = divisor -> number % divisor == 0;
 

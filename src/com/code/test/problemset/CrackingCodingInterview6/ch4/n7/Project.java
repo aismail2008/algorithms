@@ -5,10 +5,8 @@ import java.util.HashMap;
 
 public class Project {
     public enum State {COMPLETE, PARTIAL, BLANK}
-
-    ;
-    private ArrayList<Project> children = new ArrayList<Project>();
-    private HashMap<String, Project> map = new HashMap<String, Project>();
+    private ArrayList<Project> children = new ArrayList<>();
+    private HashMap<String, Project> map = new HashMap<>();
     private String name;
     private State state = State.BLANK;
 

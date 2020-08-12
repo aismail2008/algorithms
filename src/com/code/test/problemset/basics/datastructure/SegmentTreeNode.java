@@ -91,6 +91,7 @@ public class SegmentTreeNode {
                 int diff = val - root.sum;
                 root.sum = val;
                 updateParents(root.parent, diff);
+                return;
             }
 
             //  case 2: Node completely outside range => return 0

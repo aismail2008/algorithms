@@ -35,16 +35,6 @@ public class StreamsProblem {
 
     }
 
-    static class SoldProductsAggregate {
-        private final List<SimpleSoldProduct> products;
-        private final BigDecimal total;
-
-        public SoldProductsAggregate(List<SimpleSoldProduct> products, BigDecimal total) {
-            this.products = products;
-            this.total = total;
-        }
-    }
-
     static class SimpleSoldProduct {
         private final String name;
         private final BigDecimal price;
@@ -63,6 +53,16 @@ public class StreamsProblem {
         }
     }
 
+    static class SoldProductsAggregate {
+        private final List<SimpleSoldProduct> products;
+        private final BigDecimal total;
+
+        public SoldProductsAggregate(List<SimpleSoldProduct> products, BigDecimal total) {
+            this.products = products;
+            this.total = total;
+        }
+    }
+
     ExchangeService exchangeService;
 
     SoldProductsAggregate aggregate_(Stream<SoldProduct> products) {
@@ -71,12 +71,12 @@ public class StreamsProblem {
 
         return products
                 .map(sp -> Optional
-                        .ofNullable(exchangeService.rate(sp.getCurrency()))
-                        .flatMap(rate -> rate)
-                        .filter(rate -> rate.compareTo(BigDecimal.ZERO) >= 0)
-                        .map(rate -> new SimpleSoldProduct(sp.getName(), rate.multiply(sp.getPrice())))
-                        .map(p -> new SoldProductsAggregate(Collections.singletonList(p), p.getPrice()))
-                        .orElse(null))
+                            .ofNullable(exchangeService.rate(sp.getCurrency())) // cause it might return null or Optional of value
+                            .flatMap(rate -> rate)
+                            .filter(rate -> rate.compareTo(BigDecimal.ZERO) >= 0)
+                            .map(rate -> new SimpleSoldProduct(sp.getName(), rate.multiply(sp.getPrice())))
+                            .map(p -> new SoldProductsAggregate(Collections.singletonList(p), p.getPrice()))
+                            .orElse(null))
                 .filter(Objects::nonNull)
                 .reduce((a, b) -> {
                     List<SimpleSoldProduct> l = new ArrayList<>(a.products);

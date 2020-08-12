@@ -65,30 +65,6 @@ public class Q165_ValidateBinarySearchTree {
         return true;
     }
 
-    //----------------------------------//
-    public boolean bfs(TreeNode root) {
-        if (root == null || (root.left == null && root.right == null))
-            return true;
-
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
-        int lastValue = Integer.MIN_VALUE;
-        while (!queue.isEmpty()) {
-            TreeNode p = queue.poll();
-            if (lastValue > p.key)
-                return false;
-
-            if (p.left != null) {
-                queue.add(p.left);
-            }
-
-            if (p.right != null) {
-                queue.add(p.right);
-            }
-        }
-        return true;
-    }
-
     //---------------------------------------//
     int lastValue = Integer.MIN_VALUE;
 

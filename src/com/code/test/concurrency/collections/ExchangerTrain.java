@@ -2,6 +2,9 @@ package com.code.test.concurrency.collections;
 
 import java.util.concurrent.Exchanger;
 
+/**
+ * Exchanger: Supports exchanging data between two threads
+ */
 public class ExchangerTrain {
     static class DukeThread extends Thread {
 		private Exchanger<String> sillyTalk;

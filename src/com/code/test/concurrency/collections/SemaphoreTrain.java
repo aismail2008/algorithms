@@ -2,6 +2,9 @@ package com.code.test.concurrency.collections;
 
 import java.util.concurrent.Semaphore;
 
+/**
+ * Semaphore: controls access to one or more shared resources
+ */
 public class SemaphoreTrain {
 	private static Semaphore machines;
 

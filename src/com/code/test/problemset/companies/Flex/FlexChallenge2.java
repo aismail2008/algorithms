@@ -1,6 +1,6 @@
-package com.code.test.problemset.companies.Amazon;
+package com.code.test.problemset.companies.Flex;
 
-public class AmazonChallenge2 {
+public class FlexChallenge2 {
 	public static int solution(int[] a) {
 		int start = 0;
 		int i = 0;

@@ -1,4 +1,4 @@
-package com.code.test.problemset.companies.Amazon;
+package com.code.test.problemset.companies.Flex;
 
 import java.util.*;
 import java.util.regex.Pattern;

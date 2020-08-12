@@ -1,10 +1,10 @@
-package com.code.test.problemset.companies.Amazon;
+package com.code.test.problemset.companies.Flex;
 
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class AmazonChallenge {
+public class FlexChallenge {
 	public static class Node {
 		int cost;
 		int index;

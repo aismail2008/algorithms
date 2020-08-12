@@ -1,0 +1,163 @@
+* What other advantages, aside syntactic sugar and parallelization option, do Java Streams offer? - Pros and cons, overusing streams and lambdas
+
+	> parallelism: In Java Streams, parallelism is achieved by using the  Fork-Join principle
+	> laziness: As we know, Java8 Streams have two types of operations, known as Intermediate and Terminal
+				intermediate operations just create another stream, but won't perform any processing until the terminal operation is called
+	> Short-circuit Short-circuiting will terminate the processing once condition met operations: anyMatch, allMatch, findFirst, findAny, limit, etc.
+	> Stateful Intermediate Operations
+		These intermediate operations need to store the state, and hence can cause bad performance of your applications, 
+		e.g. distinct(), sort(), limit(), etc.
+	> Stateless Intermediate Operations
+		These intermediate operations can be processed independently as they don't need to remember the state, e.g. filter(), map(), etc.
+	> Streams are a more declarative style. Or a more expressive style.
+	> Streams have a strong affinity with functions. Java 8 introduces lambdas and functional interfaces,
+	> Streams encourage less mutability.
+	> more rich functions like grouping and reducing, mapping
+	> Infinite Streams
+	> They allow functional programming style using bindings
+
+Lambdas in Java
+	Pros:
+		- It makes writing code a bit easier, and the written code a bit cleaner. Looking at each call we know which methods are implemented.
+		- Passting functionalInterface Implementation like Math with <<static private int operate(int a, int b, MathOperation mathOperation)>>
+		- Inline “anonymous” simple one-off function: a function that is going to be used only once.
+Cons:
+	- Parllel could eats your CUP cores since it used ForkJoinPool configured to use as many threads as there are cores in the computer on which the program is running.
+--------------
+* Symmetric vs Asymentric Keys
+
+	Symmetric encryption uses a single key that needs to be shared among the people who need to receive the message.
+		> Encrypt and Decrypt using same key
+	Asymmetrical encryption uses a pair of public key and a private key to encrypt and decrypt messages when communicating.
+		> Share public so people encrypt messages for you using Public Key.
+		> You decrypt message sent to you by private keys
+		> RSA
+		> Used in HTTPS for SSL
+		> BitCoin
+		> Digital signature : encrypt using private key and let other decrypt it using public key
+			https://en.wikipedia.org/wiki/Digital_signature
+--------------
+* How would you store password in the database
+
+	You should consider those three things:
+	- The salt has to be different for every password you store. (to avoid rainbow table hackers)
+	- Use a cryptographically secure random number generator.
+	- Choose a long enough salt. Think about the birthday problem.
+--------------
+* What is OWASP
+
+The Open Web Application Security Project, or OWASP, is an international non-profit organization dedicated to web application security. One of OWASP’s core principles is that all of their materials be freely available and easily accessible on their website, making it possible for anyone to improve their own web application security. The materials they offer include documentation, tools, videos, and forums. 
+
+--------------
+* Java 8 vs Java 11 and later ones
+	https://dzone.com/articles/90-new-features-and-apis-in-jdk-11
+	Both Long time Support
+	+ A scalable, low-latency garbage collector. The default garbage collector has been changed to G1 – To reduce the pause times for most users the default garbage collector has been switched.
+	+ Var keyword
+	- Java Applet, Java Web Start, Java Plugin, and Java Control Panel are not available in JDK
+	- JavaFX is no longer included in the JDK. It is now available as a separate download from
+	+ Free low overhead Flight Recorder and Heap Profiler : Java Flight Recorder (JFR) is a tool for collecting diagnostic and profiling data about a running Java application. It is integrated into the Java Virtual Machine (JVM) and causes almost no performance overhead
+	+ New APIs Ex String.isBlank()
+--------------
+* What is integration test? 
+
+Is a level of software testing where individual units are combined and tested as a group. The purpose of this level of testing is to expose faults in the interaction between integrated units. Test drivers and test stubs are used to assist in Integration Testing. Definition by ISTQB
+
+Continuous Integration (CI) is a development practice where developers integrate code into a shared repository frequently, preferably several times a day. Each integration can then be verified by an automated build and automated tests
+is the practice of integrating changes from different developers in the team into a mainline as early as possible, in best cases several times a day. This makes sure the code individual developers work on doesn’t divert too much. When you combine the process with automated testing, continuous integration can enable your code to be dependable.
+--------------
+* Which version of unit tests do you use? Junit4 vs Junit5
+	https://www.baeldung.com/junit-5-migration
+	
+	Other annotations that were changed within JUnit 5:
+
+	@Before annotation is renamed to @BeforeEach
+	@After annotation is renamed to @AfterEach
+	@BeforeClass annotation is renamed to @BeforeAll
+	@AfterClass annotation is renamed to @AfterAll
+	@Ignore annotation is renamed to @Disabled
+
+	Assertion Methods
+		JUnit 5 comes with many assertion methods.
+		We can now write assertion messages in a lambda in JUnit 5, allowing the lazy evaluation to skip complex message construction until needed:
+		@Test
+		public void shouldFailBecauseTheNumbersAreNotEqual_lazyEvaluation() {
+		    Assertions.assertTrue(
+		      2 == 3, 
+		      () -> "Numbers " + 2 + " and " + 3 + " are not equal!");
+		}
+		We can also group assertions in JUnit 5:
+		@Test
+		public void shouldAssertAllTheGroup() {
+		    List<Integer> list = Arrays.asList(1, 2, 4);
+		    Assertions.assertAll("List is not incremental",
+		        () -> Assertions.assertEquals(list.get(0).intValue(), 1),
+		        () -> Assertions.assertEquals(list.get(1).intValue(), 2),
+		        () -> Assertions.assertEquals(list.get(2).intValue(), 3));
+		}
+--------------
+CAP Thearm:
+	Consistency: Read retruns most recent writes or error
+	Availability: Every Request will get response BUT doesn' gurantee to be most recent
+	Partition Tolerance: System continues to operate despite partition  du to network failures (messages drops between nodes)
+	> Cons + Part. Tol = Atomic read/write systems
+	> Avail + Part. Tol = Flexible Consistency like Cassandra
+------------
+* Spring 
+	https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html#server-properties)
+	> server.tomcat.max-connections = 8192.0
+	> server.tomcat.threads.max = 200          >>>> Maximum amount of worker threads. & Min is 10
+    > server.jetty.threads.max = 200
+
+	+ Simplified & version conflict free dependency management through the starter POMs.
+	+ We can quickly setup and run standalone, web applications and micro services at very less time.
+	+ You can just assemble the jar artifact which comes with an embedded Tomact, Jetty or Undertow application server
+	- Spring boot may unnecessarily increase the deployment binary size with unused dependencies.
+	- If you are a control freak, I doubt Spring Boot would fit your needs.
+  Dropwizard (Jetty)
+  	https://www.dropwizard.io/en/latest/manual/configuration.html
+  	> maxThreads = 1024. with Min **8**
+  	> maxQueuedRequests = 1024
+  PlayFramwork server
+  	"Play’s lightweight, stateless, web-friendly architecture uses Akka"
+  		Akka HTTP server
+  		The maximum number of concurrently accepted connections when using the >>>> max-connections = 1024
+  		The requested maximum length of the queue >>>>. backlog = 100
+  Jersey
+  	JAX-RS is nothing more than a specification, a set of interfaces and annotations offered by Java EE.
+  	Jersey is an open source framework for developing RESTful Web Services. It serves as a reference implementation of JAX-RS.
+
+How to design a good API
+http://fwdinnovations.net/whitepaper/APIDesign.pdf
+https://swagger.io/blog/api-design/api-design-best-practices/
+https://github.com/donnemartin/system-design-primer#representational-state-transfer-rest
+
+--------------
+* How can you check Performance of a query?
+	- EventStatementInterceptor extends StatementInterceptor implements QueryInterceptor
+	- Generate an Actual Execution Plan using SQL Server Management
+	- Monitor Resource Usage: the System Monitor tools to measure the performance of SQL Server
+	- Database Engine Tuning Advisor to analyze the performance it might advise you to create or remove indexes.
+	- SQL Server has dynamic management views, those views are several and provide data about query stats, execution plans, recent queries and much more.
+
+--------------
+* Structured vs non structured DB pros and cons / Mysql vs non-sql vs postgrsql
+	https://www.tutorialspoint.com/difference-between-sql-and-nosql
+	Reasons for SQL:
+		- Structured data
+		- Strict schema
+		- Relational data
+		- Need for complex joins
+		- Transactions
+		- Clear patterns for scaling
+		- More established: developers, community, code, tools, etc
+		- Lookups by index are very fast
+
+	Reasons for NoSQL: MongoDB
+		- Semi-structured data
+		- Dynamic or flexible schema
+		- Non-relational data
+		- No need for complex joins
+		- Store many TB (or PB) of data
+		- Very data intensive workload
+		- Very high throughput for IOPS

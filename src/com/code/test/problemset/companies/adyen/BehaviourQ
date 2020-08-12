@@ -1,0 +1,58 @@
+* Reason behind joining Adyen
+	- Learn from complex system, career growth, also i am interviwing with Amazon for payment system and Payemnt team in company Booking.com
+    - The idea behind building their own solution give chance to get to the low level details and understand more about complex systems and how to scale them
+    - Fintechs are flexible:
+    	Traditional banks and PSPs have difficulties in quickly responding to evolving client needs because of inflexible legacy systems, decision processes, and risk-averse budgeting. In contrast with traditional banking. Fintechs often use API (Application Program Interface) – based systems: this enables them to collaborate with other technology providers in a quicker and more scalable way allowing transperency for their client to manage their payments with no hidden costs
+    - https://www.finextra.com/blogposting/15813/why-work-with-fintechs-4-reasons
+    - The fact of being used by big tech companies like Facebook, Uber, Booking, Ebay, Spotify makes it even more challenging
+    - Adyen Formula :
+    	- We build to benefit all merchants (not just one)
+    	- We include different people to sharpen our ideas: Multicultural environment gives space for innovation and sharing ideas and high learning curve
+    	- ** We don’t hide behind email, instead we pick up the phone **
+    	- We launch fast and iterate : >>> Incremental iterative approach <<<<
+    	- Titles here are not something to hold you back
+    	- docs.adyen.com good that everything is documentent to prevet missing pices when sharing knowledges, care about their customers. API's docs versionised
+    	1. We build to benefit all merchants (not just one)
+		2. We launch fast and iterate
+		3. Winning is more important than ego; we work as a team - across cultures and time zones
+		4. We don’t hide behind email, instead we pick up the phone
+		5. We talk straight without being rude
+		6. We include different people to sharpen our ideas
+		7. We create our own path and won’t be slowed down by “stewards”
+--------------
+* What is Adyen:
+	The platform built to simplify and accelerate global payments
+	Adyen (AMS: ADYEN) is the payments platform providing an end-to-end infrastructure connecting directly to Visa, Mastercard, and consumers'​ globally preferred payment methods. 
+	Adyen delivers frictionless payments across online, mobile, and in-store channels. With offices across the world, Adyen serves customers including Facebook, Uber, Spotify, Casper, Bonobos and L'Oreal
+--------------
+* Explain how you dealt with a difficult colleague. 
+	- Understand motiviations and how to approach them
+    - Ask proper questions with right approach that differs form one to a nother
+    - RED-GREEN-BLUE-YELLOW
+-------------
+* What is your most difficult project?  
+	- GameBot
+	- Cost Optimization
+	- Modular Framworks and fragmentations and JFinder
+	- Roster and Ioslation for servie startup with panic files
+-----------
+* Can you describe a time where you faced a difficult customer and how you handled the customer?
+	- Sherlock and reserve and deprecation old lib
+----------
+* How would you design a highly available payment processing system?
+	https://blog.pragmaticengineer.com/distributed-architecture-concepts-i-have-learned-while-building-payments-systems/
+	- Provide SLA or Service Level Agreement is a contract that the service provider promises customers on service availability, performance, etc
+	 	SLO  Service Level Objective is a goal that service provider wants to reach
+	 	SLI or Service Level Indicator is a measurement the service provider uses for the goal
+	- Availability : (99.99%, or about 50 minutes downtime per year), Even large and critical systems like the VISA card network, Gmail or internet providers don't have 100% availability
+	- Accuracy: is it ok for some of the data in the system to be inaccurate or lost? If so, what percentage is acceptable? For the payments sytems that I worked on, accuracy needed to be 100%.
+	- Capacity
+	- Latency
+	- Horizontal vs vertical scaling
+	- Consistency:  Let's say our goal is to build a system with a 99.999% availability (being down about 5 minutes/year)
+		knowing if a payment has been initiated is something that needed to be stored in a strongly consistent way
+		strong consistency, weak consistency and eventual consistency.
+	- Data Durability:  Durability means that once data is successfully added to a data store, it will be available going forward. This will be the case even if nodes in the system go offline, crash or have their 	data corrupted.
+	- Idempotency: An idempotent system ensures that no matter, how many times a specific request is executed, the actual execution on this request only happens once. 
+		A good example is making a payment. If a client makes a request to pay, the request is successful, but the client times out, the client could retry this same request. With an idempotent system, the person paying would not get charged twice. With a non-idempotent system, they could
+	- The Actor Model

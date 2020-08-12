@@ -2,6 +2,9 @@ package com.code.test.concurrency.collections;
 
 import java.util.concurrent.Phaser;
 
+/**
+ * Phaser is used to support a synchronization barrier
+ */
 public class PhaserTrain {
 
 	static class Worker extends Thread {

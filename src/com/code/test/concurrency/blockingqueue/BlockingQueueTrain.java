@@ -57,7 +57,7 @@ public class BlockingQueueTrain {
         /**
          * Elements must implement Delayed Interface
          */
-        BlockingQueue<Delayed> queue = new DelayQueue<Delayed>();
+        BlockingQueue<Delayed> queue = new DelayQueue<>();
         Delayed element1 = new Delayed() {
             public int compareTo(Delayed o) {
                 // TODO Auto-generated method stub

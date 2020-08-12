@@ -2,6 +2,9 @@ package com.code.test.concurrency.collections;
 
 import java.util.concurrent.CountDownLatch;
 
+/**
+ * Allows threads to wait for a countdown to complete
+ */
 public class CountDownLatchTrain {
     static class Runner extends Thread {
         private CountDownLatch timer;

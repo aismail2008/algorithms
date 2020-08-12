@@ -3,6 +3,9 @@ package com.code.test.concurrency.collections;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
+/**
+ * Ex: Waiting for whole party to arrive to start the game
+ */
 public class CyclicBarrierTrain {
 	static class MixedDoubleTennisGame extends Thread {
 		public void run() {

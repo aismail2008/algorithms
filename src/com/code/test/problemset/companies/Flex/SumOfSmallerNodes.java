@@ -1,9 +1,6 @@
-package com.code.test.problemset.companies.Amazon;
-
-import com.code.test.problemset.basics.datastructure.TreeNode;
+package com.code.test.problemset.companies.Flex;
 
 import java.util.*;
-import java.util.regex.Pattern;
 
 /**
  * for each node in BST calculate the sum of all nodes less than or equal to itself including itself

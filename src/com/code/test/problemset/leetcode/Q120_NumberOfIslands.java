@@ -34,7 +34,8 @@ import java.util.List;
 public class Q120_NumberOfIslands {
     public static void main(String[] args) {
     }
-    int numberAmazonGoStores(int rows, int column, List<List<Integer>> grid) {
+
+    int numberConnectedIslands(int rows, int column, List<List<Integer>> grid) {
         if (grid == null || grid.size() == 0 || grid.get(0).size() == 0)
             return 0;
 
