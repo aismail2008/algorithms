@@ -18,10 +18,18 @@ public class ProducerConsumerExample {
 
         public void run() {
             try {
-                queue.put(ThreadLocalRandom.current().nextInt());
-                queue.put(ThreadLocalRandom.current().nextInt());
-                queue.put(ThreadLocalRandom.current().nextInt());
-                queue.put(ThreadLocalRandom.current().nextInt());
+                int temp = ThreadLocalRandom.current().nextInt();
+                queue.put(temp);
+                System.out.println(temp + " added");
+                temp = ThreadLocalRandom.current().nextInt();
+                queue.put(temp);
+                System.out.println(temp + " added");
+                temp = ThreadLocalRandom.current().nextInt();
+                queue.put(temp);
+                System.out.println(temp + " added");
+                temp = ThreadLocalRandom.current().nextInt();
+                queue.put(temp);
+                System.out.println(temp + " added");
             }catch (Exception e){
                 e.printStackTrace();
             }
@@ -37,10 +45,10 @@ public class ProducerConsumerExample {
 
         public void run() {
             try {
-                System.out.println(queue.take() + "");
-                System.out.println(queue.take() + "");
-                System.out.println(queue.take() + "");
-                System.out.println(queue.take() + "");
+                System.out.println(queue.take() + " consumed");
+                System.out.println(queue.take() + " consumed");
+                System.out.println(queue.take() + " consumed");
+                System.out.println(queue.take() + " consumed");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
