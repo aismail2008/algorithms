@@ -1,0 +1,2184 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "BlockingQueueTrain",
+            "request": "launch",
+            "mainClass": "com.code.test.concurrency.blockingqueue.BlockingQueueTrain",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "ProducerConsumerExample",
+            "request": "launch",
+            "mainClass": "com.code.test.concurrency.blockingqueue.ProducerConsumerExample",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "CountDownLatchTrain",
+            "request": "launch",
+            "mainClass": "com.code.test.concurrency.collections.CountDownLatchTrain",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "CyclicBarrierTrain",
+            "request": "launch",
+            "mainClass": "com.code.test.concurrency.collections.CyclicBarrierTrain",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "ExchangerTrain",
+            "request": "launch",
+            "mainClass": "com.code.test.concurrency.collections.ExchangerTrain",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "PhaserTrain",
+            "request": "launch",
+            "mainClass": "com.code.test.concurrency.collections.PhaserTrain",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "SemaphoreTrain",
+            "request": "launch",
+            "mainClass": "com.code.test.concurrency.collections.SemaphoreTrain",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "MyRecursiveAction",
+            "request": "launch",
+            "mainClass": "com.code.test.concurrency.fork.MyRecursiveAction",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "MyRecursiveTask",
+            "request": "launch",
+            "mainClass": "com.code.test.concurrency.fork.MyRecursiveTask",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "CrunchifyConcurrentHashMapVsSynchronizedMap",
+            "request": "launch",
+            "mainClass": "com.code.test.datastructure.CrunchifyConcurrentHashMapVsSynchronizedMap",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "PizzaBuilderDemo",
+            "request": "launch",
+            "mainClass": "com.code.test.designpatterns.Builder.PizzaBuilderDemo",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Client",
+            "request": "launch",
+            "mainClass": "com.code.test.designpatterns.abstractfactory.Client",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "TestAdapter",
+            "request": "launch",
+            "mainClass": "com.code.test.designpatterns.adapter.TestAdapter",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "User",
+            "request": "launch",
+            "mainClass": "com.code.test.designpatterns.facade.User",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Situation",
+            "request": "launch",
+            "mainClass": "com.code.test.designpatterns.strategy.Situation",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "CollectionsTrain",
+            "request": "launch",
+            "mainClass": "com.code.test.java8.CollectionsTrain",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "ConcurrentModificationExcep",
+            "request": "launch",
+            "mainClass": "com.code.test.java8.ConcurrentModificationExcep",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "DefualtInterface",
+            "request": "launch",
+            "mainClass": "com.code.test.java8.DefualtInterface",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Encryption",
+            "request": "launch",
+            "mainClass": "com.code.test.java8.Encryption",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "FileReading",
+            "request": "launch",
+            "mainClass": "com.code.test.java8.FileReading",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "FunctionalInterface",
+            "request": "launch",
+            "mainClass": "com.code.test.java8.FunctionalInterface",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Java8Examples",
+            "request": "launch",
+            "mainClass": "com.code.test.java8.Java8Examples",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "OracleDBConnection",
+            "request": "launch",
+            "mainClass": "com.code.test.java8.OracleDBConnection",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "CollabelTrain",
+            "request": "launch",
+            "mainClass": "com.code.test.java8.future.CollabelTrain",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "CompletionStageTest",
+            "request": "launch",
+            "mainClass": "com.code.test.java8.future.CompletionStageTest",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Test",
+            "request": "launch",
+            "mainClass": "com.code.test.java8.java8inAction.chapter4.Test",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Test(1)",
+            "request": "launch",
+            "mainClass": "com.code.test.java8.java8inAction.chapter5.Test",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "TestCollector",
+            "request": "launch",
+            "mainClass": "com.code.test.java8.java8inAction.chapter6.TestCollector",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "StreamTest",
+            "request": "launch",
+            "mainClass": "com.code.test.java8.streamsZA.StreamTest",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "N1_IsUnique",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch1.N1_IsUnique",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "N2_CheckPermutation",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch1.N2_CheckPermutation",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "N3_URLify",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch1.N3_URLify",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "N4_PalindromePermutation",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch1.N4_PalindromePermutation",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "N5_OneEditAway",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch1.N5_OneEditAway",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "N6_StringCompression",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch1.N6_StringCompression",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "N7_RotateMatrix",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch1.N7_RotateMatrix",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "N8_ZeroMatrix",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch1.N8_ZeroMatrix",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "N9_StringRotation",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch1.N9_StringRotation",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q10_RankFromStream",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch10.Q10_RankFromStream",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q11_PeaksAndValleys",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch10.Q11_PeaksAndValleys",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q1_SortedMerge",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch10.Q1_SortedMerge",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q2_GroupAnagrams",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch10.Q2_GroupAnagrams",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q3_SearchInRotatedArray",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch10.Q3_SearchInRotatedArray",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q4_SortedSearchNoSize",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch10.Q4_SortedSearchNoSize",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q5_SparseSearch",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch10.Q5_SparseSearch",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q8_FindDuplicates",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch10.Q8_FindDuplicates",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q9_SortedMatrixSearch",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch10.Q9_SortedMatrixSearch",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Question",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch15.Q03_DiningPhilosophers.Question",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Question(1)",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch15.Q04_DeadlockFree.Question",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Question(2)",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch15.Q5_CallInOrder.Question",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q11_DivingBoard",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch16.Q11_DivingBoard",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Question(3)",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch16.Q14_Bestline.Question",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q16_SubSort",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch16.Q16_SubSort",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q17_ContiguousSequence",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch16.Q17_ContiguousSequence",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q18_PatternMatching$bruteForce",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch16.Q18_PatternMatching$bruteForce",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q19_PondSizes",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch16.Q19_PondSizes",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q1_NumberSwapper",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch16.Q1_NumberSwapper",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q20_T9",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch16.Q20_T9",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q21_SumSwap$SoltutionOptimal",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch16.Q21_SumSwap$SoltutionOptimal",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Question(4)",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch16.Q22_LangtonAnt.Question",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q23_Random7FromRandom5$SolutionA",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch16.Q23_Random7FromRandom5$SolutionA",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q24_PairsWithSum",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch16.Q24_PairsWithSum",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q25_LRUCache",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch16.Q25_LRUCache",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q26_Calculator",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch16.Q26_Calculator",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q2_WordFrequencies",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch16.Q2_WordFrequencies",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q3_Intersection",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch16.Q3_Intersection",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q4_TicTacToe",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch16.Q4_TicTacToe",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q5_FactorialZeros",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch16.Q5_FactorialZeros",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q6_SmallestDifference",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch16.Q6_SmallestDifference",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q7_NumberMax",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch16.Q7_NumberMax",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q8_EnglishInt",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch16.Q8_EnglishInt",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q9_Operations",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch16.Q9_Operations",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q1_RemoveDuplicates",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch2.Q1_RemoveDuplicates",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q2_ReturnKthToLast",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch2.Q2_ReturnKthToLast",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q3_DeleteMiddleNode",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch2.Q3_DeleteMiddleNode",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q4_Partition",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch2.Q4_Partition",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q5_SumLists",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch2.Q5_SumLists",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q6_Palindrome",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch2.Q6_Palindrome",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q7_Intersection",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch2.Q7_Intersection",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q8_LoopDetection",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch2.Q8_LoopDetection",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q2_StackMin",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch3.Q2_StackMin",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q4_QueueViaStacks",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch3.Q4_QueueViaStacks",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q6_AnimalShelter",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch3.n6.Q6_AnimalShelter",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q10_CheckSubtree",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch4.Q10_CheckSubtree",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q11_RandomNode",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch4.Q11_RandomNode",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q1_RouteBetweenNodes",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch4.Q1_RouteBetweenNodes",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q3_ListOfDepths",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch4.Q3_ListOfDepths",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q4_CheckBalanced",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch4.Q4_CheckBalanced",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q5_ValidateBST",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch4.Q5_ValidateBST",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q6_Successor",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch4.Q6_Successor",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q8_FirstCommonAncestor",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch4.Q8_FirstCommonAncestor",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q9_BSTSequences",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch4.Q9_BSTSequences",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q7_BuildOrder",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch4.n7.Q7_BuildOrder",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_Ali",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch4.n7._Ali",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q1_BitInsertion",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch5.Q1_BitInsertion",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q2_BinaryToString",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch5.Q2_BinaryToString",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q3_FlipBitToWin",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch5.Q3_FlipBitToWin",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "BruteForceSolution",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch5.Q4_Hard.BruteForceSolution",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "QuestionB",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch5.Q4_Hard.QuestionB",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "QuestionC",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch5.Q4_Hard.QuestionC",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Tester",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch5.Q4_Hard.Tester",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q7_SwapOddEvenBits",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch5.Q7_SwapOddEvenBits",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q8_DrawLine",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch5.Q8_DrawLine",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Question(5)",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch7.Q10_minesweeper.Question",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Question(6)",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch7.Q11_FileSystem.Question",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q12_Hasher",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch7.Q12_Hasher",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Game",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch7.Q1_DeckCards.Game",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Test(2)",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch7.Q2_CallCenter.Test",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Test(3)",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch7.Q4_ParkingLot.Test",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Question(7)",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch7.Q8_Othello.Question",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q9_CircularArray",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch7.Q9_CircularArray",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q11_Coins",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch8.Q11_Coins",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q12_EightQueens",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch8.Q12_EightQueens",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q13_StackOfBoxes",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch8.Q13_StackOfBoxes",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q14_BooleanEvaluation",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch8.Q14_BooleanEvaluation",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q1_TripleStep",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch8.Q1_TripleStep",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q2_RobotInGrid",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch8.Q2_RobotInGrid",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q4_PowerSet",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch8.Q4_PowerSet",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q5_RecursiveMultiply",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch8.Q5_RecursiveMultiply",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q6_TowerOfHanoi",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch8.Q6_TowerOfHanoi",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q7_PermutationsWithoutDups",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch8.Q7_PermutationsWithoutDups",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q8_PermutationsWithDups",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch8.Q8_PermutationsWithDups",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q9_Parens",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch8.Q9_Parens",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "QuestionA",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch9.Q2_SocialNetworks.QuestionA",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "QuestionB(1)",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch9.Q2_SocialNetworks.QuestionB",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Tester(1)",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.CrackingCodingInterview6.ch9.Q2_SocialNetworks.Tester",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "HackerRank",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.HackerRank.HackerRank",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "HackerRankBooking",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.HackerRank.HackerRankBooking",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Kangaroo",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.HackerRank.Kangaroo",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "ScanConsoleInput",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.ScanConsoleInput",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "BFS",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.basics.BFS",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "BinarySearch",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.basics.BinarySearch",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "BubbleSort",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.basics.BubbleSort",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "DFS",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.basics.DFS",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "DFS$UndirectedGraphCycle",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.basics.DFS$UndirectedGraphCycle",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Fibonacci",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.basics.Fibonacci",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "GCD",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.basics.GCD",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "InsertionSort",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.basics.InsertionSort",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "MergeSort",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.basics.MergeSort",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Primes_SieveOfEratosthenes",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.basics.Primes_SieveOfEratosthenes",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "QuickSort",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.basics.QuickSort",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "SelectionSort",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.basics.SelectionSort",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Utils",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.basics.Utils",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "BinarySearchTree",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.basics.datastructure.BinarySearchTree",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "MinBinaryHeap",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.basics.datastructure.MinBinaryHeap",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "SegmentTreeNode",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.basics.datastructure.SegmentTreeNode",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Trie",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.basics.datastructure.Trie",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "FlexChallenge",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Flex.FlexChallenge",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "FlexChallenge2",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Flex.FlexChallenge2",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "FlexChallenge3",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Flex.FlexChallenge3",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "SumOfSmallerNodes",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Flex.SumOfSmallerNodes",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "AbsoluteValueSort",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.AbsoluteValueSort",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "ArrayQuadruplet",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.ArrayQuadruplet",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "AwardBudgetCuts",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.AwardBudgetCuts",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "BasicRegexParser",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.BasicRegexParser",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "BracketMatch",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.BracketMatch",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "BusiestTimeInTheMall",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.BusiestTimeInTheMall",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "DecryptMessage",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.DecryptMessage",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "DeletionDistance",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.DeletionDistance",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "DiffBetweenTwoStrings",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.DiffBetweenTwoStrings",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "DiffBetweenTwoStrings$SolutionDP",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.DiffBetweenTwoStrings$SolutionDP",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "DifferentNumber",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.DifferentNumber",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "DroneFlightPlanner",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.DroneFlightPlanner",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "FlattenDictionary",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.FlattenDictionary",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "HTree$Recursive",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.HTree$Recursive",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "HTree$SolutionAli",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.HTree$SolutionAli",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "KMissedArraySort",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.KMissedArraySort",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "MinimumSalesPath",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.MinimumSalesPath",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "NumberOfPaths",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.NumberOfPaths",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "PairsWithDifference",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.PairsWithDifference",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "SentenceReverse",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.SentenceReverse",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "ShortestCellPath",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.ShortestCellPath",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "SudokuSolver",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.SudokuSolver",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "TimePlanner",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.TimePlanner",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "ValidateIpAddress",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.ValidateIpAddress",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "WordCountEngine",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Pramp.WordCountEngine",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "AsynchRateLimiter",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Uber.AsynchRateLimiter",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "BinaryTreeSumPath",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Uber.BinaryTreeSumPath",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "PalindromePartitioning",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Uber.PalindromePartitioning",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Test(4)",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Uber.TokenBucketRateLimiter.Test",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "DoesItFit",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Zalando.DoesItFit",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "FirstTechInter",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Zalando.FirstTechInter",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "InquiringManager",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Zalando.InquiringManager",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "MatchTheShoes",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Zalando.MatchTheShoes",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "MinTimeLaserMin",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Zalando.MinTimeLaserMin",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "MinimalWrappingArea",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Zalando.MinimalWrappingArea",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "WarehousesFulfillOrders",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Zalando.WarehousesFulfillOrders",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "ZalandoTestA",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Zalando.ZalandoTestA",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "ZalandoTestB",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Zalando.ZalandoTestB",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "ZalandoTestC",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.Zalando.ZalandoTestC",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Nails",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.adyen.Nails",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "AddingStringNumbers",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.facebook.AddingStringNumbers",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "BalanceSplit",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.facebook.BalanceSplit",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "BalancedBrackets",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.facebook.BalancedBrackets",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "ChangeForeignCurrency",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.facebook.ChangeForeignCurrency",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "ContiguousSubArray",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.facebook.ContiguousSubArray",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "ElementSwapping",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.facebook.ElementSwapping",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "EncryptedWords",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.facebook.EncryptedWords",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "LargestTripleProducts",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.facebook.LargestTripleProducts",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "MagicalCandyBag",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.facebook.MagicalCandyBag",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "MatchingPairs",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.facebook.MatchingPairs",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "MinimumLengthSubstring",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.facebook.MinimumLengthSubstring",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "PassingYearBook",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.facebook.PassingYearBook",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "QueueRemovals",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.facebook.QueueRemovals",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "RevenueMilestones",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.facebook.RevenueMilestones",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "ReverseOperations",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.facebook.ReverseOperations",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "RotationalCypher",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.facebook.RotationalCypher",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "SeatingArrangements",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.facebook.SeatingArrangements",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "SlowSum",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.facebook.SlowSum",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "StringDigitsTarget",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.facebook.StringDigitsTarget",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "AlgorithmsRound0",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.google.AlgorithmsRound0",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "AlgorithmsRound1",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.google.AlgorithmsRound1",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "RemoveDuplicates",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.talabt.RemoveDuplicates",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Solution",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.talabt.Solution",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_TopTal2$Problem2",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.toptal._TopTal2$Problem2",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_TopTal2$Problema",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.toptal._TopTal2$Problema",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_TopToal",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.companies.toptal._TopToal",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "MostCommonWord",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.MostCommonWord",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q10_MissingRanges",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q10_MissingRanges",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q11_MergeIntervals",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q11_MergeIntervals",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q120_NumberOfIslands",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q120_NumberOfIslands",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q125_SurroundedRegions",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q125_SurroundedRegions",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q126_ZeroMatrix",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q126_ZeroMatrix",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q127_SpiralMatrix",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q127_SpiralMatrix",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q12_InsertInterval",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q12_InsertInterval",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q144_PartitionList",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q144_PartitionList",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q145_IntersectionTwoLinkedList",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q145_IntersectionTwoLinkedList",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q149_ReverseLinkedListII",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q149_ReverseLinkedListII",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q152_PalindromeLinkedList",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q152_PalindromeLinkedList",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q15_OneEditAway",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q15_OneEditAway",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q16_MergeSortedArray",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q16_MergeSortedArray",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q175_BalancedBinaryTree",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q175_BalancedBinaryTree",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q18_BackspaceStringCompare",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q18_BackspaceStringCompare",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q195_InOrderSuccessorBST",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q195_InOrderSuccessorBST",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q196_InOrderSuccessorBSTII",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q196_InOrderSuccessorBSTII",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q198_LargestBSTSubTree",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q198_LargestBSTSubTree",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q1_2_RemoveDuplicateSortedArray",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q1_2_RemoveDuplicateSortedArray",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q201_RangeSumQuery",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q201_RangeSumQuery",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q203_StackViaQueues",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q203_StackViaQueues",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q204_QueueViaStacks",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q204_QueueViaStacks",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q211_MaxChunksToMakeSorted",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q211_MaxChunksToMakeSorted",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q220_PermutationsWithoutDups$UniquePermutationsNum",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q220_PermutationsWithoutDups$UniquePermutationsNum",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q220_PermutationsWithoutDups$UniquePermutationsStr",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q220_PermutationsWithoutDups$UniquePermutationsStr",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q221_PermutationsWithDups",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q221_PermutationsWithDups",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q222_PermutationSequence",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q222_PermutationSequence",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q224_GenerateParentheses",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q224_GenerateParentheses",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q241_Combinations",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q241_Combinations",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q245_Subsets",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q245_Subsets",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q246_SubsetsII",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q246_SubsetsII",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q246_SubsetsII$UniquePermutationsNum",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q246_SubsetsII$UniquePermutationsNum",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q267_UniquePath",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q267_UniquePath",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q271_EditDistance$SolutionDP",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q271_EditDistance$SolutionDP",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q274_LongestCommonSubsequence",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q274_LongestCommonSubsequence",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q30_3Sum",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q30_3Sum",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q31_4Sum$SolutionTimeLimitExceeded",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q31_4Sum$SolutionTimeLimitExceeded",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q33_wiggleSort",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q33_wiggleSort",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q34_WiggleSubsequence",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q34_WiggleSubsequence",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q35_LongestCommonPrefix",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q35_LongestCommonPrefix",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q39_MinimumRotatedSortedArray",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q39_MinimumRotatedSortedArray",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q40_MinimumRotatedSortedArrayII",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q40_MinimumRotatedSortedArrayII",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q41_FirstLastPositionSortedArray",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q41_FirstLastPositionSortedArray",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q44_SearchInRotatedArray",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q44_SearchInRotatedArray",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q45_SearchInRotatedArrayII",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q45_SearchInRotatedArrayII",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q46_LongestIncreasingSubSequence",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q46_LongestIncreasingSubSequence",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q47_CountSmallerNumbersAferSelf",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q47_CountSmallerNumbersAferSelf",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q48_RussianDollEnvelopes",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q48_RussianDollEnvelopes",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q4_MoveZeros",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q4_MoveZeros",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q5_Candy",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q5_Candy",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q64_MinimumWindowSubstring",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q64_MinimumWindowSubstring",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q6_TrappingRainWater",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q6_TrappingRainWater",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q72_WordLadder",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q72_WordLadder",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q79_MergeKSortedLists$SolutionA",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q79_MergeKSortedLists$SolutionA",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q79_MergeKSortedLists$SolutionB",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q79_MergeKSortedLists$SolutionB",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q7_ProductOfArray",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q7_ProductOfArray",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q87_SlidingWindowMaximum",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q87_SlidingWindowMaximum",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q8_MinimumSizeSubarraySum",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q8_MinimumSizeSubarraySum",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q93_SortList",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q93_SortList",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q98_GroupAanagrams",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q98_GroupAanagrams",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "Q9_SummaryRanges",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.Q9_SummaryRanges",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "RandomSelector",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode.RandomSelector",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_AddString",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._AddString",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_AlienDictionary",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._AlienDictionary",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_BalanceBinarySearchTree",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._BalanceBinarySearchTree",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_Codality$Solution",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._Codality$Solution",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_Codality$SolutionA",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._Codality$SolutionA",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_Codality$SolutionC",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._Codality$SolutionC",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_CombinationsStringDigits",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._CombinationsStringDigits",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_CutOffTreesGolfEvent$SolutionA",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._CutOffTreesGolfEvent$SolutionA",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_CuttingRod",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._CuttingRod",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_DecodeWays",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._DecodeWays",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_EnglishInt",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._EnglishInt",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_FriendCircles",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._FriendCircles",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_FriendCircles$Solution",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._FriendCircles$Solution",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_HammingDistance",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._HammingDistance",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_HeightChecker",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._HeightChecker",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_InfixToPostfix",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._InfixToPostfix",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_IsOneBitCharacter$SolutionA",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._IsOneBitCharacter$SolutionA",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_KthLargest",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._KthLargest",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_LargestTimeFromDigits$Solution",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._LargestTimeFromDigits$Solution",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_LongPressedName",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._LongPressedName",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_NQueens",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._NQueens",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_NetworkDelayTime",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._NetworkDelayTime",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_NumberDiceRollsWithTargetSum",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._NumberDiceRollsWithTargetSum",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_PostfixToInfix",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._PostfixToInfix",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_RangeSumQueryImmutable",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._RangeSumQueryImmutable",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_SortArray",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._SortArray",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_SortedSearchNoSize",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._SortedSearchNoSize",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_StudentAttendanceRecord",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._StudentAttendanceRecord",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "_VerifyingAlienDictionary",
+            "request": "launch",
+            "mainClass": "com.code.test.problemset.leetcode._VerifyingAlienDictionary",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
+            "name": "JavaNetURLRESTFulClient",
+            "request": "launch",
+            "mainClass": "com.code.test.restclient.JavaNetURLRESTFulClient",
+            "projectName": "algorithms_6715a29b"
+        }
+    ]
+}

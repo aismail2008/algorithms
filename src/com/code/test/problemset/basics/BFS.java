@@ -26,6 +26,7 @@ public class BFS {
             this.map = map;
         }
     }
+    
     public static void bfs(GraphNode root) {
         // Since queue is a interface
         Queue<GraphNode> queue = new LinkedList<>();
