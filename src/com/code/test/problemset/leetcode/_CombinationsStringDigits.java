@@ -5,7 +5,8 @@ import java.util.List;
 
 /**
  * Combinations in a String of Digits
- * Given an input string of numbers, find all combinations of numbers that can be formed using digits in the same order.
+ * Given an input string of numbers, find all combinations of numbers
+ *  that can be formed using digits in the same order.
  *
  * Examples:
  *
@@ -29,6 +30,11 @@ public class _CombinationsStringDigits {
 
     static List<String> sol = new ArrayList<>();
 
+    /**
+     * First with Start = 1
+     * @param s
+     * @param start
+     */
     static public void solve(String s, int start) {
         if (start == s.length())
             return;

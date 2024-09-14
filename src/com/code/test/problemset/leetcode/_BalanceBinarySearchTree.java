@@ -26,7 +26,7 @@ public class _BalanceBinarySearchTree {
 
     /**
      * InOrder traversal is okay if there is no duplicated values
-     *
+     * this returns ordered list
      * @param root
      */
     void inorderRec(TreeNode root, ArrayList<Integer> list) {

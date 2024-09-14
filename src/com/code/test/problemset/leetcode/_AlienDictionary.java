@@ -2,6 +2,7 @@ package com.code.test.problemset.leetcode;
 
 import java.util.*;
 
+@Hard
 /**
  * 269. Alien Dictionary
  * <p>

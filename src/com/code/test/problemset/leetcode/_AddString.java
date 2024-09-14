@@ -14,6 +14,17 @@ package com.code.test.problemset.leetcode;
  * https://leetcode.com/problems/add-strings/
  */
 public class _AddString {
+
+    public static void main(String[] args){
+        int val = 18;
+        int test =  val / 10;
+        System.out.println(test);
+        val = 18;
+        test =  val % 10;
+        System.out.println(test);
+        new _AddString().addStrings("999", "82");
+    }
+
     public String addStrings(String num1, String num2) {
         StringBuilder st = new StringBuilder("");
         int i =  num1.length() - 1;
@@ -46,9 +57,5 @@ public class _AddString {
 
         return st.reverse().toString();
 
-    }
-
-    public static void main(String[] args) {
-        new _AddString().addStrings("999", "82");
     }
 }

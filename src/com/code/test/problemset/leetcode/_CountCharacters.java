@@ -32,6 +32,12 @@ package com.code.test.problemset.leetcode;
  * https://leetcode.com/problems/find-words-that-can-be-formed-by-characters/
  */
 public class _CountCharacters {
+    /**
+     * can also be used with hasmap of character and integer
+     * @param words
+     * @param chars
+     * @return
+     */
         public int countCharacters(String[] words, String chars) {
             int[] charCounts = new int[256];
             for (char ch : chars.toCharArray()) {
