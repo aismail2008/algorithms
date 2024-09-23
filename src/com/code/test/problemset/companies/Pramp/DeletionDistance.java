@@ -1,6 +1,6 @@
 package com.code.test.problemset.companies.Pramp;
 
-import com.code.test.problemset.leetcode._DeleteOperationTwoStrings;
+import com.code.test.problemset.leetcode.medium._DeleteOperationTwoStrings;
 
 /**
  * Deletion Distance

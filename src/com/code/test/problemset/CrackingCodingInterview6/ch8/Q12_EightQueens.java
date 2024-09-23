@@ -1,6 +1,6 @@
 package com.code.test.problemset.CrackingCodingInterview6.ch8;
 
-import com.code.test.problemset.leetcode._NQueens;
+import com.code.test.problemset.leetcode.hard._NQueens;
 
 /**
  * Eight Queens:

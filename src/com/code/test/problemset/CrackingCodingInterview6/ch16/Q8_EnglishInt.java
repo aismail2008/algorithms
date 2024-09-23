@@ -1,6 +1,6 @@
 package com.code.test.problemset.CrackingCodingInterview6.ch16;
 
-import com.code.test.problemset.leetcode._EnglishInt;
+import com.code.test.problemset.leetcode.hard._EnglishInt;
 
 /**
  * English Int:
