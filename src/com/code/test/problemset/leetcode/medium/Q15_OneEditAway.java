@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.medium;
+
+import com.code.test.problemset.leetcode.Medium;
 
 /**
  * One Away:
@@ -18,6 +20,7 @@ package com.code.test.problemset.leetcode;
  *
  *  https://leetcode.com/problems/one-edit-distance/
  */
+@Medium
 public class Q15_OneEditAway {
 
     public static boolean oneEditAway(String first, String second) {

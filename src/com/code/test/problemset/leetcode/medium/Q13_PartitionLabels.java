@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.medium;
+
+import com.code.test.problemset.leetcode.Medium;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -25,8 +27,8 @@ import java.util.Map;
  * <p>
  * https://leetcode.com/problems/partition-labels/
  */
+@Medium
 public class Q13_PartitionLabels {
-
     public List<Integer> partitionLabels(String S) {
         LinkedHashMap<Character, int[]> map = new LinkedHashMap<>();
 
@@ -64,7 +66,7 @@ public class Q13_PartitionLabels {
     }
 
     static class SolutionAli {
-        static public List<Integer> partitionLabels_(String s) {
+       static public List<Integer> partitionLabels_(String s) {
             List<Integer> output = new ArrayList<>();
             Map<Character, Integer> map = new LinkedHashMap<>();
             for (int i = 0; i < s.length(); i++) {
@@ -86,5 +88,4 @@ public class Q13_PartitionLabels {
             return output;
         }
     }
-
 }
