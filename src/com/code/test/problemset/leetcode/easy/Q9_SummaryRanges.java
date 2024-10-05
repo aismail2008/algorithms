@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.easy;
+
+import com.code.test.problemset.leetcode.Easy;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,16 +12,14 @@ import java.util.List;
  * <p>
  * https://leetcode.com/problems/summary-ranges/
  */
+@Easy
 public class Q9_SummaryRanges {
     public static void main(String[] args) {
         summaryRanges(new int[]{0, 1, 2, 4, 5, 7});
         summaryRanges(new int[]{0, 2, 3, 4, 6, 8, 9});
         summaryRanges(new int[]{});
         summaryRanges(new int[]{0});
-
-
     }
-
     public static List<String> summaryRanges(int[] a) {
         List<String> ranges = new ArrayList<>();
         if (a == null || a.length == 0) {

@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.easy;
+
+import com.code.test.problemset.leetcode.Easy;
 
 /**
  * Given an array and a value,
@@ -7,6 +9,7 @@ package com.code.test.problemset.leetcode;
  * <p>
  * https://leetcode.com/problems/remove-element/
  */
+@Easy
 public class Q3_RemoveElement {
 
     public static int removeElement(int[] nums, int val) {
@@ -15,7 +18,6 @@ public class Q3_RemoveElement {
             if (nums[i] != val) {
                 nums[j++] = nums[i];
             }
-
         }
         return j;
     }

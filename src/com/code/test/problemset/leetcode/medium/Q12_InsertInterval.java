@@ -1,13 +1,14 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.medium;
+
+import com.code.test.problemset.leetcode.Medium;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 
 /**
  * Problem:
- * Given a set of non-overlapping & sorted intervals, insert a new interval into the intervals (merge if necessary).
+ * Given a set of non-overlapping & sorted intervals,
+ * insert a new interval into the intervals (merge if necessary).
  * Example 1:
  * Given intervals [1,3],[6,9], insert and merge [2,5] in as [1,5],[6,9].
  * Example 2:
@@ -17,6 +18,7 @@ import java.util.List;
  * <p>
  * https://leetcode.com/problems/insert-interval/
  */
+@Medium
 public class Q12_InsertInterval {
 
     public static void main(String[] args) {
@@ -100,7 +102,6 @@ public class Q12_InsertInterval {
             return sol;
         }
 
-        Arrays.sort(a, Comparator.comparingInt(o -> o[0]));
         int start = newInter[0];
         int end = newInter[1];
 

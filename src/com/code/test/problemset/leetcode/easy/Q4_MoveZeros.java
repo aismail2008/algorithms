@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.easy;
+
+import com.code.test.problemset.leetcode.Easy;
 
 import java.util.Arrays;
 
@@ -12,6 +14,7 @@ import java.util.Arrays;
  * <p>
  * https://leetcode.com/problems/move-zeroes/
  */
+@Easy
 public class Q4_MoveZeros {
 
     static public int[] moveZeroes(int[] nums) {

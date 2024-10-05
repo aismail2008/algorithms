@@ -1,7 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.medium;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**

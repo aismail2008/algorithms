@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.medium;
+
+import com.code.test.problemset.leetcode.Medium;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -48,6 +50,7 @@ import java.util.Map;
  * <p>
  * https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/
  */
+@Medium
 public class _NumberDiceRollsWithTargetSum {
     public static void main(String[] args) {
         _NumberDiceRollsWithTargetSum solutionB = new _NumberDiceRollsWithTargetSum();

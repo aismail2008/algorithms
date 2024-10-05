@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.medium;
+
+import com.code.test.problemset.leetcode.Medium;
 
 /**
  * Given an array nums of n integers where n > 1,  return an array output such that output[i] is equal to the product
@@ -19,6 +21,7 @@ package com.code.test.problemset.leetcode;
  * <p>
  * https://leetcode.com/problems/product-of-array-except-self/
  */
+@Medium
 public class Q7_ProductOfArray {
 
     public static void main(String[] args) {

@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.hard;
+
+import com.code.test.problemset.leetcode.Hard;
 
 /**
  *  Trapping Rain Water:
@@ -7,7 +9,7 @@ package com.code.test.problemset.leetcode;
  * <p>
  * For example, given [0,1,0,2,1,0,1,3,2,1,2,1], return 6.
  * <p>
- * https://leetcode.com/problems/product-of-array-except-self/
+ * https://leetcode.com/problems/trapping-rain-water/description/
  */
 @Hard
 public class Q6_TrappingRainWater {

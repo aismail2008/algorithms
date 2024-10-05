@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.medium;
+
+import com.code.test.problemset.leetcode.Medium;
 
 import java.util.*;
 
@@ -11,6 +13,7 @@ import java.util.*;
  *
  * https://leetcode.com/problems/merge-intervals/
  */
+@Medium
 public class Q11_MergeIntervals {
 
     public static void main(String[] args) {

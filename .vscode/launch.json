@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Problem",
+            "request": "launch",
+            "mainClass": "com.code.test.Problem",
+            "projectName": "algorithms_6715a29b"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "com.code.test.Main",
