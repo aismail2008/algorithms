@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.easy;
+
+import com.code.test.problemset.leetcode.Easy;
 
 /**
  * Given a string s and a string t, check if s is subsequence of t.
@@ -12,6 +14,7 @@ package com.code.test.problemset.leetcode;
  *
  * https://leetcode.com/problems/is-subsequence/
  */
+@Easy
 public class Q17_IsSequence {
 
     public boolean isSubsequence(String s, String t) {

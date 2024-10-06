@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.easy;
+
+import com.code.test.problemset.leetcode.Easy;
 
 import java.util.Arrays;
 
@@ -13,6 +15,7 @@ import java.util.Arrays;
  * <p>
  * https://leetcode.com/problems/merge-sorted-array
  */
+@Easy
 public class Q16_MergeSortedArray {
 
     public static void main(String[] args) {

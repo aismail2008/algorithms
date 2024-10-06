@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.medium;
+
+import com.code.test.problemset.leetcode.Medium;
 
 /**
  * Repeated String Match
@@ -13,6 +15,7 @@ package com.code.test.problemset.leetcode;
  * <p>
  * https://leetcode.com/problems/repeated-string-match/
  */
+@Medium
 public class Q19_RepeatedStringMatch {
 
     public int repeatedStringMatch(String A, String B) {

@@ -1,5 +1,9 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.easy;
 
+
+import com.code.test.problemset.leetcode.Easy;
+
+import java.util.Stack;
 
 /**
  * Given two strings S and T, return if they are equal when both are typed into empty text editors. # means a backspace character.
@@ -35,6 +39,7 @@ package com.code.test.problemset.leetcode;
  * <p>
  * https://leetcode.com/problems/backspace-string-compare/
  */
+@Easy
 public class Q18_BackspaceStringCompare {
 
     public static void main(String[] args) {
@@ -45,6 +50,40 @@ public class Q18_BackspaceStringCompare {
         b = backspaceCompare("ab##", "c#d#");
         b = backspaceCompare("a##c", "a#c#");
         b = backspaceCompare("a##c", "a#c#");
+    }
+
+    public static boolean backspaceCompare_(String str, String tr) {
+        Stack<Character> stack = new Stack<>();
+
+        for (char ch : str.toCharArray()) {
+            if (ch != '#') {
+                stack.push(ch);  // Add the character to the stack
+            } else if (!stack.isEmpty()) {
+                stack.pop();  // Remove the last character if '#' is encountered
+            }
+        }
+        // Convert the stack back to a string
+        StringBuilder finalString = new StringBuilder();
+        for (char ch : stack) {
+            finalString.append(ch);
+        }
+        str = finalString.toString();
+        stack.clear();
+
+        for (char ch : tr.toCharArray()) {
+            if (ch != '#') {
+                stack.push(ch);  // Add the character to the stack
+            } else if (!stack.isEmpty()) {
+                stack.pop();  // Remove the last character if '#' is encountered
+            }
+        }
+        // Convert the stack back to a string
+        finalString = new StringBuilder();
+        for (char ch : stack) {
+            finalString.append(ch);
+        }
+
+        return str.equals(finalString.toString());
     }
 
     public static boolean backspaceCompare(String S, String T) {

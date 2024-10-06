@@ -1,6 +1,6 @@
 package com.code.test.problemset.CrackingCodingInterview6.ch10;
 
-import com.code.test.problemset.leetcode.Q16_MergeSortedArray;
+import com.code.test.problemset.leetcode.easy.Q16_MergeSortedArray;
 
 /**
  * Given two sorted integer arrays A and B, merge B into A as one sorted array.
