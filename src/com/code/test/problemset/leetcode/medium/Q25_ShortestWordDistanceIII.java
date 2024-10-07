@@ -1,7 +1,4 @@
-package com.code.test.problemset.leetcode;
-
-import java.util.ArrayList;
-import java.util.HashMap;
+package com.code.test.problemset.leetcode.medium;
 
 /**
  * This is a follow-up problem of Shortest Word Distance. The only difference is now word1 could be the same as word2.
@@ -18,6 +15,33 @@ import java.util.HashMap;
  */
 public class Q25_ShortestWordDistanceIII {
 
+    // didn't try this yet
+    public int shortestWordDistance_(String[] words, String word1, String word2) {
+        int shortest = Integer.MAX_VALUE;
+        if(!word1.equals(word2)){
+            Q24_ShortestWordDistanceII sol = new Q24_ShortestWordDistanceII();
+            sol.WordDistance(words);
+            shortest = sol.shortest(word1, word2);
+        }else {
+            int first = -1;
+            for (int i = 0; i < words.length; i++) {
+                if(words[i].equals(word1)){
+                    first = i;
+                    break;
+                }
+            }
+
+            for (int i = first + 1; i < words.length; i++) {
+                if(words[i].equals(word1)){
+                    shortest = Math.min( shortest, i - first);
+                    first = i;
+                }
+            }
+        }
+        return shortest;
+    }
+
+    //----//
     public int shortestWordDistance(String[] words, String word1, String word2) {
         if (words == null || words.length == 0)
             return -1;

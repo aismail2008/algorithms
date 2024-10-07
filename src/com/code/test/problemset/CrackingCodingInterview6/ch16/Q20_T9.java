@@ -1,6 +1,6 @@
 package com.code.test.problemset.CrackingCodingInterview6.ch16;
 
-import com.code.test.problemset.leetcode.Q242_LetterCombinationsOfPhoneNumber;
+import com.code.test.problemset.leetcode.medium.Q242_LetterCombinationsOfPhoneNumber;
 
 /**
  * T9:

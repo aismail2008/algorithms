@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.easy;
+
+import com.code.test.problemset.leetcode.Easy;
 
 /**
  * Valid Palindrome
@@ -16,6 +18,7 @@ package com.code.test.problemset.leetcode;
  *
  * https://leetcode.com/problems/valid-palindrome/
  */
+@Easy
 public class Q22_ValidPalindrome {
     public boolean isPalindrome(String s) {
         if (s == null || s.length() == 0)

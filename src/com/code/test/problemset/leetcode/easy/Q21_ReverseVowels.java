@@ -1,7 +1,9 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.easy;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.code.test.problemset.leetcode.Easy;
+
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Reverse Vowels of a String
@@ -17,10 +19,11 @@ import java.util.List;
  *
  *  https://leetcode.com/problems/reverse-vowels-of-a-string
  */
+@Easy
 public class Q21_ReverseVowels {
 
     public String reverseVowels(String s) {
-        List<Character> vowList = new ArrayList<Character>();
+        Set<Character> vowList = new HashSet<>();
         vowList.add('a');
         vowList.add('e');
         vowList.add('i');
@@ -31,6 +34,7 @@ public class Q21_ReverseVowels {
         vowList.add('I');
         vowList.add('O');
         vowList.add('U');
+
 
         char[] arr = s.toCharArray();
 
@@ -47,6 +51,9 @@ public class Q21_ReverseVowels {
                 j--;
                 continue;
             }
+
+            if(j <= i)
+                break;
 
             char t = arr[i];
             arr[i]=arr[j];

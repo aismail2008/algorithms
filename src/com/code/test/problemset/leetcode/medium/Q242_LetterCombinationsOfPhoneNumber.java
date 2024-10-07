@@ -1,7 +1,12 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.medium;
+
+import com.code.test.problemset.leetcode.Medium;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * Given a digit string, return all possible letter combinations that the number could represent.
@@ -11,14 +16,54 @@ import java.util.List;
  * <p>
  * https://leetcode.com/problems/letter-combinations-of-a-phone-number/
  *
- * Time complexity : O(3^N *4^M)
- *      where N is the number of digits in the input that maps to 3 letters (e.g. 2, 3, 4, 5, 6, 8)
- *      and M is the number of digits in the input that maps to 4 letters (e.g. 7, 9), and N+M is the total number digits in the input.
- *
+ * Time complexity : O(K^N)
+ *         k: possible choices.
+ *         n: length/depth of input
+ *         m: number of generated combinations. Filtering is O(m)
+ *         O( (k^n) + m)
+ *         worst: O(k^n)*
  * Space complexity : O(3^N)
  *      since one has to keep 3^N * times 4^M solutions
  */
+@Medium
 public class Q242_LetterCombinationsOfPhoneNumber {
+
+    public static List<String> solve(String digits){
+        Set<String> dictionary= new HashSet<>();
+        // fill in dictionary
+        fillDictionary(dictionary);
+        //set in separate method for initializing mapping
+        String[] mapping = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+        List<String> combinations = new ArrayList<>();
+        getPossibleCombinations("", digits, mapping, combinations);
+        return combinations.stream().filter(dictionary::contains).collect(Collectors.toList());
+    }
+
+    // we can use memory with generated prev. digits and check in begining to save time of re-processing
+    // this can be converted to stack
+    private static void getPossibleCombinations(String combination, String nextDigits, String[] mapping, List<String> combinations) {
+        if(nextDigits.length() == 0){
+            combinations.add(combination);
+        }else{
+            String letters = mapping[nextDigits.charAt(0) - '0'];
+            for(char letter: letters.toCharArray()){
+                getPossibleCombinations(combination+letter, nextDigits.substring(1), mapping, combinations);
+            }
+        }
+    }
+
+    private static void fillDictionary(Set dictionary){
+        dictionary.add("cat");
+        dictionary.add("bat");
+        dictionary.add("hat");
+        dictionary.add("good");
+        dictionary.add("gone");
+        dictionary.add("home");
+        dictionary.add("hello");
+        dictionary.add("test");
+    }
+
+    //-----------Another solution---------------//
     static class Solution {
         /* Mapping of digits to letters. */
         static char[][] t9Letters = {null, null, {'a', 'b', 'c'}, {'d', 'e', 'f'}, {'g', 'h', 'i'}, {'j', 'k', 'l'}, {'m', 'n', 'o'},

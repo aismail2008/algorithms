@@ -1,15 +1,17 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.medium;
+
+import com.code.test.problemset.leetcode.Medium;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 
 /**
- * This is a follow up of Shortest Word Distance.
+ * This is a followup of Shortest Word Distance.
  * The only difference is now you are given the list of words and your method will be called repeatedly many times with different parameters.
  * How would you optimize it?
  * <p>
- * Design a class which receives a list of words in the constructor, and implements a method that takes two words word1 and word2 and return the shortest distance between these two words in the list.
+ * Design a class which receives a list of words in the constructor, and implements a method that takes two words word1 and word2
+ * and return the shortest distance between these two words in the list.
  * For example,
  * Assume that words = ["practice", "makes", "perfect", "coding", "makes"].
  * <p>
@@ -19,6 +21,7 @@ import java.util.HashMap;
  * <p>
  * https://leetcode.com/problems/shortest-word-distance-ii/
  */
+@Medium
 public class Q24_ShortestWordDistanceII {
     HashMap<String, ArrayList<Integer>> map;
 
