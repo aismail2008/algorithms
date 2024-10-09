@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.medium;
+
+import com.code.test.problemset.leetcode.Medium;
 
 import java.util.Arrays;
 
@@ -21,6 +23,7 @@ import java.util.Arrays;
  * <p>
  * https://leetcode.com/problems/3sum-closest/
  */
+@Medium
 public class Q32_3SumCloset {
     public int threeSumClosest(int[] nums, int target) {
         int min = Integer.MAX_VALUE;

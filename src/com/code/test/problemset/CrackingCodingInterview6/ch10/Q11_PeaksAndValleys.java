@@ -1,8 +1,6 @@
 package com.code.test.problemset.CrackingCodingInterview6.ch10;
 
-import com.code.test.problemset.leetcode.Q33_wiggleSort;
-
-import java.util.Arrays;
+import com.code.test.problemset.leetcode.medium.Q33_wiggleSort;
 
 /**
  * Peaks and Valleys:

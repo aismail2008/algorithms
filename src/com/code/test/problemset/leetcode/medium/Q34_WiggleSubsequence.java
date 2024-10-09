@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.medium;
+
+import com.code.test.problemset.leetcode.Medium;
 
 /**
  * Wiggle Subsequence
@@ -35,6 +37,7 @@ package com.code.test.problemset.leetcode;
  * <p>
  * https://leetcode.com/problems/wiggle-subsequence/
  */
+@Medium
 public class Q34_WiggleSubsequence {
 
     public static void main(String[] args) {

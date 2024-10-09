@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.medium;
+
+import com.code.test.problemset.leetcode.Medium;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -8,7 +10,8 @@ import java.util.stream.Collectors;
  * 4Sum
  * Add to List
  * Share
- * Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of target.
+ * Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a + b + c + d = target?
+ * Find all unique quadruplets in the array which gives the sum of target.
  * Note:
  * The solution set must not contain duplicate quadruplets.
  *
@@ -28,9 +31,13 @@ import java.util.stream.Collectors;
  * Time Complexity: we have three nested loops whose combined time complexity is O(N^3), where N is the size of arr.
  * Space Complexity: O(1) as we used only a constant amount of space throughout the algorithm.
  */
+@Medium
 public class Q31_4Sum {
 
-    public List<List<Integer>> fourSums(int[] nums, int target) {
+    public static void main(String[] args) {
+        List l = fourSums(new int[]{1000000000,1000000000,1000000000,1000000000}, -294967296);
+    }
+    public static List<List<Integer>> fourSums(int[] nums, int target) {
         List<List<Integer>> result = new ArrayList<>();
 
         if (nums == null || nums.length < 4)
@@ -49,9 +56,11 @@ public class Q31_4Sum {
                 int l = nums.length - 1;
 
                 while (k < l) {
-                    if (nums[i] + nums[j] + nums[k] + nums[l] < target) {
+                    // to solve the overflow of sum num[..]
+                    long current = (long)nums[i] + nums[j] + nums[k] + nums[l];
+                    if (current < target) {
                         k++;
-                    } else if (nums[i] + nums[j] + nums[k] + nums[l] > target) {
+                    } else if (current > target) {
                         l--;
                     } else {
                         List<Integer> t = new ArrayList<>();

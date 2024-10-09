@@ -1,7 +1,7 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.easy;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import com.code.test.problemset.leetcode.Easy;
+
 import java.util.HashSet;
 
 /**
@@ -23,6 +23,7 @@ import java.util.HashSet;
  * <p>
  * https://leetcode.com/problems/intersection-of-two-arrays/
  */
+@Easy
 public class Q26_IntersectionOfTwoArrays {
 
     public int[] intersection(int[] nums1, int[] nums2) {

@@ -1,7 +1,8 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.medium;
+
+import com.code.test.problemset.leetcode.Medium;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  *
@@ -22,6 +23,7 @@ import java.util.stream.Collectors;
  *
  * https://leetcode.com/problems/3sum/
  */
+@Medium
 public class Q30_3Sum {
     public static void main(String[] args) {
         new Q30_3Sum().threeSum(new int[]{-1, 0, 1, 2, -1, -4});
@@ -31,7 +33,7 @@ public class Q30_3Sum {
         Arrays.sort(nums);
         List<List<Integer>> res = new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {
-            if (i > 0 && nums[i] == nums[i - 1]) {
+            if (i > 0 && nums[i] == nums[i - 1]) {// optimization to avoid double checking same number again
                 continue;
             }
             int target = -1 * nums[i];
@@ -47,7 +49,7 @@ public class Q30_3Sum {
                     s1.add(nums[i]);
                     s1.add(nums[j]);
                     s1.add(nums[k]);
-                    Collections.sort(s1);
+//                    Collections.sort(s1);
                     res.add(s1);
                     k--;
                     j++;

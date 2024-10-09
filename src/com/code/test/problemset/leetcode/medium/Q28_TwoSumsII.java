@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.medium;
+
+import com.code.test.problemset.leetcode.Medium;
 
 /**
  * Two Sum II 2 sums - Input array is sorted
@@ -15,6 +17,7 @@ package com.code.test.problemset.leetcode;
  *
  * https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
  */
+@Medium
 public class Q28_TwoSumsII {
 
     public int[] twoSum(int[] numbers, int target) {

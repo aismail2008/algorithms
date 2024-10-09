@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.medium;
+
+import com.code.test.problemset.leetcode.Medium;
 
 import java.util.HashMap;
 
@@ -19,17 +21,19 @@ import java.util.HashMap;
  *
  * https://leetcode.com/problems/two-sum-iii-data-structure-design/
  */
+@Medium
 public class Q29_TwoSumsIII {
     private HashMap<Integer, Integer> elements = new HashMap<>();
 
     public void add(int number) {
-        if (elements.containsKey(number)) {
-            elements.put(number, elements.get(number) + 1);
-        } else {
-            elements.put(number, 1);
-        }
+        elements.put(number, elements.getOrDefault(number, 0) + 1);
     }
 
+    /**
+     * Find if there exists any pair of numbers which sum is equal to the value.
+     * @param value
+     * @return
+     */
     public boolean find(int value) {
         for (Integer i : elements.keySet()) {
             int target = value - i;

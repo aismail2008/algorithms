@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.easy;
+
+import com.code.test.problemset.leetcode.Easy;
 
 /**
  * Longest Common Prefix
@@ -21,6 +23,7 @@ package com.code.test.problemset.leetcode;
  * <p>
  * https://leetcode.com/problems/longest-common-prefix/
  */
+@Easy
 public class Q35_LongestCommonPrefix {
     public static void main(String[] args) {
         new Q35_LongestCommonPrefix().longestCommonPrefix(new String[]{"flower", "flow", "flight"});
@@ -34,7 +37,8 @@ public class Q35_LongestCommonPrefix {
         for (int i = 1; i < strs.length; i++) {
             while (strs[i].indexOf(prefix) != 0) {
                 prefix = prefix.substring(0, prefix.length() - 1);
-                if (prefix.isEmpty()) return "";
+                if (prefix.isEmpty())
+                    return "";
             }
         }
 

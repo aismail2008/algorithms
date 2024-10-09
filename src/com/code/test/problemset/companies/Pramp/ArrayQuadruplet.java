@@ -1,6 +1,6 @@
 package com.code.test.problemset.companies.Pramp;
 
-import com.code.test.problemset.leetcode.Q31_4Sum;
+import com.code.test.problemset.leetcode.medium.Q31_4Sum;
 
 import java.util.Arrays;
 
