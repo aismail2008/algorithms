@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.hard;
+
+import com.code.test.problemset.leetcode.Hard;
 
 /**
  * Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
@@ -24,6 +26,7 @@ package com.code.test.problemset.leetcode;
  * <p>
  * https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/
  */
+@Hard
 public class Q40_MinimumRotatedSortedArrayII {
 
     public static void main(String[] args) {

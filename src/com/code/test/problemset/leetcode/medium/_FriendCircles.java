@@ -1,7 +1,7 @@
 package com.code.test.problemset.leetcode.medium;
 
 import com.code.test.problemset.leetcode.Medium;
-import com.code.test.problemset.leetcode.Q37_SearchInsertPosition;
+import com.code.test.problemset.leetcode.easy.Q37_SearchInsertPosition;
 
 /**
  * Friend Circles

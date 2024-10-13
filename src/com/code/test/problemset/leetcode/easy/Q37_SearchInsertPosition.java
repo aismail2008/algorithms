@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.easy;
+
+import com.code.test.problemset.leetcode.Easy;
 
 /**
  * Search Insert Index : Search Insert Position
@@ -24,6 +26,7 @@ package com.code.test.problemset.leetcode;
  * <p>
  * https://leetcode.com/problems/search-insert-position/
  */
+@Easy
 public class Q37_SearchInsertPosition {
 
     public int searchInsert(int[] numbers, int val) {

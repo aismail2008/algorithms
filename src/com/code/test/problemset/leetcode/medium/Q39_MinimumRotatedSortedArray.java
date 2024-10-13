@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.medium;
+
+import com.code.test.problemset.leetcode.Medium;
 
 /**
  * Find Minimum in Rotated Sorted Array
@@ -21,6 +23,7 @@ package com.code.test.problemset.leetcode;
  *
  * https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
  */
+@Medium
 public class Q39_MinimumRotatedSortedArray {
 
     public static void main(String[] args) {

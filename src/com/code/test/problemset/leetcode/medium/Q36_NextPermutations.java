@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.medium;
+
+import com.code.test.problemset.leetcode.Medium;
 
 /**
  * Next Permutation
@@ -15,6 +17,7 @@ package com.code.test.problemset.leetcode;
  * 1,1,5 → 1,5,1
  * https://leetcode.com/problems/next-permutation/
  */
+@Medium
 public class Q36_NextPermutations {
 
     //  The steps to solve this problem:

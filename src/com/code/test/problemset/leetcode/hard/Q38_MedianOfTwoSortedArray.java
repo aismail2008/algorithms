@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.hard;
+
+import com.code.test.problemset.leetcode.Hard;
 
 /**
  * Median of Two Sorted Arrays
