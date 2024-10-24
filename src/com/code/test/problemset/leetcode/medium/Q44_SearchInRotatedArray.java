@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.medium;
+
+import com.code.test.problemset.leetcode.Medium;
 
 /**
  * 􏰲􏰣􏰴􏰵􏰭􏰶 Search in Rotated Sorted Array􏰷􏰕
@@ -21,8 +23,9 @@ package com.code.test.problemset.leetcode;
  * Input: nums = [4,5,6,7,0,1,2], target = 3
  * Output: -1
  *
- * https://leetcode.com/problems/search-in-rotated-sorted-array􏰳􏰰􏰸􏰴􏰸􏰣􏰹 􏰈􏰂􏰂􏰀􏰅􏰉 􏰈􏰃􏰠􏰂􏰌 􏰉 􏰺􏰻􏰼􏰽􏰾􏰶 􏰨􏰼􏰼􏰉􏰿 􏰂􏱀 􏰌 􏰆􏰌􏰚􏰅􏰁􏰅􏰍􏰊 􏱁􏱂􏰇􏱁 􏱂􏱃􏰕 􏰀􏰅􏰅􏰌 􏱄􏱅􏱆􏱇􏱆􏱈􏱉 􏱃􏱊 􏱋􏱊􏱌􏱍􏱅􏱎􏱍 􏰃􏱏􏰊􏰓􏰀􏰆 􏰲􏱐 􏰈􏰁􏰊􏰅􏰚􏱑 􏰏􏱒􏰁􏰬􏰅 􏰭􏰲􏰠􏰅 􏰈􏰵 􏱓􏱔􏰠 􏰉􏰄 􏱕􏱖􏰀􏰊􏰞􏰃􏰈 􏰁􏰃 􏱗􏰋􏰞 􏰉􏱘􏱙􏰑􏱚􏱛 􏱜􏱝􏱞 􏰊􏰑􏱚 􏱟􏱠􏱠􏱞􏱡􏱢 􏱣􏱤􏰑􏱣 􏱥􏱤􏱢 􏰑􏱦􏱧􏰑􏱨 􏰏􏰑􏱠 􏰂􏰘􏱩􏰥􏱪􏰄􏰇􏰍􏰍􏰡 􏰌􏰻􏰆􏰈􏰅􏰠 􏰄􏰌 􏰁􏰃􏰭􏰷􏰞􏰉􏰚􏱫􏰄􏰥 􏰂􏰷􏰠􏰅􏰆􏰰
+ * https://leetcode.com/problems/search-in-rotated-sorted-array
  */
+@Medium
 public class Q44_SearchInRotatedArray {
 
     public static void main(String[] args) {

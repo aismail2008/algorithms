@@ -1,6 +1,6 @@
 package com.code.test.problemset.CrackingCodingInterview6.ch10;
 
-import com.code.test.problemset.leetcode.Q44_SearchInRotatedArray;
+import com.code.test.problemset.leetcode.medium.Q44_SearchInRotatedArray;
 
 public class Q3_SearchInRotatedArray {
 

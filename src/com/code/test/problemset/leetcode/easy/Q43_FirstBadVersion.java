@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.easy;
+
+import com.code.test.problemset.leetcode.Easy;
 
 /**
  * First Bad Version
@@ -25,14 +27,38 @@ package com.code.test.problemset.leetcode;
  *
  * https://leetcode.com/problems/first-bad-version/
  */
+@Easy
 public class Q43_FirstBadVersion {
 
-    public int firstBadVersion(int n) {
+    public static void main(String[] args) {
+        firstBadVersion_(4);
+    }
+
+    static public int firstBadVersion_(int n) {
+        int lo = 0;
+        int hi = n;
+        int lastBadVersion = n;
+        while(lo<= hi){
+            int mid = lo + (hi-lo) / 2;// To prevent overflow from int + int to 2^31
+
+            boolean bad = isBadVersion(mid);
+            if(bad){
+                lastBadVersion = mid;
+                hi = mid - 1;
+            }else {
+                lo = mid + 1;
+            }
+        }
+        return lastBadVersion;
+    }
+
+
+    static public int firstBadVersion(int n) {
         return helper(1, n);
     }
 
-    public int helper(int i, int j) {
-        int m = i + (j - i) / 2;
+    static public int helper(int i, int j) {
+        int m = (j + i) / 2;
 
         if (i >= j)
             return i;
@@ -44,7 +70,7 @@ public class Q43_FirstBadVersion {
         }
     }
 
-    private boolean isBadVersion(int m) {
+    static private boolean isBadVersion(int m) {
         return true;
     }
 }

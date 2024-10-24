@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.medium;
+
+import com.code.test.problemset.leetcode.Medium;
 
 /**
  * Find First and Last Position of Element in Sorted Array
@@ -20,6 +22,7 @@ package com.code.test.problemset.leetcode;
  * <p>
  * https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
  */
+@Medium
 public class Q41_FirstLastPositionSortedArray {
     public static void main(String[] args) {
         int[] resp = new Q41_FirstLastPositionSortedArray().searchRange(new int[]{0,0,0,0,0,1,1,2,2,3,4,4,5,5,5,5,6,7}, 0);

@@ -1,4 +1,6 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.easy;
+
+import com.code.test.problemset.leetcode.Easy;
 
 /**
  * Guess Number Higher or Lower
@@ -21,6 +23,7 @@ package com.code.test.problemset.leetcode;
  *
  * https://leetcode.com/problems/guess-number-higher-or-lower/
  */
+@Easy
 public class Q42_GuessNumberHigherOrLower {
     /**
      * Forward declaration of guess API.

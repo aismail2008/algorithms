@@ -1,7 +1,9 @@
-package com.code.test.problemset.leetcode;
+package com.code.test.problemset.leetcode.medium;
+
+import com.code.test.problemset.leetcode.Medium;
 
 /**
- * 􏰲􏰣􏰴􏰵􏰭􏰶 Search in Rotated Sorted Array II
+ * Search in Rotated Sorted Array II
  * 􏰷􏰕
  * Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
  * <p>
@@ -21,8 +23,9 @@ package com.code.test.problemset.leetcode;
  * <p>
  * This is a follow up problem to Search in Rotated Sorted Array, where nums may contain duplicates.
  * Would this affect the run-time complexity? How and why?
- * https://leetcode.com/problems/search-in-rotated-sorted-array􏰳􏰰􏰸􏰴􏰸􏰣􏰹 􏰈􏰂􏰂􏰀􏰅􏰉 􏰈􏰃􏰠􏰂􏰌 􏰉 􏰺􏰻􏰼􏰽􏰾􏰶 􏰨􏰼􏰼􏰉􏰿 􏰂􏱀 􏰌 􏰆􏰌􏰚􏰅􏰁􏰅􏰍􏰊 􏱁􏱂􏰇􏱁 􏱂􏱃􏰕 􏰀􏰅􏰅􏰌 􏱄􏱅􏱆􏱇􏱆􏱈􏱉 􏱃􏱊 􏱋􏱊􏱌􏱍􏱅􏱎􏱍 􏰃􏱏􏰊􏰓􏰀􏰆 􏰲􏱐 􏰈􏰁􏰊􏰅􏰚􏱑 􏰏􏱒􏰁􏰬􏰅 􏰭􏰲􏰠􏰅 􏰈􏰵 􏱓􏱔􏰠 􏰉􏰄 􏱕􏱖􏰀􏰊􏰞􏰃􏰈 􏰁􏰃 􏱗􏰋􏰞 􏰉􏱘􏱙􏰑􏱚􏱛 􏱜􏱝􏱞 􏰊􏰑􏱚 􏱟􏱠􏱠􏱞􏱡􏱢 􏱣􏱤􏰑􏱣 􏱥􏱤􏱢 􏰑􏱦􏱧􏰑􏱨 􏰏􏰑􏱠 􏰂􏰘􏱩􏰥􏱪􏰄􏰇􏰍􏰍􏰡 􏰌􏰻􏰆􏰈􏰅􏰠 􏰄􏰌 􏰁􏰃􏰭􏰷􏰞􏰉􏰚􏱫􏰄􏰥 􏰂􏰷􏰠􏰅􏰆􏰰
+ * https://leetcode.com/problems/search-in-rotated-sorted-array-ii
  */
+@Medium
 public class Q45_SearchInRotatedArrayII {
 
     public static void main(String[] args) {
